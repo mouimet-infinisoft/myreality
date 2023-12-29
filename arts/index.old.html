@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Philosophical Concepts Gallery</title>
+    <style>
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            grid-gap: 20px;
+            padding: 20px;
+        }
+        .gallery-item {
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            cursor: pointer;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+        .modal-content {
+            margin: 10% auto;
+            width: 60%;
+        }
+        .modal-content img {
+            width: 100%;
+            height: auto;
+        }
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 35px;
+            color: #fff;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div id="myModal" class="modal">
+    <span class="close">&times;</span>
+    <div class="modal-content">
+        <img src="" id="img01">
+        <div id="caption"></div>
+    </div>
+</div>
+
+<div class="gallery" id="gallery"></div>
+
+<script>
+    // Artworks JSON data
+    var artworks = [
+    {
+        "title": "Concept of Universe as Russian Dolls",
+        "prompt": "The universe as a series of Russian dolls, symbolizing an infinite loop where the largest scale becomes the smallest and vice versa.",
+        "imagePath": "arts/img/1.png",
+        "description": "A cosmic background with nested layers of universes, each layer smaller yet infinitely vast, suggesting a fractal-like nature."
+    },
+    {
+        "title": "Universal Law and Infinite Perspectives",
+        "prompt": "A universe governed by a universal law but perceived differently from infinite viewpoints, creating unique realities.",
+        "imagePath": "arts/img/2.png",
+        "description": "Captures the illusion of reality influenced by distance and perception, where a human might appear as a point of light from afar."
+    },
+    {
+        "title": "Paradise as Omnipresent Light",
+        "prompt": "Paradise is light and omnipresent, contrasting with the evolution through pain and complexity of earthly life.",
+        "imagePath": "arts/img/3.png",
+        "description": "A serene and luminous landscape embodying the idea of awakening and enlightenment after overcoming life's challenges."
+    },
+    {
+        "title": "Powerful, Unstoppable Train",
+        "prompt": "A powerful, unstoppable train symbolizing relentless drive and potential, reignited by a striking lightning bolt.",
+        "imagePath": "arts/img/4.png",
+        "description": "A majestic train, radiating with energy and motion, signifying the awakening of inner strength and creativity."
+    },
+    {
+        "title": "Inner Strength of a Simple Man",
+        "prompt": "A simple man who appears to have lost everything, but harbors a powerful force within, symbolized by Archangel Michael.",
+        "imagePath": "arts/img/5.png",
+        "description": "Subtly depicts the awakening of a powerful force within a man, hinting at immense, silent power."
+    },
+    {
+        "title": "Cycle of Creation and Dissolution",
+        "prompt": "The end of a beginning as the start of the end, where intensity and mass decrease but acceleration increases.",
+        "imagePath": "arts/img/6.png",
+        "description": "Represents a cycle from existence to non-existence, material to immaterial, embodying a continuous cycle of creation and dissolution."
+    },
+    {
+        "title": "Journey of Self-Discovery",
+        "prompt": "The singularity of answers within, unlocking global consciousness through a journey of self-discovery and enlightenment.",
+        "imagePath": "arts/img/7.png",
+        "description": "Symbolizes the inner journey of self-discovery, shedding sparks of understanding towards the explosion of a supernova."
+    }
+]
+
+
+    // Function to create gallery items
+    function createGalleryItem(artwork, index) {
+        var galleryItem = document.createElement('div');
+        galleryItem.className = 'gallery-item';
+        galleryItem.innerHTML = '<img src="' + artwork.imagePath + '" alt="' + artwork.title + '" onclick="openModal(this);">' +
+                                '<h3>' + artwork.title + '</h3>' +
+                                '<p>' + artwork.prompt + '</p>' +
+                                '<p>' + artwork.description + '</p>';
+        return galleryItem;
+    }
+
+    // Populate the gallery
+    var gallery = document.getElementById('gallery');
+    artworks.forEach(function(artwork, index) {
+        artwork.imagePath = 'img/' + (index + 1) + '.png'; // Set image path
+        gallery.appendChild(createGalleryItem(artwork, index));
+    });
+
+    // Modal functionality
+    var modal = document.getElementById("myModal");
+    var modalImg = document.getElementById("img01");
+    var captionText = document.getElementById("caption");
+    function openModal(img) {
+        modal.style.display = "block";
+        modalImg.src = img.src;
+        captionText.innerHTML = img.alt;
+    }
+    var span = document.getElementsByClassName("close")[0];
+    span.onclick = function() { 
+        modal.style.display = "none";
+    }
+</script>
+
+</body>
+</html>

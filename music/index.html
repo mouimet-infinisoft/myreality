@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Music | Martin Ouimet Universe</title>
+    <style>
+      body,
+      html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        overflow: hidden;
+        background: black;
+      }
+
+      .video-background video {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+      }
+
+      .music-section {
+        position: relative;
+        z-index: 1;
+        color: white;
+        padding: 20px;
+      }
+
+      .music-list {
+        list-style: none;
+        padding: 0;
+      }
+
+      .song-item {
+        margin-bottom: 15px;
+        font-size: 1.2em;
+      }
+
+      .title {
+        display: block;
+      }
+
+      .date {
+        font-style: italic;
+      }
+
+      .style-icon {
+        margin-right: 10px;
+      }
+
+      .play-button {
+        background: none;
+        border: 1px solid white;
+        color: white;
+        padding: 5px 10px;
+        cursor: pointer;
+      }
+
+      .play-button:hover {
+        background: white;
+        color: black;
+      }
+
+      /* Additional styling as needed */
+    </style>
+  </head>
+  <body>
+    <div class="video-background">
+      <!-- Background video here -->
+      <video autoplay muted loop>
+        <source src="path_to_your_water_drop_video.mp4" type="video/mp4" />
+        Your browser does not support HTML5 video.
+      </video>
+    </div>
+
+    <div class="music-section">
+      <ul class="music-list">
+        <li class="song-item">
+          <span class="title">Song Title 1</span>
+          <span class="date">Release Date 1</span>
+          <span class="prompt">A brief description or theme of Song 1</span>
+          <span class="style">Genre or Style of Song 1</span>
+          <span class="style-icon">🎵</span>
+          <button class="play-button">Play</button>
+          <a href="download_link_1.mp3" download>Download</a>
+        </li>
+        <li class="song-item">
+          <span class="title">Song Title 2</span>
+          <span class="date">Release Date 2</span>
+          <span class="prompt">A brief description or theme of Song 2</span>
+          <span class="style">Genre or Style of Song 2</span>
+          <span class="style-icon">🎶</span>
+          <button class="play-button">Play</button>
+          <a href="download_link_2.mp3" download>Download</a>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
