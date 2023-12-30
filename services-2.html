@@ -10,7 +10,7 @@
 	<head>
 
 		<!-- Title -->
-		<title>Aivo - Multipurpose Portfolio HTML Website Template</title>
+		<title>Services / Aivo - Multipurpose Portfolio HTML Website Template</title>
 
 		<!-- Meta -->
 		<meta charset="utf-8">
@@ -78,7 +78,7 @@
 		* Use class "menu-align-right" to align menu to right.
 		* Use class "menu-align-center" to align menu to center (do not use with header classes!).
 		-->
-		<header id="header" class="header-show-hide-on-scroll header-transparent menu-align-right">
+		<header id="header" class="header-show-hide-on-scroll header-transparent header-transparent-dark menu-align-right">
 
 			<!-- Begin header inner -->
 			<div class="header-inner tt-wrap"> <!-- add/remove class "tt-wrap" to enable/disable element boxed layout (class "tt-boxed" is required in <body> tag!). Note: additionally you can use prepared helper class "max-width-*" to add custom width to "tt-wrap". Example: "max-width-1500" (class "tt-wrap" is still required!). More info about helper classes in file "helper.css" -->
@@ -244,7 +244,7 @@
 
 							<!-- Begin submenu (submenu master)
 							==================================== -->
-							<li class="tt-submenu-wrap tt-submenu-master active">
+							<li class="tt-submenu-wrap tt-submenu-master">
 								<a href="#0">Home</a>
 								<div class="tt-submenu">
 									<ul class="tt-submenu-list">
@@ -253,7 +253,7 @@
 										<li><a href="home-landing-3.html">Home Landing 3</a></li>
 										<li><a href="home-full-screen-slideshow.html">Full Screen Slideshow</a></li>
 										<li><a href="home-full-screen-single-image.html">Full Screen Image</a></li>
-										<li class="active"><a href="home-full-screen-video.html">Full Screen Video</a></li>
+										<li><a href="home-full-screen-video.html">Full Screen Video</a></li>
 									</ul> <!-- /.tt-submenu-list -->
 								</div> <!-- /.tt-submenu -->
 							</li>
@@ -483,7 +483,7 @@
 
 							<!-- Begin submenu (submenu master)
 							==================================== -->
-							<li class="tt-submenu-wrap tt-submenu-master">
+							<li class="tt-submenu-wrap tt-submenu-master active">
 								<a href="#0">More</a>
 								<div class="tt-submenu">
 									<ul class="tt-submenu-list">
@@ -580,12 +580,12 @@
 
 										<!-- Begin submenu
 										=================== -->
-										<li class="tt-submenu-wrap">
+										<li class="tt-submenu-wrap active">
 											<a href="#0">Services</a>
 											<div class="tt-submenu">
 												<ul class="tt-submenu-list">
 													<li><a href="services.html">Services Style 1</a></li>
-													<li><a href="services-2.html">Services Style 2</a></li>
+													<li class="active"><a href="services-2.html">Services Style 2</a></li>
 													<li><a href="services-3.html">Services Style 3</a></li>
 												</ul> <!-- /.tt-submenu-list -->
 											</div> <!-- /.tt-submenu -->
@@ -722,89 +722,300 @@
 		<div id="body-content">
 
 
-			<!-- ==========================
-			///// Begin intro section /////
-			===============================
-			* Use classes "intro-xs", "intro-sm", "intro-lg" "intro-xlg" or "intro-full" to set intro size.
-			* Use class "intro-full-m" to set intro size for small screens only.
+			<!-- ========================
+			///// Begin page header /////
+			=============================
+			* Use classes "ph-xs", "ph-sm", "ph-lg" or "ph-xlg" to set page header size.
+			* Use class "ph-center" or "ph-right" to align page header caption.
 			-->
-			<section id="tt-intro" class="intro-full">
-				<div class="tt-intro-inner"> <!-- add/remove class "tt-wrap" to enable/disable element boxed layout (class "tt-boxed" is required in <body> tag!). Note: additionally you can use prepared helper class "max-width-*" to add custom width to "tt-wrap". Example: "max-width-1500" (class "tt-wrap" is still required!). More info about helper classes in file "helper.css" -->
+			<section id="page-header" class="ph-lg">
 
-					<!-- Begin YTPlayer (Youtube video background)
-					=======================================================
-					* NOTE: Replace videoURL with your own (videoURL:'your-youtube-video-URL'). 
-					* Do not forget to add your background image for mobile devices (because the video background doesn't work on mobile devices).
-					* YTPlayer may not work in the local computer. It works properly only if used under a web server.
-					* Read more info about YTPlayer: https://github.com/pupunzi/jquery.mb.YTPlayer
+				<!-- Begin page header image 
+				============================= 
+				* Use class "parallax-1" up to "parallax-8" to enable image parallax effect (number 1-8 represents the speed).
+				* Use class "hide-ph-image" to hide page header image without removing the code.
+				-->
+				<div class="page-header-image hide-ph-image parallax-6 bg-image" style="background-image: url(assets/img/page-header/page-header-bg-6.jpg);">
+					
+					<!-- Element cover 
+					===================
+					* Use class "cover-opacity-*" to set cover opasity (1, 1.5, 2, 2.5, ... 9.5). Example: "cover-opacity-2" or "cover-opacity-2-5".
+					* Aditional color classes you can use: "cover-color", "cover-light", "cover-red", "cover-pink", "cover-purple", "cover-green", "cover-blue", "cover-yellow" or "cover-brown" to set cover background color (note: class "cover-color" = template main color).
+					* Use class "cover-gradient-dark", "cover-gradient-light" or "cover-gradient-color" to enable cover gradient background.
 					-->
-					<div class="youtube-bg-wrap parallax-6 bg-dark"> <!-- Class "parallax-6" is for tt-intro only!!! -->
-						<div class="youtube-bg" 
-						style="background-image: url(assets/img/video-bg/video-bg-1.jpg); background-position: 50% 50%;"
-						data-property="{
-							videoURL: 'https://www.youtube.com/watch?v=GCYlRFZQk2E',
-							containment: 'self',
-							quality: 'default',
-							startAt: 0,
-							stopAt: 0,
-							autoPlay: true,
-							loop: true,
-							mute: true,
-							showControls: false,
-							showYTLogo: false,
-							realfullscreen: true,
-							addRaster: false,
-							optimizeDisplay: true,
-							stopMovieOnBlur: true
-						}">
+					<div class="cover cover-opacity-4"></div>
+					
+				</div>
+				<!-- End page header image -->
 
-							<!-- Element cover 
-							===================
-							* Use class "cover-opacity-*" to set cover opasity (1, 1.5, 2, 2.5, ... 9.5). Example: "cover-opacity-2" or "cover-opacity-2-5".
-							* Aditional color classes you can use: "cover-color", "cover-light", "cover-red", "cover-pink", "cover-purple", "cover-green", "cover-blue", "cover-yellow" or "cover-brown" to set cover background color (note: class "cover-color" = template main color).
-							* Use class "cover-gradient-dark", "cover-gradient-light" or "cover-gradient-color" to enable cover gradient background.
-							-->
-							<div class="cover cover-opacity-6"></div>
+				<!-- Begin page header inner -->
+				<div class="page-header-inner tt-wrap">
 
-						</div> <!-- /.youtube-bg -->
-					</div>
-					<!-- End YTPlayer -->
-
-					<!-- Begin intro caption 
-					=========================
-					* Position classes: "top-left", "top-center", "top-right", "center-left", "center", "center-right", "bottom-left", "bottom-center", "bottom-right". 
-					* Size classes: "intro-caption-xs", "intro-caption-sm", "intro-caption-lg", "intro-caption-xlg", "intro-caption-xxlg".
+					<!-- Begin page header caption 
+					===============================
+					* Use classes "ph-cap-xs", "ph-cap-sm", "ph-cap-lg" or "ph-cap-xlg" to set caption size.
+					* Use classes "ph-cap-light" to enable caption light color style (useful if you use dark background images).
+					* Use classes "ph-cap-shadow" to enable caption text shadow.
 					* Use class "parallax-1" up to "parallax-6" to enable parallax effect (no effect on mobile devices!).
 					* Use class "fade-out-scroll-1" up to "fade-out-scroll-6" to enable fade out effect if page scrolls (no effect on mobile devices!).
 					-->
-					<div class="intro-caption-wrap caption-animate intro-caption-lg bottom-left parallax-4">
-						<div class="intro-caption-holder">
-							<div class="intro-caption center">
-								<h1 class="intro-title">What Are You<br>Waiting For?</h1>
-								<h2 class="intro-subtitle">Build your beautiful portfolio website today!</h2>
+					<div class="page-header-caption ph-cap-xlg parallax-5">
+						<div class="ph-title-wrap">
+							<h1 class="page-header-title">Services</h1>
+						</div>
+						<div class="ph-subtitle-wrap">
+							<h2 class="page-header-subtitle">What We Do</h2>
+						</div>
 
-								<!-- Begin intro description (recommended max 170 characters!) 
-								============================= -->
-								<div class="intro-description">
-									Aivo – is a complete HTML5 and CSS3 website template. It fits perfectly for freelancers, artists and design agencies. It looks great with all types of devices.
-								</div>
-								<!-- End intro-description -->
+						<!-- Begin zig-zag separator 
+						============================= 
+						* Use classes "zig-zag-xs", "zig-zag-sm", "zig-zag-lg" or "zig-zag-xlg" to set separator size. 
+						* Use classes "zig-zag-light" or "zig-zag-dark" to change zig-zag separator style.
+						-->
+						<div class="zig-zag-separator zig-zag-lg">
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+						</div>
+						<!-- End zig-zag separator -->
 
-								<!-- Begin intro buttons -->
-								<button id="startButton">Start</button>
-									<div class="intro-buttons">
-									<a href="https://themeforest.net/item/aivo-multipurpose-portfolio-html-website-template/21587861?ref=Themetorium" class="btn btn-primary margin-top-5 margin-right-10" target="_blank">Buy It Now!</a> 
-									<a href="" class="btn btn-white-bordered margin-top-5">Discover More</a>
-						<!-- End intro buttons -->
+						<!-- Begin page header description (recommended max 170 characters!) 
+						=================================== -->
+						<div class="page-header-description">
+							<div class="ph-desc-inner">
+								Fusce imperdiet, arcu non tempor aliquam, justo tortor cursus est, sed facilisis eros purus et felis. Sed eros sapien, iaculis eget gravida euismod, dapibus vitae turpis.
+							</div>
+						</div>
+						<!-- End page header description -->
 
-							</div> <!-- /.intro-caption -->
-						</div> <!-- /.intro-caption-holder -->
 					</div>
-					<!-- End intro caption wrap -->
-					
-				</div> <!-- /.tt-intro-inner -->
+					<!-- End page header caption -->
+
+				</div> 
+				<!-- End page header inner -->
+
+				<!-- Begin page header animated element
+				========================================
+				* Use class "ph-anim-circle" to enable element circle style.
+				* Use class "ph-anim-center" or "ph-anim-right" to align animated element.
+				* Use class "parallax-1" up to "parallax-6" to enable parallax effect.
+				* Use class "fade-out-scroll-1" up to "fade-out-scroll-6" to enable fade out effect if page scroll.
+				* Use class "hide-ph-anim" to disable animated element without removing the code.
+				-->
+				<div class="ph-anim-element-wrap ph-anim-circle parallax-4">
+					<div class="ph-anim-element-holder">
+						<div class="ph-anim-element"></div>
+					</div>
+				</div>
+				<!-- End page header animated element -->
+
 			</section>
-			<!-- End intro section -->
+			<!-- End page header -->
+
+
+			<!-- =======================================
+			///// Begin services section (style-1) /////
+			============================================ 
+			* Add class "ss-light" if you use a dark background.
+			-->
+			<section id="services-section" class="services-style-1">
+				<div class="services-inner tt-wrap">
+
+					<!-- Begin info box wrap 
+					========================= 
+					* Use class "ib-style-2" to change info box style.
+					* Use class "ib-boxed" enable info box boxed style.
+					* Use class "ib-icon-color" to enable icon colored style (no effect with class: "ib-icon-bg-color").
+					* Use class "ib-icon-bg-shape" to enable icon background shape (no effect with class: "ib-icon-bg-color").
+					* Use class "ib-icon-bg-color" to enable icon background color style.
+					* Use class "ib-icon-rounded" to enable icon rounded style (class "ib-icon-bg-color" is required!).
+					* Use class "ib-light" if the background is dark.
+					-->
+					<div class="info-box-wrap ib-style-2 ib-boxed ib-icon-color">
+						
+						<div class="row">
+							<div class="col-sm-4">
+
+								<!-- Begin info box -->
+								<div class="info-box">
+									<span class="info-box-icon"><span class="lnr lnr-screen"></span></span>
+									<div class="info-box-info">
+										<h3 class="info-box-heading"><a href="">Web Design</a></h3>
+										<div class="info-box-text tt-ellipsis"> <!-- Use class "tt-ellipsis" to enable text element fixed height with ellipsis -->
+											Aenean ac consectetur quam. Donec malesuada lacus nec ullamcorper pellentesque praesent ulis. Proin pulvinar scelerisque lorem apti.
+										</div>
+									</div> <!-- /.info-box-info -->
+								</div>
+								<!-- End info box -->
+
+							</div> <!-- /.col -->
+
+							<div class="col-sm-4">
+
+								<!-- Begin info box -->
+								<div class="info-box">
+									<span class="info-box-icon"><span class="lnr lnr-cog"></span></span>
+									<div class="info-box-info">
+										<h3 class="info-box-heading"><a href="">Web Development</a></h3>
+										<div class="info-box-text tt-ellipsis"> <!-- Use class "tt-ellipsis" to enable text element fixed height with ellipsis -->
+											Integer at condimentum orci, ut euismod ante. Class aptent taciti sociosqu ad litora torquent. Proin pulvinar scelerisque lorem apti.
+										</div>
+									</div> <!-- /.info-box-info -->
+								</div>
+								<!-- End info box -->
+
+							</div> <!-- /.col -->
+
+							<div class="col-sm-4">
+
+								<!-- Begin info box -->
+								<div class="info-box">
+									<span class="info-box-icon"><span class="lnr lnr-camera-video"></span></span>
+									<div class="info-box-info">
+										<h3 class="info-box-heading"><a href="">Motion Graphics</a></h3>
+										<div class="info-box-text tt-ellipsis"> <!-- Use class "tt-ellipsis" to enable text element fixed height with ellipsis -->
+											Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit necessit officia tempor. Proin pulvinar scelerisque lorem apti.
+										</div>
+									</div> <!-- /.info-box-info -->
+								</div>
+								<!-- End info box -->
+
+							</div> <!-- /.col -->
+						</div> <!-- /.row -->
+
+						<div class="row">
+							<div class="col-sm-4">
+
+								<!-- Begin info box -->
+								<div class="info-box">
+									<span class="info-box-icon"><span class="lnr lnr-leaf"></span></span>
+									<div class="info-box-info">
+										<h3 class="info-box-heading"><a href="">Illustrations</a></h3>
+										<div class="info-box-text tt-ellipsis"> <!-- Use class "tt-ellipsis" to enable text element fixed height with ellipsis -->
+											Aenean ac consectetur quam. Donec malesuada lacus nec ullamcorper pellentesque praesent ulis. Proin pulvinar scelerisque lorem apti.
+										</div>
+									</div> <!-- /.info-box-info -->
+								</div>
+								<!-- End info box -->
+
+							</div> <!-- /.col -->
+
+							<div class="col-sm-4">
+
+								<!-- Begin info box -->
+								<div class="info-box">
+									<span class="info-box-icon"><span class="lnr lnr-users"></span></span>
+									<div class="info-box-info">
+										<h3 class="info-box-heading"><a href="">Marketing</a></h3>
+										<div class="info-box-text tt-ellipsis"> <!-- Use class "tt-ellipsis" to enable text element fixed height with ellipsis -->
+											Integer at condimentum orci, ut euismod ante. Class aptent taciti sociosqu ad litora torquent. Proin pulvinar scelerisque lorem apti.
+										</div>
+									</div> <!-- /.info-box-info -->
+								</div>
+								<!-- End info box -->
+
+							</div> <!-- /.col -->
+
+							<div class="col-sm-4">
+
+								<!-- Begin info box -->
+								<div class="info-box">
+									<span class="info-box-icon"><span class="lnr lnr-pie-chart"></span></span>
+									<div class="info-box-info">
+										<h3 class="info-box-heading"><a href="">Analytics</a></h3>
+										<div class="info-box-text tt-ellipsis"> <!-- Use class "tt-ellipsis" to enable text element fixed height with ellipsis -->
+											Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit necessit officia tempore. Proin pulvinar scelerisque lorem apti.
+										</div>
+									</div> <!-- /.info-box-info -->
+								</div>
+								<!-- End info box -->
+
+							</div> <!-- /.col -->
+						</div> <!-- /.row -->
+
+					</div>
+					<!-- End info box wrap -->
+
+				</div> <!-- /.services-inner -->
+			</section>
+			<!-- End services section -->
+
+
+			<!-- ================================
+			///// Begin simple text section /////
+			================================= -->
+			<section class="simple-text-section bg-main text-white">
+				<div class="simple-text-inner tt-wrap"> <!-- add/remove class "tt-wrap" to enable/disable element boxed layout (class "tt-boxed" is required in <body> tag!). Note: additionally you can use prepared helper class "max-width-*" to add custom width to "tt-wrap". Example: "max-width-1500" (class "tt-wrap" is still required!). More info about helper classes in file "helper.css" -->
+
+					<!-- Begin simple text section content 
+					======================================= 
+					* Use class "text-center" or "text-right" to align text.
+					-->
+					<div class="simple-text-section-content text-center">
+						<p>Sed non auctor magna. Nunc eu ultrices orci. Fusce vel cursus lectus. Sollicitudin diam vitae, amet lacus donec eu, donec vulputate duis nullam nulla, suscipit nulla orci, ornare maecenas. In sit amet pretium neque. Proin ultricies pellentesque eros id fermentum. Mauris sagittis porta nisl eget varius. Dolore esse laborum, perspiciatis dolor condimentum orci, ut euismod ante. Vestibulum euismod semper egestas</p>
+					</div>
+					<!-- End simple text section content -->
+
+				</div> <!-- /.cta-inner -->
+			</section>
+			<!-- End simple text section -->
+
+
+			<!-- =============================================
+			///// Begin call to action section (style-1) /////
+			============================================== -->
+			<section class="call-to-action-section cta-style-1 bg-dark text-white bg-image" style="background-image: url(assets/img/textures/texture-4.jpg);">
+
+				<!-- Element cover 
+				===================
+				* Use class "cover-opacity-*" to set cover opasity (1, 1.5, 2, 2.5, ... 9.5). Example: "cover-opacity-2" or "cover-opacity-2-5".
+				* Aditional color classes you can use: "cover-color", "cover-light", "cover-red", "cover-pink", "cover-purple", "cover-green", "cover-blue", "cover-yellow" or "cover-brown" to set cover background color (note: class "cover-color" = template main color).
+				* Use class "cover-gradient-dark", "cover-gradient-light" or "cover-gradient-color" to enable cover gradient background.
+				-->
+				<div class="cover cover-gradient-dark"></div>
+
+				<div class="cta-inner tt-wrap"> <!-- add/remove class "tt-wrap" to enable/disable element boxed layout (class "tt-boxed" is required in <body> tag!). Note: additionally you can use prepared helper class "max-width-*" to add custom width to "tt-wrap". Example: "max-width-1500" (class "tt-wrap" is still required!). More info about helper classes in file "helper.css" -->
+					<div class="row">
+						<div class="col-md-12">
+
+							<!-- Begin tt-heading 
+							====================== 
+							* Use class "padding-on" to enable heading paddings (useful if you use tt-heading as stand alone element).
+							* Use class "text-center" or "text-right" to align tt-heading.
+							* Use classes "tt-heading-xs", "tt-heading-sm", "tt-heading-lg", "tt-heading-xlg" or "tt-heading-xxlg" to set tt-heading size.
+							-->
+							<div class="tt-heading tt-heading-xxlg text-center">
+								<div class="tt-heading-inner">
+									<h1 class="tt-heading-title">What Next?</h1>
+									<div class="tt-heading-subtitle">Interested in working with us?</div>
+									
+									<!-- Begin zig-zag separator 
+									============================= 
+									* Use classes "zig-zag-xs", "zig-zag-sm", "zig-zag-lg" or "zig-zag-xlg" to set separator size. 
+									* Use classes "zig-zag-light" or "zig-zag-dark" to change zig-zag separator style.
+									-->
+									<div class="zig-zag-separator">
+										<span></span>
+										<span></span>
+										<span></span>
+										<span></span>
+									</div>
+									<!-- End zig-zag separator -->
+
+								</div> <!-- /.tt-heading-inner -->
+							</div>
+							<!-- End tt-heading -->
+
+							<div class="text-center">
+								<a href="contact.html" class="btn btn-primary btn-lg">Let's Work Together!</a>
+							</div>
+
+						</div> <!-- /.col -->
+					</div> <!-- /.row -->
+				</div> <!-- /.cta-inner -->
+			</section>
+			<!-- End call to action section -->
 
 
          <!-- ===========================
@@ -813,7 +1024,7 @@
 			* Use class "footer-dark" to enable dark footer.
 			* Use class "no-margin-top" if needed. 
 			-->
-			<section id="footer" class="no-margin-top">
+			<section id="footer" class="footer-dark no-margin-top">
 				<div class="footer-inner">
 					<div class="footer-container tt-wrap">
 						<div class="row">
@@ -967,7 +1178,6 @@
 
 		<!-- Theme master JS -->
 		<script src="assets/js/theme.js"></script>
-		<script src="assets/js/script.js"></script>
 
 
 

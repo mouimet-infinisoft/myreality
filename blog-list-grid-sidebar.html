@@ -10,7 +10,7 @@
 	<head>
 
 		<!-- Title -->
-		<title>Aivo - Multipurpose Portfolio HTML Website Template</title>
+		<title>Blog / Aivo - Multipurpose Portfolio HTML Website Template</title>
 
 		<!-- Meta -->
 		<meta charset="utf-8">
@@ -78,7 +78,7 @@
 		* Use class "menu-align-right" to align menu to right.
 		* Use class "menu-align-center" to align menu to center (do not use with header classes!).
 		-->
-		<header id="header" class="header-show-hide-on-scroll header-transparent menu-align-right">
+		<header id="header" class="header-show-hide-on-scroll menu-align-right">
 
 			<!-- Begin header inner -->
 			<div class="header-inner tt-wrap"> <!-- add/remove class "tt-wrap" to enable/disable element boxed layout (class "tt-boxed" is required in <body> tag!). Note: additionally you can use prepared helper class "max-width-*" to add custom width to "tt-wrap". Example: "max-width-1500" (class "tt-wrap" is still required!). More info about helper classes in file "helper.css" -->
@@ -244,7 +244,7 @@
 
 							<!-- Begin submenu (submenu master)
 							==================================== -->
-							<li class="tt-submenu-wrap tt-submenu-master active">
+							<li class="tt-submenu-wrap tt-submenu-master">
 								<a href="#0">Home</a>
 								<div class="tt-submenu">
 									<ul class="tt-submenu-list">
@@ -253,7 +253,7 @@
 										<li><a href="home-landing-3.html">Home Landing 3</a></li>
 										<li><a href="home-full-screen-slideshow.html">Full Screen Slideshow</a></li>
 										<li><a href="home-full-screen-single-image.html">Full Screen Image</a></li>
-										<li class="active"><a href="home-full-screen-video.html">Full Screen Video</a></li>
+										<li><a href="home-full-screen-video.html">Full Screen Video</a></li>
 									</ul> <!-- /.tt-submenu-list -->
 								</div> <!-- /.tt-submenu -->
 							</li>
@@ -418,21 +418,21 @@
 
 							<!-- Begin submenu (submenu master)
 							==================================== -->
-							<li class="tt-submenu-wrap tt-submenu-master">
+							<li class="tt-submenu-wrap tt-submenu-master active">
 								<a href="#0">Blog</a>
 								<div class="tt-submenu">
 									<ul class="tt-submenu-list">
 
 										<!-- Begin submenu
 										=================== -->
-										<li class="tt-submenu-wrap">
+										<li class="tt-submenu-wrap active">
 											<a href="#0">Blog List</a>
 											<div class="tt-submenu">
 												<ul class="tt-submenu-list">
 													<li><a href="blog-list-classic.html">Classic</a></li>
 													<li><a href="blog-list-simple.html">Classic Simple</a></li>
 													<li><a href="blog-list-grid.html">Grid</a></li>
-													<li><a href="blog-list-grid-sidebar.html">Grid + Sidebar</a></li>
+													<li class="active"><a href="blog-list-grid-sidebar.html">Grid + Sidebar</a></li>
 													<li><a href="blog-list-grid-fluid.html">Grid Fluid</a></li>
 													<li><a href="blog-list-grid-fluid-sidebar.html">Grid Fluid + Sidebar</a></li>
 													<li><a href="blog-list-thumbnails.html">Thumbnails List</a></li>
@@ -722,89 +722,737 @@
 		<div id="body-content">
 
 
-			<!-- ==========================
-			///// Begin intro section /////
-			===============================
-			* Use classes "intro-xs", "intro-sm", "intro-lg" "intro-xlg" or "intro-full" to set intro size.
-			* Use class "intro-full-m" to set intro size for small screens only.
+			<!-- ========================
+			///// Begin page header /////
+			=============================
+			* Use classes "ph-xs", "ph-sm", "ph-lg" or "ph-xlg" to set page header size.
+			* Use class "ph-center" or "ph-right" to align page header caption.
 			-->
-			<section id="tt-intro" class="intro-full">
-				<div class="tt-intro-inner"> <!-- add/remove class "tt-wrap" to enable/disable element boxed layout (class "tt-boxed" is required in <body> tag!). Note: additionally you can use prepared helper class "max-width-*" to add custom width to "tt-wrap". Example: "max-width-1500" (class "tt-wrap" is still required!). More info about helper classes in file "helper.css" -->
+			<section id="page-header" class="ph-sm">
 
-					<!-- Begin YTPlayer (Youtube video background)
-					=======================================================
-					* NOTE: Replace videoURL with your own (videoURL:'your-youtube-video-URL'). 
-					* Do not forget to add your background image for mobile devices (because the video background doesn't work on mobile devices).
-					* YTPlayer may not work in the local computer. It works properly only if used under a web server.
-					* Read more info about YTPlayer: https://github.com/pupunzi/jquery.mb.YTPlayer
+				<!-- Begin page header image 
+				============================= 
+				* Use class "parallax-1" up to "parallax-8" to enable image parallax effect (number 1-8 represents the speed).
+				* Use class "hide-ph-image" to hide page header image without removing the code.
+				-->
+				<div class="page-header-image hide-ph-image parallax-6 bg-image" style="background-image: url(assets/img/page-header/page-header-bg-13.jpg);">
+					
+					<!-- Element cover 
+					===================
+					* Use class "cover-opacity-*" to set cover opasity (1, 1.5, 2, 2.5, ... 9.5). Example: "cover-opacity-2" or "cover-opacity-2-5".
+					* Aditional color classes you can use: "cover-color", "cover-light", "cover-red", "cover-pink", "cover-purple", "cover-green", "cover-blue", "cover-yellow" or "cover-brown" to set cover background color (note: class "cover-color" = template main color).
+					* Use class "cover-gradient-dark", "cover-gradient-light" or "cover-gradient-color" to enable cover gradient background.
 					-->
-					<div class="youtube-bg-wrap parallax-6 bg-dark"> <!-- Class "parallax-6" is for tt-intro only!!! -->
-						<div class="youtube-bg" 
-						style="background-image: url(assets/img/video-bg/video-bg-1.jpg); background-position: 50% 50%;"
-						data-property="{
-							videoURL: 'https://www.youtube.com/watch?v=GCYlRFZQk2E',
-							containment: 'self',
-							quality: 'default',
-							startAt: 0,
-							stopAt: 0,
-							autoPlay: true,
-							loop: true,
-							mute: true,
-							showControls: false,
-							showYTLogo: false,
-							realfullscreen: true,
-							addRaster: false,
-							optimizeDisplay: true,
-							stopMovieOnBlur: true
-						}">
+					<div class="cover cover-opacity-4"></div>
+					
+				</div>
+				<!-- End page header image -->
 
-							<!-- Element cover 
-							===================
-							* Use class "cover-opacity-*" to set cover opasity (1, 1.5, 2, 2.5, ... 9.5). Example: "cover-opacity-2" or "cover-opacity-2-5".
-							* Aditional color classes you can use: "cover-color", "cover-light", "cover-red", "cover-pink", "cover-purple", "cover-green", "cover-blue", "cover-yellow" or "cover-brown" to set cover background color (note: class "cover-color" = template main color).
-							* Use class "cover-gradient-dark", "cover-gradient-light" or "cover-gradient-color" to enable cover gradient background.
-							-->
-							<div class="cover cover-opacity-6"></div>
+				<!-- Begin page header inner -->
+				<div class="page-header-inner tt-wrap">
 
-						</div> <!-- /.youtube-bg -->
-					</div>
-					<!-- End YTPlayer -->
-
-					<!-- Begin intro caption 
-					=========================
-					* Position classes: "top-left", "top-center", "top-right", "center-left", "center", "center-right", "bottom-left", "bottom-center", "bottom-right". 
-					* Size classes: "intro-caption-xs", "intro-caption-sm", "intro-caption-lg", "intro-caption-xlg", "intro-caption-xxlg".
+					<!-- Begin page header caption 
+					===============================
+					* Use classes "ph-cap-xs", "ph-cap-sm", "ph-cap-lg" or "ph-cap-xlg" to set caption size.
+					* Use classes "ph-cap-light" to enable caption light color style (useful if you use dark background images).
+					* Use classes "ph-cap-shadow" to enable caption text shadow.
 					* Use class "parallax-1" up to "parallax-6" to enable parallax effect (no effect on mobile devices!).
 					* Use class "fade-out-scroll-1" up to "fade-out-scroll-6" to enable fade out effect if page scrolls (no effect on mobile devices!).
 					-->
-					<div class="intro-caption-wrap caption-animate intro-caption-lg bottom-left parallax-4">
-						<div class="intro-caption-holder">
-							<div class="intro-caption center">
-								<h1 class="intro-title">What Are You<br>Waiting For?</h1>
-								<h2 class="intro-subtitle">Build your beautiful portfolio website today!</h2>
+					<div class="page-header-caption ph-cap-xlg parallax-5">
+						<div class="ph-title-wrap">
+							<h1 class="page-header-title">Blog</h1>
+						</div>
+						<div class="ph-subtitle-wrap">
+							<h2 class="page-header-subtitle">Articles &amp; News</h2>
+						</div>
 
-								<!-- Begin intro description (recommended max 170 characters!) 
-								============================= -->
-								<div class="intro-description">
-									Aivo – is a complete HTML5 and CSS3 website template. It fits perfectly for freelancers, artists and design agencies. It looks great with all types of devices.
-								</div>
-								<!-- End intro-description -->
+						<!-- Begin zig-zag separator 
+						============================= 
+						* Use classes "zig-zag-xs", "zig-zag-sm", "zig-zag-lg" or "zig-zag-xlg" to set separator size. 
+						* Use classes "zig-zag-light" or "zig-zag-dark" to change zig-zag separator style.
+						-->
+						<div class="zig-zag-separator zig-zag-lg">
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+						</div>
+						<!-- End zig-zag separator -->
 
-								<!-- Begin intro buttons -->
-								<button id="startButton">Start</button>
-									<div class="intro-buttons">
-									<a href="https://themeforest.net/item/aivo-multipurpose-portfolio-html-website-template/21587861?ref=Themetorium" class="btn btn-primary margin-top-5 margin-right-10" target="_blank">Buy It Now!</a> 
-									<a href="" class="btn btn-white-bordered margin-top-5">Discover More</a>
-						<!-- End intro buttons -->
+						<!-- Begin page header description (recommended max 170 characters!) 
+						=================================== -->
+						<!-- <div class="page-header-description">
+							<div class="ph-desc-inner">
+								Fusce imperdiet, arcu non tempor aliquam, justo tortor cursus est, sed facilisis eros purus et felis. Sed eros sapien, iaculis eget gravida euismod, dapibus vitae turpis.
+							</div>
+						</div> -->
+						<!-- End page header description -->
 
-							</div> <!-- /.intro-caption -->
-						</div> <!-- /.intro-caption-holder -->
 					</div>
-					<!-- End intro caption wrap -->
-					
-				</div> <!-- /.tt-intro-inner -->
+					<!-- End page header caption -->
+
+				</div> 
+				<!-- End page header inner -->
+
+				<!-- Begin page header animated element
+				========================================
+				* Use class "ph-anim-circle" to enable element circle style.
+				* Use class "ph-anim-center" or "ph-anim-right" to align animated element.
+				* Use class "parallax-1" up to "parallax-6" to enable parallax effect.
+				* Use class "fade-out-scroll-1" up to "fade-out-scroll-6" to enable fade out effect if page scroll.
+				* Use class "hide-ph-anim" to disable animated element without removing the code.
+				-->
+				<div class="ph-anim-element-wrap ph-anim-circle parallax-4">
+					<div class="ph-anim-element-holder">
+						<div class="ph-anim-element"></div>
+					</div>
+				</div>
+				<!-- End page header animated element -->
+
 			</section>
-			<!-- End intro section -->
+			<!-- End page header -->
+
+
+			<!-- =====================================
+			///// Begin blog list section (grid) /////
+			====================================== -->
+			<section id="blog-list-section" class="blog-list-grid">
+				<div class="blog-list-inner tt-wrap"> <!-- add/remove class "tt-wrap" to enable/disable element boxed layout (class "tt-boxed" is required in <body> tag!). Note: additionally you can use prepared helper class "max-width-*" to add custom width to "tt-wrap". Example: "max-width-1500" (class "tt-wrap" is still required!). More info about helper classes in file "helper.css" -->
+
+					<div class="row no-margin">
+					
+						<!-- Content column -->
+						<div class="col-md-8 no-padding-left no-padding-right">
+
+							<div class="isotope-wrap">
+								
+								<!-- Begin isotope
+								===================
+								* Use class "gutter-1", "gutter-2", "gutter-3", "gutter-4", "gutter-5" or "gutter-6" to add more space between items.
+								* Use class "col-1", "col-2", "col-3", "col-4", "col-5" or "col-6" for columns.
+								-->
+								<div class="isotope col-2 gutter-5">
+
+									<!-- Begin isotope items wrap 
+									============================== -->
+									<div class="isotope-items-wrap no-margin">
+
+										<!-- Grid sizer (do not remove!!!) -->
+										<div class="grid-sizer"></div>
+
+
+										<!-- ===================== 
+										/// Begin isotope item ///
+										====================== -->
+										<div class="isotope-item">
+
+											<!-- Begin blog list item -->
+											<article class="blog-list-item">
+												
+												<!-- Begin blog list item image -->
+												<div class="bl-item-image-wrap">
+													<a href="blog-single.html" class="bl-item-image bg-image lazy" data-src="assets/img/blog/list/blog-1.jpg"></a>
+												</div>
+												<!-- End blog list item image -->
+												
+												<!-- Begin blog list item info -->
+												<div class="bl-item-info">
+													<div class="bl-item-category">
+														<a href="blog-archive.html">Web Design</a> <a href="blog-archive.html">Coding</a>
+													</div>
+													<a href="blog-single.html" class="bl-item-title"><h2>Responsive Web Design: 50 Examples and Best Practices</h2></a>
+													<div class="bl-item-meta"> 
+														<span class="published">Nov 28, 2017</span>
+														<span class="posted-by">- by <a href="#" title="View all posts by Lucas Sanski">Lucas Sanski</a></span>
+													</div>
+													<div class="bl-item-desc">
+														Etiam sollicitudin dolor lorem, non aliquet quam dignissim vel. Nunc at eros non odio vestibulum porttitor egestas ut nisl proin...
+													</div>
+
+													<!-- Begin blog list item attributes -->
+													<ul class="bl-item-attr">
+														<li>
+															<!-- Begin comments count -->
+															<a href="blog-single.html#blog-post-comments" class="bl-item-comments-count" title="Read comments"><i class="far fa-comment"></i> 10</a>
+															<!-- End comments count -->
+														</li>
+													</ul>
+													<!-- End blog list item attributes -->
+
+												</div>
+												<!-- End blog list item info -->
+
+											</article>
+											<!-- End blog list item -->
+
+										</div>
+										<!-- End isotope item -->
+
+										<!-- ===================== 
+										/// Begin isotope item ///
+										====================== -->
+										<div class="isotope-item">
+
+											<!-- Begin blog list item -->
+											<article class="blog-list-item">
+												
+												<!-- Begin blog list item image -->
+												<div class="bl-item-image-wrap">
+													<a href="blog-single.html" class="bl-item-image bg-image lazy" data-src="assets/img/blog/list/blog-2.jpg"></a>
+												</div>
+												<!-- End blog list item image -->
+												
+												<!-- Begin blog list item info -->
+												<div class="bl-item-info">
+													<div class="bl-item-category">
+														<a href="blog-archive.html">Resources</a>
+													</div>
+													<a href="blog-single.html" class="bl-item-title"><h2>25 Free and Premium Admin HTML Website Templates and Layouts</h2></a>
+													<div class="bl-item-meta"> 
+														<span class="published">Nov 22, 2017</span>
+														<span class="posted-by">- by <a href="#" title="View all posts by Lucas Sanski">Lucas Sanski</a></span>
+													</div>
+													<div class="bl-item-desc">
+														Etiam sollicitudin dolor lorem, non aliquet quam dignissim vel. Nunc at eros non odio vestibulum porttitor egestas ut nisl proin...
+													</div>
+
+													<!-- Begin blog list item attributes -->
+													<ul class="bl-item-attr">
+														<li>
+															<!-- Begin comments count -->
+															<a href="blog-single.html#blog-post-comments" class="bl-item-comments-count" title="Read comments"><i class="far fa-comment"></i> 66</a>
+															<!-- End comments count -->
+														</li>
+													</ul>
+													<!-- End blog list item attributes -->
+
+												</div>
+												<!-- End blog list item info -->
+
+											</article>
+											<!-- End blog list item -->
+
+										</div>
+										<!-- End isotope item -->
+
+										<!-- ===================== 
+										/// Begin isotope item ///
+										====================== -->
+										<div class="isotope-item">
+
+											<!-- Begin blog list item -->
+											<article class="blog-list-item">
+												
+												<!-- Begin blog list item image -->
+												<div class="bl-item-image-wrap">
+													<a href="blog-single.html" class="bl-item-image bg-image lazy" data-src="assets/img/blog/list/blog-3.jpg"></a>
+												</div>
+												<!-- End blog list item image -->
+												
+												<!-- Begin blog list item info -->
+												<div class="bl-item-info">
+													<div class="bl-item-category">
+														<a href="blog-archive.html">Coding</a>
+													</div>
+													<a href="blog-single.html" class="bl-item-title"><h2>Why Designers and Web Developers Must Work Together</h2></a>
+													<div class="bl-item-meta"> 
+														<span class="published">Nov 14, 2017</span>
+														<span class="posted-by">- by <a href="#" title="View all posts by Kate Dixon">Kate Dixon</a></span>
+													</div>
+													<div class="bl-item-desc">
+														Etiam sollicitudin dolor lorem, non aliquet quam dignissim vel. Nunc at eros non odio vestibulum porttitor egestas ut nisl proin...
+													</div>
+
+													<!-- Begin blog list item attributes -->
+													<ul class="bl-item-attr">
+														<li>
+															<!-- Begin comments count -->
+															<a href="blog-single.html#blog-post-comments" class="bl-item-comments-count" title="Read comments"><i class="far fa-comment"></i> 3</a>
+															<!-- End comments count -->
+														</li>
+													</ul>
+													<!-- End blog list item attributes -->
+
+												</div>
+												<!-- End blog list item info -->
+
+											</article>
+											<!-- End blog list item -->
+
+										</div>
+										<!-- End isotope item -->
+
+										<!-- ===================== 
+										/// Begin isotope item ///
+										====================== -->
+										<div class="isotope-item">
+
+											<!-- Begin blog list item -->
+											<article class="blog-list-item">
+												
+												<!-- Begin blog list item image -->
+												<div class="bl-item-image-wrap">
+													<a href="blog-single.html" class="bl-item-image bg-image lazy" data-src="assets/img/blog/list/blog-4.jpg"></a>
+												</div>
+												<!-- End blog list item image -->
+												
+												<!-- Begin blog list item info -->
+												<div class="bl-item-info">
+													<div class="bl-item-category">
+														<a href="blog-archive.html">Resources</a>
+													</div>
+													<a href="blog-single.html" class="bl-item-title"><h2>Time-Saving Tools and Resources for Freelance Designers</h2></a>
+													<div class="bl-item-meta"> 
+														<span class="published">Nov 11, 2017</span>
+														<span class="posted-by">- by <a href="#" title="View all posts by Lucas Sanski">Lucas Sanski</a></span>
+													</div>
+													<div class="bl-item-desc">
+														Etiam sollicitudin dolor lorem, non aliquet quam dignissim vel. Nunc at eros non odio vestibulum porttitor egestas ut nisl proin...
+													</div>
+
+													<!-- Begin blog list item attributes -->
+													<ul class="bl-item-attr">
+														<li>
+															<!-- Begin comments count -->
+															<a href="blog-single.html#blog-post-comments" class="bl-item-comments-count" title="Read comments"><i class="far fa-comment"></i> 0</a>
+															<!-- End comments count -->
+														</li>
+													</ul>
+													<!-- End blog list item attributes -->
+
+												</div>
+												<!-- End blog list item info -->
+
+											</article>
+											<!-- End blog list item -->
+
+										</div>
+										<!-- End isotope item -->
+
+										<!-- ===================== 
+										/// Begin isotope item ///
+										====================== -->
+										<div class="isotope-item">
+
+											<!-- Begin blog list item -->
+											<article class="blog-list-item">
+												
+												<!-- Begin blog list item image -->
+												<div class="bl-item-image-wrap">
+													<a href="blog-single.html" class="bl-item-image bg-image lazy" data-src="assets/img/blog/list/blog-5.jpg"></a>
+												</div>
+												<!-- End blog list item image -->
+												
+												<!-- Begin blog list item info -->
+												<div class="bl-item-info">
+													<div class="bl-item-category">
+														<a href="blog-archive.html">Tutorials</a>
+													</div>
+													<a href="blog-single.html" class="bl-item-title"><h2>How to Create a Flat Cityscape in Adobe Illustrator</h2></a>
+													<div class="bl-item-meta"> 
+														<span class="published">Nov 04, 2017</span>
+														<span class="posted-by">- by <a href="#" title="View all posts by Lucas Sanski">Lucas Sanski</a></span>
+													</div>
+													<div class="bl-item-desc">
+														Etiam sollicitudin dolor lorem, non aliquet quam dignissim vel. Nunc at eros non odio vestibulum porttitor egestas ut nisl proin...
+													</div>
+
+													<!-- Begin blog list item attributes -->
+													<ul class="bl-item-attr">
+														<li>
+															<!-- Begin comments count -->
+															<a href="blog-single.html#blog-post-comments" class="bl-item-comments-count" title="Read comments"><i class="far fa-comment"></i> 8</a>
+															<!-- End comments count -->
+														</li>
+													</ul>
+													<!-- End blog list item attributes -->
+
+												</div>
+												<!-- End blog list item info -->
+
+											</article>
+											<!-- End blog list item -->
+
+										</div>
+										<!-- End isotope item -->
+
+										<!-- ===================== 
+										/// Begin isotope item ///
+										====================== -->
+										<div class="isotope-item">
+
+											<!-- Begin blog list item -->
+											<article class="blog-list-item">
+												
+												<!-- Begin blog list item image -->
+												<div class="bl-item-image-wrap">
+													<a href="blog-single.html" class="bl-item-image bg-image lazy" data-src="assets/img/blog/list/blog-7.jpg"></a>
+												</div>
+												<!-- End blog list item image -->
+												
+												<!-- Begin blog list item info -->
+												<div class="bl-item-info">
+													<div class="bl-item-category">
+														<a href="blog-archive.html">Resources</a>
+													</div>
+													<a href="blog-single.html" class="bl-item-title"><h2>21 tips for Creating a Great Personal Online Portfolio</h2></a>
+													<div class="bl-item-meta"> 
+														<span class="published">Nov 04, 2017</span>
+														<span class="posted-by">- by <a href="#" title="View all posts by Kate Dixon">Kate Dixon</a></span>
+													</div>
+													<div class="bl-item-desc">
+														Etiam sollicitudin dolor lorem, non aliquet quam dignissim vel. Nunc at eros non odio vestibulum porttitor egestas ut nisl proin...
+													</div>
+
+													<!-- Begin blog list item attributes -->
+													<ul class="bl-item-attr">
+														<li>
+															<!-- Begin comments count -->
+															<a href="blog-single.html#blog-post-comments" class="bl-item-comments-count" title="Read comments"><i class="far fa-comment"></i> 8</a>
+															<!-- End comments count -->
+														</li>
+													</ul>
+													<!-- End blog list item attributes -->
+
+												</div>
+												<!-- End blog list item info -->
+
+											</article>
+											<!-- End blog list item -->
+
+										</div>
+										<!-- End isotope item -->
+
+										<!-- ===================== 
+										/// Begin isotope item ///
+										====================== -->
+										<div class="isotope-item">
+
+											<!-- Begin blog list item -->
+											<article class="blog-list-item">
+												
+												<!-- Begin blog list item image -->
+												<div class="bl-item-image-wrap">
+													<a href="blog-single.html" class="bl-item-image bg-image lazy" data-src="assets/img/blog/list/blog-9.jpg"></a>
+												</div>
+												<!-- End blog list item image -->
+												
+												<!-- Begin blog list item info -->
+												<div class="bl-item-info">
+													<div class="bl-item-category">
+														<a href="blog-archive.html">Coding</a>
+													</div>
+													<a href="blog-single.html" class="bl-item-title"><h2>Convert PSD to HTML – Useful Resources for Web Designers</h2></a>
+													<div class="bl-item-meta"> 
+														<span class="published">Nov 04, 2017</span>
+														<span class="posted-by">- by <a href="#" title="View all posts by Kate Dixon">Kate Dixon</a></span>
+													</div>
+													<div class="bl-item-desc">
+														Etiam sollicitudin dolor lorem, non aliquet quam dignissim vel. Nunc at eros non odio vestibulum porttitor egestas ut nisl proin...
+													</div>
+
+													<!-- Begin blog list item attributes -->
+													<ul class="bl-item-attr">
+														<li>
+															<!-- Begin comments count -->
+															<a href="blog-single.html#blog-post-comments" class="bl-item-comments-count" title="Read comments"><i class="far fa-comment"></i> 8</a>
+															<!-- End comments count -->
+														</li>
+													</ul>
+													<!-- End blog list item attributes -->
+
+												</div>
+												<!-- End blog list item info -->
+
+											</article>
+											<!-- End blog list item -->
+
+										</div>
+										<!-- End isotope item -->
+
+										<!-- ===================== 
+										/// Begin isotope item ///
+										====================== -->
+										<div class="isotope-item">
+
+											<!-- Begin blog list item -->
+											<article class="blog-list-item">
+												
+												<!-- Begin blog list item image -->
+												<div class="bl-item-image-wrap">
+													<a href="blog-single.html" class="bl-item-image bg-image lazy" data-src="assets/img/blog/list/blog-6.jpg"></a>
+												</div>
+												<!-- End blog list item image -->
+												
+												<!-- Begin blog list item info -->
+												<div class="bl-item-info">
+													<div class="bl-item-category">
+														<a href="blog-archive.html">Resources</a>
+													</div>
+													<a href="blog-single.html" class="bl-item-title"><h2>Premium Web Tools &amp; Services Recommended By Professionals</h2></a>
+													<div class="bl-item-meta"> 
+														<span class="published">Nov 02, 2017</span>
+														<span class="posted-by">- by <a href="#" title="View all posts by Lucas Sanski">Lucas Sanski</a></span>
+													</div>
+													<div class="bl-item-desc">
+														Etiam sollicitudin dolor lorem, non aliquet quam dignissim vel. Nunc at eros non odio vestibulum porttitor egestas ut nisl proin...
+													</div>
+
+													<!-- Begin blog list item attributes -->
+													<ul class="bl-item-attr">
+														<li>
+															<!-- Begin comments count -->
+															<a href="blog-single.html#blog-post-comments" class="bl-item-comments-count" title="Read comments"><i class="far fa-comment"></i> 8</a>
+															<!-- End comments count -->
+														</li>
+													</ul>
+													<!-- End blog list item attributes -->
+
+												</div>
+												<!-- End blog list item info -->
+
+											</article>
+											<!-- End blog list item -->
+
+										</div>
+										<!-- End isotope item -->
+
+									</div>
+									<!-- End isotope items wrap -->
+
+								</div>
+								<!-- End isotope -->
+
+							</div> <!-- /.isotope-wrap -->
+
+
+							<!-- Begin tt-pagination 
+							========================= 
+							* Use class "tt-pagin-center" or "tt-pagin-right" to align pagination 
+							* Use class "tt-pagin-rounded" to enable pagination rounded style -->
+							<div class="tt-pagination-wrap">
+								<ul class="tt-pagination">
+									<li><a href="" title="Go to the first page">First</a></li>
+									<li><a href="" title="Go to the previous page">Prev</a></li>
+									<li class="active"><a href="#0">1</a></li>
+									<li><a href="">2</a></li>
+									<li><a href="">3</a></li>
+									<li><span>...</span></li>
+									<li><a href="">6</a></li>
+									<li><a href="">7</a></li>
+									<li><a href="">8</a></li>
+									<li><a href="" title="Go to the next page">Next</a></li>
+									<li><a href="" title="Go to the last page">Last</a></li>
+								</ul>
+
+								<div class="tt-pagination-info">
+									<span>Showing page 1 of 8</span>
+									<span>Portfolios 1-15 of 114</span>
+								</div>
+							</div>
+							<!-- End tt-pagination -->
+
+						</div> <!-- /.col (Content column) -->
+
+						<!-- Sidebar column -->
+						<div class="col-md-4 no-padding-left no-padding-right">
+
+							<!-- Begin sidebar (sidebar right) 
+							=================================== -->
+							<div class="sidebar sidebar-right">
+								<div class="row">
+
+									<div class="col-sm-12">
+
+										<!-- Begin sidebar widget -->
+										<div class="sidebar-widget blog-author no-margin-top">
+											<h3 class="sidebar-heading">About Me</h3>
+											<a href="about-me.html" class="blog-author-img bg-image lazy" data-src="assets/img/blog/small/avatar/avatar-1.jpg"></a>
+											<div class="blog-author-info">
+	                              	<h4 class="blog-author-name"><a href="about-me.html">Lucas Sanski</a></h4>
+												<div class="blog-author-sub">Artist / Designer / Developer</div>
+												<p class="blog-author-text">Debitis sociis phasellus feugiat luctus diam. Vitae aenean odio ligula interdum suscipit antimoa arte lacus ante.</p>
+	                              </div>
+										</div>
+										<!-- End sidebar widget -->
+
+									</div> <!-- /.col -->
+
+									<div class="col-sm-12">
+
+										<!-- Begin sidebar widget -->
+										<div class="sidebar-widget sidebar-social">
+											<h3 class="sidebar-heading">Follow</h3>
+											<!-- Begin social buttons -->
+											<div class="social-buttons">
+												<ul>
+													<li><a href="https://www.facebook.com/themetorium" class="btn btn-social-min btn-facebook" title="Follow me on Facebook" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+													<li><a href="https://twitter.com/Themetorium" class="btn btn-social-min btn-twitter" title="Follow me on Twitter" target="_blank"><i class="fab fa-twitter"></i></a></li>
+													<li><a href="https://plus.google.com/+SiiliOnu" class="btn btn-social-min btn-google" title="Follow me on Google+" target="_blank"><i class="fab fa-google-plus-g"></i></a></li>
+													<li><a href="https://www.behance.com/themetorium" class="btn btn-social-min btn-behance" title="Follow me on Behance" target="_blank"><i class="fab fa-behance"></i></a></li>
+													<li><a href="https://dribbble.com/Themetorium" class="btn btn-social-min btn-dribbble" title="Follow me on Dribbble" target="_blank"><i class="fab fa-dribbble"></i></a></li>
+													<!-- <li><a href="https://instagram.com" class="btn btn-social-min btn-instagram" title="Follow me on instagram" target="_blank"><i class="fab fa-instagram"></i></a></li> -->
+												</ul>
+											</div>
+											<!-- End social buttons -->
+										</div>
+										<!-- End sidebar widget -->
+
+									</div> <!-- /.col -->
+
+									<div class="col-sm-12">
+
+										<!-- Begin sidebar widget -->
+										<div class="sidebar-widget sidebar-search">
+											<h3 class="sidebar-heading">Search</h3>
+											<form id="blog-search-form" class="form-btn-inside" method="get" action="search-results.html">
+												<div class="form-group no-margin">
+													<input type="text" class="form-control" id="blog-search" name="search" placeholder="Search...">
+													<button type="submit"><i class="fas fa-search"></i></button>
+												</div>
+											</form>
+										</div>
+										<!-- End sidebar widget -->
+
+									</div> <!-- /.col -->
+
+									<div class="col-md-12 col-sm-6">
+
+										<!-- Begin sidebar widget -->
+										<div class="sidebar-widget sidebar-categories">
+											<h3 class="sidebar-heading">Categories</h3>
+											<ul class="list-unstyled">
+												<li><a href="">Web Design <span title="Entries in this category">26</span></a></li>
+												<li><a href="">Coding <span title="Entries in this category">54</span></a></li>
+												<li><a href="">Resources <span title="Entries in this category">127</span></a></li>
+												<li><a href="">Tutorials <span title="Entries in this category">19</span></a></li>
+												<li><a href="">Freebies <span title="Entries in this category">67</span></a></li>
+												<li><a href="">Inspiration <span title="Entries in this category">67</span></a></li>
+											</ul>
+										</div>
+										<!-- End sidebar widget -->
+
+									</div> <!-- /.col -->
+
+									<div class="col-md-12 col-sm-6">
+
+										<!-- Begin sidebar widget -->
+										<div class="sidebar-widget sidebar-post-list">
+											<h3 class="sidebar-heading">Random Posts</h3>
+											<ul class="list-unstyled">
+												<li>
+													<a href="" class="post-thumb bg-image lazy" data-src="assets/img/blog/small/small-1.jpg"></a>
+													<div class="post-data">
+														<h5 class="post-title"><a href="blog-single.html">5 User Onboarding Techniques for Mobile Apps</a></h5>
+														<!-- <span class="author">By: <a href="">Lucas Sanski</a></span> -->
+														<span class="date">Nov 14, 2017</span>
+													</div>
+												</li>
+												<li>
+													<a href="" class="post-thumb bg-image lazy" data-src="assets/img/blog/small/small-2.jpg"></a>
+													<div class="post-data">
+														<h5 class="post-title"><a href="blog-single.html">Premium Web Tools &amp; Services Recommended By Professionals</a></h5>
+														<!-- <span class="author">By: <a href="">John Doe</a></span> -->
+														<span class="date">Nov 12, 2017</span>
+													</div>
+												</li>
+												<li>
+													<a href="" class="post-thumb bg-image lazy" data-src="assets/img/blog/small/small-3.jpg"></a>
+													<div class="post-data">
+														<h5 class="post-title"><a href="blog-single.html">21 tips for Creating a Great Personal Online Portfolio</a></h5>
+														<!-- <span class="author">By: <a href="">Henry Harrison</a></span> -->
+														<span class="date">April 17, 2017</span>
+													</div>
+												</li>
+												<li>
+													<a href="" class="post-thumb bg-image lazy" data-src="assets/img/blog/small/small-4.jpg"></a>
+													<div class="post-data">
+														<h5 class="post-title"><a href="blog-single.html">Free and Premium Magazine Style WordPress Themes</a></h5>
+														<!-- <span class="author">By: <a href="">Henry Harrison</a></span> -->
+														<span class="date">March 21, 2017</span>
+													</div>
+												</li>
+											</ul>
+										</div>
+										<!-- End sidebar widget -->
+
+									</div> <!-- /.col -->
+
+									<div class="col-md-12 col-sm-6">
+
+										<!-- Begin sidebar widget -->
+										<div class="sidebar-widget sidebar-tags">
+											<h3 class="sidebar-heading">Popular Tags</h3>
+											<ul>
+												<li><a href="">#portfolio</a></li>
+												<li><a href="">#multipurpose</a></li>
+												<li><a href="">#minimal</a></li>
+												<li><a href="">#agency</a></li>
+												<li><a href="">#creatives</a></li>
+												<li><a href="">#freelancers</a></li>
+												<li><a href="">#design</a></li>
+												<li><a href="">#bootstrap</a></li>
+												<li><a href="">#responsive</a></li>
+												<li><a href="">#simple</a></li>
+												<li><a href="">#creative</a></li>
+												<li><a href="">#retina</a></li>
+												<li><a href="">#blog</a></li>
+												<li><a href="">#wordpress</a></li>
+												<li><a href="">#black &amp; white</a></li>
+											</ul>
+										</div>
+										<!-- End sidebar widget -->
+									</div> <!-- /.col -->
+
+									<div class="col-md-12 col-sm-6">
+
+										<!-- Begin sidebar widget -->
+										<div class="sidebar-widget sidebar-subscribe">
+											<h3 class="sidebar-heading">Subscribe</h3>
+											<p class="small text-gray">Subscribe to our newsletter and stay updated on the latest news! Do not worry, we will not send spam.</p>
+
+											<!-- Begin subscribe form -->
+											<form id="sidebar-subscribe-form">
+												<div class="form-group no-margin">
+													<input type="email" class="form-control" id="sidebar-subscribe" name="subscribe" placeholder="Enter your email address..." required="">
+													<button type="submit" class="btn btn-primary btn-block">Subscribe</button>
+												</div>
+											</form>
+											<!-- End subscribe form -->
+
+										</div>
+										<!-- End sidebar widget -->
+
+									</div> <!-- /.col -->
+
+									<div class="col-md-12 col-sm-6">
+
+										<!-- Begin sidebar widget -->
+										<div class="sidebar-widget sidebar-meta">
+											<h3 class="sidebar-heading">Meta</h3>
+											<ul class="list-unstyled">
+												<li><a href="">Log In</a></li>
+												<li><a href="">Entries RSS</a></li>
+												<li><a href="">Comments RSS</a></li>
+												<li><a href="https://wordpress.org/">WordPress.org</a></li>
+											</ul>
+										</div>
+										<!-- End sidebar widget -->
+
+									</div> <!-- /.col -->
+
+								</div> <!-- /.row -->
+							</div>
+							<!-- End sidebar -->
+
+						</div> <!-- /.col (Sidebar column) -->
+
+					</div> <!-- /.row -->
+
+				</div> <!-- /.blog-list-inner -->
+			</section>
+			<!-- End blog list section -->
 
 
          <!-- ===========================
@@ -813,7 +1461,7 @@
 			* Use class "footer-dark" to enable dark footer.
 			* Use class "no-margin-top" if needed. 
 			-->
-			<section id="footer" class="no-margin-top">
+			<section id="footer" class="footer-dark no-margin-top">
 				<div class="footer-inner">
 					<div class="footer-container tt-wrap">
 						<div class="row">
@@ -967,7 +1615,6 @@
 
 		<!-- Theme master JS -->
 		<script src="assets/js/theme.js"></script>
-		<script src="assets/js/script.js"></script>
 
 
 

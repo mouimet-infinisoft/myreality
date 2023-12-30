@@ -10,7 +10,7 @@
 	<head>
 
 		<!-- Title -->
-		<title>Aivo - Multipurpose Portfolio HTML Website Template</title>
+		<title>Portfolio / Aivo - Multipurpose Portfolio HTML Website Template</title>
 
 		<!-- Meta -->
 		<meta charset="utf-8">
@@ -78,7 +78,7 @@
 		* Use class "menu-align-right" to align menu to right.
 		* Use class "menu-align-center" to align menu to center (do not use with header classes!).
 		-->
-		<header id="header" class="header-show-hide-on-scroll header-transparent menu-align-right">
+		<header id="header" class="header-show-hide-on-scroll header-transparent header-transparent-dark menu-align-right">
 
 			<!-- Begin header inner -->
 			<div class="header-inner tt-wrap"> <!-- add/remove class "tt-wrap" to enable/disable element boxed layout (class "tt-boxed" is required in <body> tag!). Note: additionally you can use prepared helper class "max-width-*" to add custom width to "tt-wrap". Example: "max-width-1500" (class "tt-wrap" is still required!). More info about helper classes in file "helper.css" -->
@@ -244,7 +244,7 @@
 
 							<!-- Begin submenu (submenu master)
 							==================================== -->
-							<li class="tt-submenu-wrap tt-submenu-master active">
+							<li class="tt-submenu-wrap tt-submenu-master">
 								<a href="#0">Home</a>
 								<div class="tt-submenu">
 									<ul class="tt-submenu-list">
@@ -253,7 +253,7 @@
 										<li><a href="home-landing-3.html">Home Landing 3</a></li>
 										<li><a href="home-full-screen-slideshow.html">Full Screen Slideshow</a></li>
 										<li><a href="home-full-screen-single-image.html">Full Screen Image</a></li>
-										<li class="active"><a href="home-full-screen-video.html">Full Screen Video</a></li>
+										<li><a href="home-full-screen-video.html">Full Screen Video</a></li>
 									</ul> <!-- /.tt-submenu-list -->
 								</div> <!-- /.tt-submenu -->
 							</li>
@@ -316,7 +316,7 @@
 
 							<!-- Begin submenu (submenu master)
 							==================================== -->
-							<li class="tt-submenu-wrap tt-submenu-master">
+							<li class="tt-submenu-wrap tt-submenu-master active">
 								<a href="#0">Portfolio</a>
 								<div class="tt-submenu">
 									<ul class="tt-submenu-list">
@@ -345,11 +345,11 @@
 
 										<!-- Begin submenu
 										=================== -->
-										<li class="tt-submenu-wrap">
+										<li class="tt-submenu-wrap active">
 											<a href="#0">Portfolio List</a>
 											<div class="tt-submenu">
 												<ul class="tt-submenu-list">
-													<li><a href="portfolio-list-1.html">Portfolio List 1</a></li>
+													<li class="active"><a href="portfolio-list-1.html">Portfolio List 1</a></li>
 													<li><a href="portfolio-list-2.html">Portfolio List 2</a></li>
 													<li><a href="portfolio-list-3.html">Portfolio List 3</a></li>
 												</ul> <!-- /.tt-submenu-list -->
@@ -722,89 +722,538 @@
 		<div id="body-content">
 
 
-			<!-- ==========================
-			///// Begin intro section /////
-			===============================
-			* Use classes "intro-xs", "intro-sm", "intro-lg" "intro-xlg" or "intro-full" to set intro size.
-			* Use class "intro-full-m" to set intro size for small screens only.
+			<!-- ========================
+			///// Begin page header /////
+			=============================
+			* Use classes "ph-xs", "ph-sm", "ph-lg" or "ph-xlg" to set page header size.
+			* Use class "ph-center" or "ph-right" to align page header caption.
 			-->
-			<section id="tt-intro" class="intro-full">
-				<div class="tt-intro-inner"> <!-- add/remove class "tt-wrap" to enable/disable element boxed layout (class "tt-boxed" is required in <body> tag!). Note: additionally you can use prepared helper class "max-width-*" to add custom width to "tt-wrap". Example: "max-width-1500" (class "tt-wrap" is still required!). More info about helper classes in file "helper.css" -->
+			<section id="page-header" class="ph-lg">
 
-					<!-- Begin YTPlayer (Youtube video background)
-					=======================================================
-					* NOTE: Replace videoURL with your own (videoURL:'your-youtube-video-URL'). 
-					* Do not forget to add your background image for mobile devices (because the video background doesn't work on mobile devices).
-					* YTPlayer may not work in the local computer. It works properly only if used under a web server.
-					* Read more info about YTPlayer: https://github.com/pupunzi/jquery.mb.YTPlayer
+				<!-- Begin page header image 
+				============================= 
+				* Use class "parallax-1" up to "parallax-8" to enable image parallax effect (number 1-8 represents the speed).
+				* Use class "hide-ph-image" to hide page header image without removing the code.
+				-->
+				<div class="page-header-image hide-ph-image parallax-6 bg-image" style="background-image: url(assets/img/page-header/page-header-bg-9.jpg);">
+					
+					<!-- Element cover 
+					===================
+					* Use class "cover-opacity-*" to set cover opasity (1, 1.5, 2, 2.5, ... 9.5). Example: "cover-opacity-2" or "cover-opacity-2-5".
+					* Aditional color classes you can use: "cover-color", "cover-light", "cover-red", "cover-pink", "cover-purple", "cover-green", "cover-blue", "cover-yellow" or "cover-brown" to set cover background color (note: class "cover-color" = template main color).
+					* Use class "cover-gradient-dark", "cover-gradient-light" or "cover-gradient-color" to enable cover gradient background.
 					-->
-					<div class="youtube-bg-wrap parallax-6 bg-dark"> <!-- Class "parallax-6" is for tt-intro only!!! -->
-						<div class="youtube-bg" 
-						style="background-image: url(assets/img/video-bg/video-bg-1.jpg); background-position: 50% 50%;"
-						data-property="{
-							videoURL: 'https://www.youtube.com/watch?v=GCYlRFZQk2E',
-							containment: 'self',
-							quality: 'default',
-							startAt: 0,
-							stopAt: 0,
-							autoPlay: true,
-							loop: true,
-							mute: true,
-							showControls: false,
-							showYTLogo: false,
-							realfullscreen: true,
-							addRaster: false,
-							optimizeDisplay: true,
-							stopMovieOnBlur: true
-						}">
+					<div class="cover cover-opacity-4"></div>
+					
+				</div>
+				<!-- End page header image -->
 
-							<!-- Element cover 
-							===================
-							* Use class "cover-opacity-*" to set cover opasity (1, 1.5, 2, 2.5, ... 9.5). Example: "cover-opacity-2" or "cover-opacity-2-5".
-							* Aditional color classes you can use: "cover-color", "cover-light", "cover-red", "cover-pink", "cover-purple", "cover-green", "cover-blue", "cover-yellow" or "cover-brown" to set cover background color (note: class "cover-color" = template main color).
-							* Use class "cover-gradient-dark", "cover-gradient-light" or "cover-gradient-color" to enable cover gradient background.
-							-->
-							<div class="cover cover-opacity-6"></div>
+				<!-- Begin page header inner -->
+				<div class="page-header-inner tt-wrap">
 
-						</div> <!-- /.youtube-bg -->
-					</div>
-					<!-- End YTPlayer -->
-
-					<!-- Begin intro caption 
-					=========================
-					* Position classes: "top-left", "top-center", "top-right", "center-left", "center", "center-right", "bottom-left", "bottom-center", "bottom-right". 
-					* Size classes: "intro-caption-xs", "intro-caption-sm", "intro-caption-lg", "intro-caption-xlg", "intro-caption-xxlg".
+					<!-- Begin page header caption 
+					===============================
+					* Use classes "ph-cap-xs", "ph-cap-sm", "ph-cap-lg" or "ph-cap-xlg" to set caption size.
+					* Use classes "ph-cap-light" to enable caption light color style (useful if you use dark background images).
+					* Use classes "ph-cap-shadow" to enable caption text shadow.
 					* Use class "parallax-1" up to "parallax-6" to enable parallax effect (no effect on mobile devices!).
 					* Use class "fade-out-scroll-1" up to "fade-out-scroll-6" to enable fade out effect if page scrolls (no effect on mobile devices!).
 					-->
-					<div class="intro-caption-wrap caption-animate intro-caption-lg bottom-left parallax-4">
-						<div class="intro-caption-holder">
-							<div class="intro-caption center">
-								<h1 class="intro-title">What Are You<br>Waiting For?</h1>
-								<h2 class="intro-subtitle">Build your beautiful portfolio website today!</h2>
+					<div class="page-header-caption ph-cap-xlg parallax-5">
+						<div class="ph-title-wrap">
+							<h1 class="page-header-title">Portfolio</h1>
+						</div>
+						<!-- <div class="ph-subtitle-wrap">
+							<h2 class="page-header-subtitle">Subtitle Here</h2>
+						</div> -->
 
-								<!-- Begin intro description (recommended max 170 characters!) 
-								============================= -->
-								<div class="intro-description">
-									Aivo – is a complete HTML5 and CSS3 website template. It fits perfectly for freelancers, artists and design agencies. It looks great with all types of devices.
-								</div>
-								<!-- End intro-description -->
+						<!-- Begin zig-zag separator 
+						============================= 
+						* Use classes "zig-zag-xs", "zig-zag-sm", "zig-zag-lg" or "zig-zag-xlg" to set separator size. 
+						* Use classes "zig-zag-light" or "zig-zag-dark" to change zig-zag separator style.
+						-->
+						<div class="zig-zag-separator zig-zag-lg">
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+						</div>
+						<!-- End zig-zag separator -->
 
-								<!-- Begin intro buttons -->
-								<button id="startButton">Start</button>
-									<div class="intro-buttons">
-									<a href="https://themeforest.net/item/aivo-multipurpose-portfolio-html-website-template/21587861?ref=Themetorium" class="btn btn-primary margin-top-5 margin-right-10" target="_blank">Buy It Now!</a> 
-									<a href="" class="btn btn-white-bordered margin-top-5">Discover More</a>
-						<!-- End intro buttons -->
+						<!-- Begin page header description (recommended max 170 characters!) 
+						=================================== -->
+						<div class="page-header-description">
+							<div class="ph-desc-inner">
+								Fusce imperdiet, arcu non tempor aliquam, justo tortor cursus est, sed facilisis eros purus et felis. Sed eros sapien, iaculis eget gravida euismod, dapibus vitae turpis.
+							</div>
+						</div>
+						<!-- End page header description -->
 
-							</div> <!-- /.intro-caption -->
-						</div> <!-- /.intro-caption-holder -->
 					</div>
-					<!-- End intro caption wrap -->
-					
-				</div> <!-- /.tt-intro-inner -->
+					<!-- End page header caption -->
+
+				</div> 
+				<!-- End page header inner -->
+
+				<!-- Begin page header animated element
+				========================================
+				* Use class "ph-anim-circle" to enable element circle style.
+				* Use class "ph-anim-center" or "ph-anim-right" to align animated element.
+				* Use class "parallax-1" up to "parallax-6" to enable parallax effect.
+				* Use class "fade-out-scroll-1" up to "fade-out-scroll-6" to enable fade out effect if page scroll.
+				* Use class "hide-ph-anim" to disable animated element without removing the code.
+				-->
+				<div class="ph-anim-element-wrap parallax-4">
+					<div class="ph-anim-element-holder">
+						<div class="ph-anim-element"></div>
+					</div>
+				</div>
+				<!-- End page header animated element -->
+
 			</section>
-			<!-- End intro section -->
+			<!-- End page header -->
+
+
+			<!-- ===================================
+			///// Begin portfolio list section /////
+			==================================== -->
+			<section id="portfolio-list-section">
+				<div class="portfolio-list-inner tt-wrap"> <!-- add/remove class "tt-wrap" to enable/disable element boxed layout (class "tt-boxed" is required in <body> tag!). Note: additionally you can use prepared helper class "max-width-*" to add custom width to "tt-wrap". Example: "max-width-1500" (class "tt-wrap" is still required!). More info about helper classes in file "helper.css" -->
+
+					<!-- Begin split box (based on: http://www.minimit.com/articles/solutions-tutorials/bootstrap-3-responsive-columns-of-same-height)
+					======================= -->
+					<div class="split-box margin-top-100">
+						<div class="container-fluid">
+							<div class="row">
+								<div class="row-lg-height">
+
+									<!-- Column (Split box image) 
+									==============================
+									* Use class "frame-left" or "frame-right" to enable split box image frame (Effect only on element boxed layout!).
+									* Use class "sbi-shadow" to enable split box image shadow effect (Effect only on element boxed layout!).
+									-->
+									<div class="col-lg-6 col-lg-height split-box-image frame-left no-padding bg-image lazy" data-src="assets/img/portfolio/list/list-2/portfolio-list-21.gif">
+
+										<!-- Split box image height
+										============================
+										* You can use prepared "padding-height-*" helper classes to set split box image height. Example: "padding-height-90" (useful if "split-box-content" contend/text is very short). Also you can use class "full-height-vh" for full height image. Find out "helper.css" file for more info. Note: class "sbi-height" is required.
+										-->
+										<div class="sbi-height padding-height-70"></div>
+
+									</div> <!-- /.col -->
+
+									<!-- Column (use class "col-lg-top", "col-lg-middle" or "col-lg-bottom" to align content) -->
+									<div class="col-lg-6 col-lg-height col-lg-middle no-padding">
+
+										<!-- Begin split box content 
+										=============================
+										* Depends on which side the content is located use class "sb-content-left" or "sb-content-right".
+										* Use class "sb-shifted-left" or "sb-shifted-right" to enable shifted content (not recommended for long content).
+										* Use class "sb-content-color" to enable content box colored style.
+										-->
+										<div class="split-box-content sb-content-right">
+
+											<!-- Begin tt-heading 
+											====================== 
+											* Use class "padding-on" to enable heading paddings (useful if you use tt-heading as stand alone element).
+											* Use class "text-center" or "text-right" to align tt-heading.
+											* Use classes "tt-heading-xs", "tt-heading-sm", "tt-heading-lg", "tt-heading-xlg" or "tt-heading-xxlg" to set tt-heading size.
+											-->
+											<div class="tt-heading tt-heading-lg">
+												<div class="tt-heading-inner">
+													<h1 class="tt-heading-title"><a href="portfolio-single-8.html">Elper Nomadis</a></h1>
+													<div class="tt-heading-subtitle"><a href="">Digital</a></div>
+													
+													<!-- Begin zig-zag separator 
+													============================= 
+													* Use classes "zig-zag-xs", "zig-zag-sm", "zig-zag-lg" or "zig-zag-xlg" to set separator size. 
+													* Use classes "zig-zag-light" or "zig-zag-dark" to change zig-zag separator style.
+													-->
+													<div class="zig-zag-separator zig-zag-sm">
+														<span></span>
+														<span></span>
+														<span></span>
+														<span></span>
+													</div>
+													<!-- End zig-zag separator -->
+
+												</div> <!-- /.tt-heading-inner -->
+											</div>
+											<!-- End tt-heading -->
+
+											<p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed viverra rhoncus placerat. Quisque sed auctor turpis. Etiam elementum malesuada felis, sit amet aliquet nibh laoreet et.</p>
+
+											<!-- Begin portfolio list carousel buttons -->
+											<div class="margin-top-20">
+												<a href="portfolio-single-8.html" class="btn btn-primary btn-shadow margin-top-5 margin-right-10">View This Project</a>
+											</div>
+											<!-- End portfolio list carousel buttons -->
+
+										</div>
+										<!-- End split box content -->
+
+									</div> <!-- /.col -->
+
+								</div> <!-- /.row-height -->
+							</div> <!-- /.row -->
+						</div> <!-- /.container -->
+					</div>
+					<!-- End split box -->
+
+
+					<!-- Begin split box (based on: http://www.minimit.com/articles/solutions-tutorials/bootstrap-3-responsive-columns-of-same-height)
+					======================= -->
+					<div class="split-box margin-top-100">
+						<div class="container-fluid">
+							<div class="row">
+								<div class="row-lg-height">
+
+									<!-- Column (Split box image) 
+									==============================
+									* Use class "frame-left" or "frame-right" to enable split box image frame (Effect only on element boxed layout!).
+									* Use class "sbi-shadow" to enable split box image shadow effect (Effect only on element boxed layout!).
+									-->
+									<div class="col-lg-push-6 col-lg-6 col-lg-height split-box-image frame-right no-padding bg-image lazy" data-src="assets/img/portfolio/list/list-2/portfolio-list-22.gif">
+
+										<!-- Split box image height
+										============================
+										* You can use prepared "padding-height-*" helper classes to set split box image height. Example: "padding-height-90" (useful if "split-box-content" contend/text is very short). Also you can use class "full-height-vh" for full height image. Find out "helper.css" file for more info. Note: class "sbi-height" is required.
+										-->
+										<div class="sbi-height padding-height-70"></div>
+
+									</div> <!-- /.col -->
+
+									<!-- Column (use class "col-lg-top", "col-lg-middle" or "col-lg-bottom" to align content) -->
+									<div class="col-lg-pull-6 col-lg-6 col-lg-height col-lg-middle no-padding">
+
+										<!-- Begin split box content 
+										=============================
+										* Depends on which side the content is located use class "sb-content-left" or "sb-content-right".
+										* Use class "sb-shifted-left" or "sb-shifted-right" to enable shifted content (not recommended for long content).
+										* Use class "sb-content-color" to enable content box colored style.
+										-->
+										<div class="split-box-content sb-content-left">
+
+											<!-- Begin tt-heading 
+											====================== 
+											* Use class "padding-on" to enable heading paddings (useful if you use tt-heading as stand alone element).
+											* Use class "text-center" or "text-right" to align tt-heading.
+											* Use classes "tt-heading-xs", "tt-heading-sm", "tt-heading-lg", "tt-heading-xlg" or "tt-heading-xxlg" to set tt-heading size.
+											-->
+											<div class="tt-heading tt-heading-lg no-margin-bottom">
+												<div class="tt-heading-inner">
+													<h1 class="tt-heading-title"><a href="portfolio-single-9.html">Futter Samantis</a></h1>
+													<div class="tt-heading-subtitle"><a href="">Motion</a></div>
+													
+													<!-- Begin zig-zag separator 
+													============================= 
+													* Use classes "zig-zag-xs", "zig-zag-sm", "zig-zag-lg" or "zig-zag-xlg" to set separator size. 
+													* Use classes "zig-zag-light" or "zig-zag-dark" to change zig-zag separator style.
+													-->
+													<div class="zig-zag-separator zig-zag-sm">
+														<span></span>
+														<span></span>
+														<span></span>
+														<span></span>
+													</div>
+													<!-- End zig-zag separator -->
+
+												</div> <!-- /.tt-heading-inner -->
+											</div>
+											<!-- End tt-heading -->
+
+											<p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed viverra rhoncus placerat. Quisque sed auctor turpis. Etiam elementum malesuada felis, sit amet aliquet nibh laoreet et.</p>
+
+											<!-- Begin portfolio list carousel buttons -->
+											<div class="margin-top-20">
+												<a href="portfolio-single-9.html" class="btn btn-primary btn-shadow margin-top-5 margin-right-10">View This Project</a>
+											</div>
+											<!-- End portfolio list carousel buttons -->
+
+										</div>
+										<!-- End split box content -->
+
+									</div> <!-- /.col -->
+
+								</div> <!-- /.row-height -->
+							</div> <!-- /.row -->
+						</div> <!-- /.container -->
+					</div>
+					<!-- End split box -->
+
+
+					<!-- Begin split box (based on: http://www.minimit.com/articles/solutions-tutorials/bootstrap-3-responsive-columns-of-same-height)
+					======================= -->
+					<div class="split-box margin-top-100">
+						<div class="container-fluid">
+							<div class="row">
+								<div class="row-lg-height">
+
+									<!-- Column (Split box image) 
+									==============================
+									* Use class "frame-left" or "frame-right" to enable split box image frame (Effect only on element boxed layout!).
+									* Use class "sbi-shadow" to enable split box image shadow effect (Effect only on element boxed layout!).
+									-->
+									<div class="col-lg-6 col-lg-height split-box-image frame-left no-padding bg-image lazy" data-src="assets/img/portfolio/list/list-2/portfolio-list-23.gif">
+
+										<!-- Split box image height
+										============================
+										* You can use prepared "padding-height-*" helper classes to set split box image height. Example: "padding-height-90" (useful if "split-box-content" contend/text is very short). Also you can use class "full-height-vh" for full height image. Find out "helper.css" file for more info. Note: class "sbi-height" is required.
+										-->
+										<div class="sbi-height padding-height-70"></div>
+
+									</div> <!-- /.col -->
+
+									<!-- Column (use class "col-lg-top", "col-lg-middle" or "col-lg-bottom" to align content) -->
+									<div class="col-lg-6 col-lg-height col-lg-middle no-padding">
+
+										<!-- Begin split box content 
+										=============================
+										* Depends on which side the content is located use class "sb-content-left" or "sb-content-right".
+										* Use class "sb-shifted-left" or "sb-shifted-right" to enable shifted content (not recommended for long content).
+										* Use class "sb-content-color" to enable content box colored style.
+										-->
+										<div class="split-box-content sb-content-right">
+
+											<!-- Begin tt-heading 
+											====================== 
+											* Use class "padding-on" to enable heading paddings (useful if you use tt-heading as stand alone element).
+											* Use class "text-center" or "text-right" to align tt-heading.
+											* Use classes "tt-heading-xs", "tt-heading-sm", "tt-heading-lg", "tt-heading-xlg" or "tt-heading-xxlg" to set tt-heading size.
+											-->
+											<div class="tt-heading tt-heading-lg">
+												<div class="tt-heading-inner">
+													<h1 class="tt-heading-title"><a href="portfolio-single-10.html">Tartumi Sandera Naomis</a></h1>
+													<div class="tt-heading-subtitle"><a href="">Branding</a>, <a href="">Motion</a></div>
+													
+													<!-- Begin zig-zag separator 
+													============================= 
+													* Use classes "zig-zag-xs", "zig-zag-sm", "zig-zag-lg" or "zig-zag-xlg" to set separator size. 
+													* Use classes "zig-zag-light" or "zig-zag-dark" to change zig-zag separator style.
+													-->
+													<div class="zig-zag-separator zig-zag-sm">
+														<span></span>
+														<span></span>
+														<span></span>
+														<span></span>
+													</div>
+													<!-- End zig-zag separator -->
+
+												</div> <!-- /.tt-heading-inner -->
+											</div>
+											<!-- End tt-heading -->
+
+											<p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed viverra rhoncus placerat. Quisque sed auctor turpis. Etiam elementum malesuada felis, sit amet aliquet nibh laoreet et.</p>
+
+											<!-- Begin portfolio list carousel buttons -->
+											<div class="margin-top-20">
+												<a href="portfolio-single-10.html" class="btn btn-primary btn-shadow margin-top-5 margin-right-10">View This Project</a>
+											</div>
+											<!-- End portfolio list carousel buttons -->
+
+										</div>
+										<!-- End split box content -->
+
+									</div> <!-- /.col -->
+
+								</div> <!-- /.row-height -->
+							</div> <!-- /.row -->
+						</div> <!-- /.container -->
+					</div>
+					<!-- End split box -->
+
+
+					<!-- Begin split box (based on: http://www.minimit.com/articles/solutions-tutorials/bootstrap-3-responsive-columns-of-same-height)
+					======================= -->
+					<div class="split-box margin-top-100">
+						<div class="container-fluid">
+							<div class="row">
+								<div class="row-lg-height">
+
+									<!-- Column (Split box image) 
+									==============================
+									* Use class "frame-left" or "frame-right" to enable split box image frame (Effect only on element boxed layout!).
+									* Use class "sbi-shadow" to enable split box image shadow effect (Effect only on element boxed layout!).
+									-->
+									<div class="col-lg-push-6 col-lg-6 col-lg-height split-box-image frame-right no-padding bg-image lazy" data-src="assets/img/portfolio/list/list-2/portfolio-list-24.gif">
+
+										<!-- Split box image height
+										============================
+										* You can use prepared "padding-height-*" helper classes to set split box image height. Example: "padding-height-90" (useful if "split-box-content" contend/text is very short). Also you can use class "full-height-vh" for full height image. Find out "helper.css" file for more info. Note: class "sbi-height" is required.
+										-->
+										<div class="sbi-height padding-height-70"></div>
+
+									</div> <!-- /.col -->
+
+									<!-- Column (use class "col-lg-top", "col-lg-middle" or "col-lg-bottom" to align content) -->
+									<div class="col-lg-pull-6 col-lg-6 col-lg-height col-lg-middle no-padding">
+
+										<!-- Begin split box content 
+										=============================
+										* Depends on which side the content is located use class "sb-content-left" or "sb-content-right".
+										* Use class "sb-shifted-left" or "sb-shifted-right" to enable shifted content (not recommended for long content).
+										* Use class "sb-content-color" to enable content box colored style.
+										-->
+										<div class="split-box-content sb-content-left">
+
+											<!-- Begin tt-heading 
+											====================== 
+											* Use class "padding-on" to enable heading paddings (useful if you use tt-heading as stand alone element).
+											* Use class "text-center" or "text-right" to align tt-heading.
+											* Use classes "tt-heading-xs", "tt-heading-sm", "tt-heading-lg", "tt-heading-xlg" or "tt-heading-xxlg" to set tt-heading size.
+											-->
+											<div class="tt-heading tt-heading-lg no-margin-bottom">
+												<div class="tt-heading-inner">
+													<h1 class="tt-heading-title"><a href="portfolio-single-11.html">Tetera Laktus</a></h1>
+													<div class="tt-heading-subtitle"><a href="">Digital</a></div>
+													
+													<!-- Begin zig-zag separator 
+													============================= 
+													* Use classes "zig-zag-xs", "zig-zag-sm", "zig-zag-lg" or "zig-zag-xlg" to set separator size. 
+													* Use classes "zig-zag-light" or "zig-zag-dark" to change zig-zag separator style.
+													-->
+													<div class="zig-zag-separator zig-zag-sm">
+														<span></span>
+														<span></span>
+														<span></span>
+														<span></span>
+													</div>
+													<!-- End zig-zag separator -->
+
+												</div> <!-- /.tt-heading-inner -->
+											</div>
+											<!-- End tt-heading -->
+
+											<p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed viverra rhoncus placerat. Quisque sed auctor turpis. Etiam elementum malesuada felis, sit amet aliquet nibh laoreet et.</p>
+
+											<!-- Begin portfolio list carousel buttons -->
+											<div class="margin-top-20">
+												<a href="portfolio-single-11.html" class="btn btn-primary btn-shadow margin-top-5 margin-right-10">View This Project</a>
+											</div>
+											<!-- End portfolio list carousel buttons -->
+
+										</div>
+										<!-- End split box content -->
+
+									</div> <!-- /.col -->
+
+								</div> <!-- /.row-height -->
+							</div> <!-- /.row -->
+						</div> <!-- /.container -->
+					</div>
+					<!-- End split box -->
+
+
+					<!-- Begin split box (based on: http://www.minimit.com/articles/solutions-tutorials/bootstrap-3-responsive-columns-of-same-height)
+					======================= -->
+					<div class="split-box margin-top-100">
+						<div class="container-fluid">
+							<div class="row">
+								<div class="row-lg-height">
+
+									<!-- Column (Split box image) 
+									==============================
+									* Use class "frame-left" or "frame-right" to enable split box image frame (Effect only on element boxed layout!).
+									* Use class "sbi-shadow" to enable split box image shadow effect (Effect only on element boxed layout!).
+									-->
+									<div class="col-lg-6 col-lg-height split-box-image frame-left no-padding bg-image lazy" data-src="assets/img/portfolio/list/list-2/portfolio-list-25.gif">
+
+										<!-- Split box image height
+										============================
+										* You can use prepared "padding-height-*" helper classes to set split box image height. Example: "padding-height-90" (useful if "split-box-content" contend/text is very short). Also you can use class "full-height-vh" for full height image. Find out "helper.css" file for more info. Note: class "sbi-height" is required.
+										-->
+										<div class="sbi-height padding-height-70"></div>
+
+									</div> <!-- /.col -->
+
+									<!-- Column (use class "col-lg-top", "col-lg-middle" or "col-lg-bottom" to align content) -->
+									<div class="col-lg-6 col-lg-height col-lg-middle no-padding">
+
+										<!-- Begin split box content 
+										=============================
+										* Depends on which side the content is located use class "sb-content-left" or "sb-content-right".
+										* Use class "sb-shifted-left" or "sb-shifted-right" to enable shifted content (not recommended for long content).
+										* Use class "sb-content-color" to enable content box colored style.
+										-->
+										<div class="split-box-content sb-content-right">
+
+											<!-- Begin tt-heading 
+											====================== 
+											* Use class "padding-on" to enable heading paddings (useful if you use tt-heading as stand alone element).
+											* Use class "text-center" or "text-right" to align tt-heading.
+											* Use classes "tt-heading-xs", "tt-heading-sm", "tt-heading-lg", "tt-heading-xlg" or "tt-heading-xxlg" to set tt-heading size.
+											-->
+											<div class="tt-heading tt-heading-lg">
+												<div class="tt-heading-inner">
+													<h1 class="tt-heading-title"><a href="portfolio-single-12.html">Tant Saktra Memis</a></h1>
+													<div class="tt-heading-subtitle"><a href="">Motion</a></div>
+													
+													<!-- Begin zig-zag separator 
+													============================= 
+													* Use classes "zig-zag-xs", "zig-zag-sm", "zig-zag-lg" or "zig-zag-xlg" to set separator size. 
+													* Use classes "zig-zag-light" or "zig-zag-dark" to change zig-zag separator style.
+													-->
+													<div class="zig-zag-separator zig-zag-sm">
+														<span></span>
+														<span></span>
+														<span></span>
+														<span></span>
+													</div>
+													<!-- End zig-zag separator -->
+
+												</div> <!-- /.tt-heading-inner -->
+											</div>
+											<!-- End tt-heading -->
+
+											<p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed viverra rhoncus placerat. Quisque sed auctor turpis. Etiam elementum malesuada felis, sit amet aliquet nibh laoreet et.</p>
+
+											<!-- Begin portfolio list carousel buttons -->
+											<div class="margin-top-20">
+												<a href="portfolio-single-12.html" class="btn btn-primary btn-shadow margin-top-5 margin-right-10">View This Project</a>
+											</div>
+											<!-- End portfolio list carousel buttons -->
+
+										</div>
+										<!-- End split box content -->
+
+									</div> <!-- /.col -->
+
+								</div> <!-- /.row-height -->
+							</div> <!-- /.row -->
+						</div> <!-- /.container -->
+					</div>
+					<!-- End split box -->
+
+
+					<!-- Begin tt-pagination 
+					========================= 
+					* Use class "tt-pagin-center" or "tt-pagin-right" to align pagination 
+					* Use class "tt-pagin-rounded" to enable pagination rounded style -->
+					<div class="tt-pagination-wrap margin-top-100">
+						<ul class="tt-pagination">
+							<li><a href="" title="Go to the first page">First</a></li>
+							<li><a href="" title="Go to the previous page">Prev</a></li>
+							<li class="active"><a href="#0">1</a></li>
+							<li><a href="">2</a></li>
+							<li><a href="">3</a></li>
+							<li><span>...</span></li>
+							<li><a href="">6</a></li>
+							<li><a href="">7</a></li>
+							<li><a href="">8</a></li>
+							<li><a href="" title="Go to the next page">Next</a></li>
+							<li><a href="" title="Go to the last page">Last</a></li>
+						</ul>
+
+						<div class="tt-pagination-info">
+							<span>Showing page 1 of 8</span>
+							<span>Portfolios 1-15 of 114</span>
+						</div>
+					</div>
+					<!-- End tt-pagination -->
+
+				</div> <!-- /.portfolio-list-inner -->
+			</section>
+			<!-- End portfolio list section -->
 
 
          <!-- ===========================
@@ -813,7 +1262,7 @@
 			* Use class "footer-dark" to enable dark footer.
 			* Use class "no-margin-top" if needed. 
 			-->
-			<section id="footer" class="no-margin-top">
+			<section id="footer" class="footer-dark">
 				<div class="footer-inner">
 					<div class="footer-container tt-wrap">
 						<div class="row">
@@ -967,7 +1416,6 @@
 
 		<!-- Theme master JS -->
 		<script src="assets/js/theme.js"></script>
-		<script src="assets/js/script.js"></script>
 
 
 

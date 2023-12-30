@@ -10,7 +10,7 @@
 	<head>
 
 		<!-- Title -->
-		<title>Aivo - Multipurpose Portfolio HTML Website Template</title>
+		<title>Contact / Aivo - Multipurpose Portfolio HTML Website Template</title>
 
 		<!-- Meta -->
 		<meta charset="utf-8">
@@ -78,7 +78,7 @@
 		* Use class "menu-align-right" to align menu to right.
 		* Use class "menu-align-center" to align menu to center (do not use with header classes!).
 		-->
-		<header id="header" class="header-show-hide-on-scroll header-transparent menu-align-right">
+		<header id="header" class="header-show-hide-on-scroll menu-align-right">
 
 			<!-- Begin header inner -->
 			<div class="header-inner tt-wrap"> <!-- add/remove class "tt-wrap" to enable/disable element boxed layout (class "tt-boxed" is required in <body> tag!). Note: additionally you can use prepared helper class "max-width-*" to add custom width to "tt-wrap". Example: "max-width-1500" (class "tt-wrap" is still required!). More info about helper classes in file "helper.css" -->
@@ -244,7 +244,7 @@
 
 							<!-- Begin submenu (submenu master)
 							==================================== -->
-							<li class="tt-submenu-wrap tt-submenu-master active">
+							<li class="tt-submenu-wrap tt-submenu-master">
 								<a href="#0">Home</a>
 								<div class="tt-submenu">
 									<ul class="tt-submenu-list">
@@ -253,7 +253,7 @@
 										<li><a href="home-landing-3.html">Home Landing 3</a></li>
 										<li><a href="home-full-screen-slideshow.html">Full Screen Slideshow</a></li>
 										<li><a href="home-full-screen-single-image.html">Full Screen Image</a></li>
-										<li class="active"><a href="home-full-screen-video.html">Full Screen Video</a></li>
+										<li><a href="home-full-screen-video.html">Full Screen Video</a></li>
 									</ul> <!-- /.tt-submenu-list -->
 								</div> <!-- /.tt-submenu -->
 							</li>
@@ -467,13 +467,13 @@
 
 							<!-- Begin submenu (submenu master)
 							==================================== -->
-							<li class="tt-submenu-wrap tt-submenu-master">
+							<li class="tt-submenu-wrap tt-submenu-master active">
 								<a href="#0">Contact</a>
 								<div class="tt-submenu">
 									<ul class="tt-submenu-list">
 										<li><a href="contact.html">Contact Style 1</a></li>
 										<li><a href="contact-2.html">Contact Style 2</a></li>
-										<li><a href="contact-3.html">Contact Style 3</a></li>
+										<li class="active"><a href="contact-3.html">Contact Style 3</a></li>
 										<li><a href="contact-4.html">Contact Style 4</a></li>
 										<li><a href="contact-5.html">Contact Style 5</a></li>
 									</ul> <!-- /.tt-submenu-list -->
@@ -722,89 +722,219 @@
 		<div id="body-content">
 
 
-			<!-- ==========================
-			///// Begin intro section /////
-			===============================
-			* Use classes "intro-xs", "intro-sm", "intro-lg" "intro-xlg" or "intro-full" to set intro size.
-			* Use class "intro-full-m" to set intro size for small screens only.
+			<!-- Begin custom Google Map 
+			=============================
+			* Tutorial: https://developers.google.com/maps/documentation/javascript/tutorial
+			* Styles: https://snazzymaps.com/
 			-->
-			<section id="tt-intro" class="intro-full">
-				<div class="tt-intro-inner"> <!-- add/remove class "tt-wrap" to enable/disable element boxed layout (class "tt-boxed" is required in <body> tag!). Note: additionally you can use prepared helper class "max-width-*" to add custom width to "tt-wrap". Example: "max-width-1500" (class "tt-wrap" is still required!). More info about helper classes in file "helper.css" -->
+			<div id="tt-map"></div>
+			<!-- End custom Google Map -->
 
-					<!-- Begin YTPlayer (Youtube video background)
-					=======================================================
-					* NOTE: Replace videoURL with your own (videoURL:'your-youtube-video-URL'). 
-					* Do not forget to add your background image for mobile devices (because the video background doesn't work on mobile devices).
-					* YTPlayer may not work in the local computer. It works properly only if used under a web server.
-					* Read more info about YTPlayer: https://github.com/pupunzi/jquery.mb.YTPlayer
-					-->
-					<div class="youtube-bg-wrap parallax-6 bg-dark"> <!-- Class "parallax-6" is for tt-intro only!!! -->
-						<div class="youtube-bg" 
-						style="background-image: url(assets/img/video-bg/video-bg-1.jpg); background-position: 50% 50%;"
-						data-property="{
-							videoURL: 'https://www.youtube.com/watch?v=GCYlRFZQk2E',
-							containment: 'self',
-							quality: 'default',
-							startAt: 0,
-							stopAt: 0,
-							autoPlay: true,
-							loop: true,
-							mute: true,
-							showControls: false,
-							showYTLogo: false,
-							realfullscreen: true,
-							addRaster: false,
-							optimizeDisplay: true,
-							stopMovieOnBlur: true
-						}">
 
-							<!-- Element cover 
-							===================
-							* Use class "cover-opacity-*" to set cover opasity (1, 1.5, 2, 2.5, ... 9.5). Example: "cover-opacity-2" or "cover-opacity-2-5".
-							* Aditional color classes you can use: "cover-color", "cover-light", "cover-red", "cover-pink", "cover-purple", "cover-green", "cover-blue", "cover-yellow" or "cover-brown" to set cover background color (note: class "cover-color" = template main color).
-							* Use class "cover-gradient-dark", "cover-gradient-light" or "cover-gradient-color" to enable cover gradient background.
+			<!-- ======================================
+			///// Begin contact section (style-3) /////
+			======================================= -->
+			<section id="contact-section" class="contact-style-3">
+				<div class="contact-section-inner tt-wrap">
+
+					<div class="row">
+						<div class="col-md-4">
+							
+							<!-- Begin contact info -->
+							<div class="contact-info-wrap margin-bottom-40">
+
+								<h3 class="contact-info-title">
+									<span class="lnr lnr-map-marker"></span> 
+									<a href="https://www.google.com/maps/search/?api=1&query=-37.817251,144.955891" target="_blank">Melbourne</a>
+									<small> (Our headquarter)</small>
+								</h3>
+
+								<ul class="contact-info">
+									<li><span class="address"><span class="lnr lnr-home"></span> <a href="https://www.google.com/maps/search/?api=1&query=-37.817251,144.955891" target="_blank">121 King Street, Melbourne, Australia</a></span></li>
+									<li><span class="phone"><span class="lnr lnr-phone"></span> +(123) 456 789 000</span></li>
+									<li><span class="email"><span class="lnr lnr-envelope"></span> <a href="mailto:company@email.com" target="_blank">company@email.com</a></span></li>
+								</ul> <!-- /.contact-info -->
+
+							</div>
+							<!-- End contact info -->
+
+						</div> <!-- /.col -->
+
+						<div class="col-md-4">
+							
+							<!-- Begin contact info -->
+							<div class="contact-info-wrap margin-bottom-40">
+
+								<h3 class="contact-info-title">
+									<span class="lnr lnr-map-marker"></span> 
+									<a href="https://www.google.com/maps/search/?api=1&query=40.748437,-73.985685" target="_blank">New York</a>
+								</h3>
+
+								<ul class="contact-info">
+									<li><span class="address"><span class="lnr lnr-home"></span> 350 5th Ave, New York, NY 10118, US</span></li>
+									<li><span class="phone"><span class="lnr lnr-phone"></span> +(123) 456 789 000</span></li>
+									<li><span class="email"><span class="lnr lnr-envelope"></span> <a href="mailto:company@email.com" target="_blank">company@email.com</a></span></li>
+								</ul> <!-- /.contact-info -->
+
+							</div>
+							<!-- End contact info -->
+
+						</div> <!-- /.col -->
+
+						<div class="col-md-4">
+							
+							<!-- Begin contact info -->
+							<div class="contact-info-wrap margin-bottom-40">
+
+								<h3 class="contact-info-title">
+									<span class="lnr lnr-map-marker"></span> 
+									<a href="https://www.google.com/maps/search/?api=1&query=48.854590,2.336972" target="_blank">Paris</a>
+								</h3>
+
+								<ul class="contact-info">
+									<li><span class="address"><span class="lnr lnr-home"></span> 57 rue de Seine, Paris, France</span></li>
+									<li><span class="phone"><span class="lnr lnr-phone"></span> +(123) 456 789 000</span></li>
+									<li><span class="email"><span class="lnr lnr-envelope"></span> <a href="mailto:company@email.com" target="_blank">company@email.com</a></span></li>
+								</ul> <!-- /.contact-info -->
+
+							</div>
+							<!-- End contact info -->
+
+						</div> <!-- /.col -->
+					</div> <!-- /.row -->
+
+					<div class="row margin-top-80">
+						<div class="col-md-6">
+							
+							<!-- Begin tt-heading 
+							====================== 
+							* Use class "padding-on" to enable heading paddings (useful if you use tt-heading as stand alone element).
+							* Use class "text-center" or "text-right" to align tt-heading.
+							* Use classes "tt-heading-xs", "tt-heading-sm", "tt-heading-lg", "tt-heading-xlg" or "tt-heading-xxlg" to set tt-heading size.
 							-->
-							<div class="cover cover-opacity-6"></div>
+							<div class="tt-heading tt-heading-xlg margin-bottom-20">
+								<div class="tt-heading-inner">
+									<h1 class="tt-heading-title">Get in Touch</h1>
+									<div class="tt-heading-subtitle">Drop Us a Line</div>
+									
+									<!-- Begin zig-zag separator 
+									============================= 
+									* Use classes "zig-zag-xs", "zig-zag-sm", "zig-zag-lg" or "zig-zag-xlg" to set separator size. 
+									* Use classes "zig-zag-light" or "zig-zag-dark" to change zig-zag separator style.
+									-->
+									<div class="zig-zag-separator">
+										<span></span>
+										<span></span>
+										<span></span>
+										<span></span>
+									</div>
+									<!-- End zig-zag separator -->
 
-						</div> <!-- /.youtube-bg -->
-					</div>
-					<!-- End YTPlayer -->
+									<div class="tt-heading-text">
+										Fusce imperdiet, arcu non tempor aliquam, justo tortor cursus est, sed facilisis eros purus et felis. Sed eros sapien, iaculis eget gravida.
+									</div>
 
-					<!-- Begin intro caption 
-					=========================
-					* Position classes: "top-left", "top-center", "top-right", "center-left", "center", "center-right", "bottom-left", "bottom-center", "bottom-right". 
-					* Size classes: "intro-caption-xs", "intro-caption-sm", "intro-caption-lg", "intro-caption-xlg", "intro-caption-xxlg".
-					* Use class "parallax-1" up to "parallax-6" to enable parallax effect (no effect on mobile devices!).
-					* Use class "fade-out-scroll-1" up to "fade-out-scroll-6" to enable fade out effect if page scrolls (no effect on mobile devices!).
-					-->
-					<div class="intro-caption-wrap caption-animate intro-caption-lg bottom-left parallax-4">
-						<div class="intro-caption-holder">
-							<div class="intro-caption center">
-								<h1 class="intro-title">What Are You<br>Waiting For?</h1>
-								<h2 class="intro-subtitle">Build your beautiful portfolio website today!</h2>
+									<!-- Begin social buttons -->
+									<div class="social-buttons margin-top-25">
+										<h5>Follow Us:</h5>
+										<ul>
+											<li><a href="https://www.facebook.com/themetorium" class="btn btn-social-min btn-default btn-rounded-full" title="Follow us on Facebook" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+											<li><a href="https://twitter.com/Themetorium" class="btn btn-social-min btn-default btn-rounded-full" title="Follow us on Twitter" target="_blank"><i class="fab fa-twitter"></i></a></li>
+											<li><a href="https://plus.google.com/+SiiliOnu" class="btn btn-social-min btn-default btn-rounded-full" title="Follow us on Google+" target="_blank"><i class="fab fa-google-plus-g"></i></a></li>
+											<li><a href="https://www.behance.net/Themetorium" class="btn btn-social-min btn-default btn-rounded-full" title="Follow us on Behance" target="_blank"><i class="fab fa-behance"></i></a></li>
+											<li><a href="https://dribbble.com/Themetorium" class="btn btn-social-min btn-default btn-rounded-full" title="Follow us on Dribbble" target="_blank"><i class="fab fa-dribbble"></i></a></li>
+										</ul>
+									</div>
+									<!-- End social buttons -->
 
-								<!-- Begin intro description (recommended max 170 characters!) 
-								============================= -->
-								<div class="intro-description">
-									Aivo – is a complete HTML5 and CSS3 website template. It fits perfectly for freelancers, artists and design agencies. It looks great with all types of devices.
-								</div>
-								<!-- End intro-description -->
+								</div> <!-- /.tt-heading-inner -->
+							</div>
+							<!-- End tt-heading -->
 
-								<!-- Begin intro buttons -->
-								<button id="startButton">Start</button>
-									<div class="intro-buttons">
-									<a href="https://themeforest.net/item/aivo-multipurpose-portfolio-html-website-template/21587861?ref=Themetorium" class="btn btn-primary margin-top-5 margin-right-10" target="_blank">Buy It Now!</a> 
-									<a href="" class="btn btn-white-bordered margin-top-5">Discover More</a>
-						<!-- End intro buttons -->
+						</div> <!-- /.col -->
 
-							</div> <!-- /.intro-caption -->
-						</div> <!-- /.intro-caption-holder -->
-					</div>
-					<!-- End intro caption wrap -->
-					
-				</div> <!-- /.tt-intro-inner -->
+						<div class="col-md-6">
+							
+							<!-- Begin contact form 
+							========================= -->
+							<form id="contact-form">
+								<div class="contact-form-inner bg-gray-3 padding-5-p">
+
+									<!-- <h2>Drop Us a Line</h2> -->
+
+									<!-- <div class="contact-form-text">
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea deleniti vero deserunt praesentium atque, modi quaerat sed iure assumenda quasi commodi numquam id eius explicabo, repudiandae eveniet.</p>
+									</div> -->
+
+
+									<!-- ///////////////////////////////////////////////////////////////////////
+									///// Begin hidden REQUIRED FIELDS (https://github.com/agragregra/uniMail) 
+									//////////////////////////////////////////////////////////////////////////// -->
+									<input type="hidden" name="project_name" value="yourwebsiteaddress.com"> <!-- Change value to your site name -->
+									<input type="hidden" name="admin_email" value="your@email.com"> <!-- Change value to your valid email address (where a message will be sent) -->
+									<input type="hidden" name="form_subject" value="Message from yourwebsiteaddress.com"> <!-- Change value to your own message subject -->
+									<!-- End hidden required fields -->
+
+
+									<div class="row">
+										<div class="col-lg-6">
+											<div class="form-group">
+												<input type="text" class="form-control" name="name" placeholder="Your Name" required>
+											</div>
+										</div> <!-- /.col -->
+
+										<div class="col-lg-6">
+											<div class="form-group">
+												<input type="email" class="form-control" name="email" placeholder="Your Email" required>
+											</div>
+										</div> <!-- /.col -->
+									</div> <!-- /.row -->
+
+									<div class="row">
+										<div class="col-lg-12">
+											<div class="form-group">
+												<input type="text" class="form-control" name="subject" placeholder="Subject" required>
+											</div>
+										</div> <!-- /.col -->
+									</div> <!-- /.row -->
+
+									<div class="row">
+										<div class="col-lg-12">
+											<div class="form-group">
+												<select class="form-control" name="option" required>
+													<option value="" disabled selected>Select an option</option>
+													<option value="Say Hello">Say hello</option>
+													<option value="New Project">New project</option>
+													<option value="Feedback">Feedback</option>
+													<option value="Other">Other</option>
+												</select>
+											</div>
+										</div> <!-- /.col -->
+									</div> <!-- /.row -->
+
+									<div class="row">
+										<div class="col-lg-12">
+											<div class="form-group">
+												<textarea class="form-control" name="message" rows="4" placeholder="Your Message" required></textarea>
+											</div>
+										</div> <!-- /.col -->
+									</div> <!-- /.row -->
+
+									<div class="small text-gray"><em>* All fields are required!</em></div>
+
+									<!-- Submit button -->
+									<button type="submit" class="btn btn-primary margin-top-40">Send Message</button>
+
+								</div> <!-- /.contact-form-inner -->
+							</form>
+							<!-- End contact form -->
+
+						</div> <!-- /.col -->
+					</div> <!-- /.row -->
+
+				</div> <!-- /.contact-section-inner -->
 			</section>
-			<!-- End intro section -->
+			<!-- End contact section -->
 
 
          <!-- ===========================
@@ -813,7 +943,7 @@
 			* Use class "footer-dark" to enable dark footer.
 			* Use class "no-margin-top" if needed. 
 			-->
-			<section id="footer" class="no-margin-top">
+			<section id="footer" class="footer-dark no-margin-top">
 				<div class="footer-inner">
 					<div class="footer-container tt-wrap">
 						<div class="row">
@@ -965,9 +1095,12 @@
 		<script src="assets/vendor/jquery-lazy/js/jquery.lazy.min.js"></script> <!-- jqueryLazy JS (http://jquery.eisbehr.de/lazy/) -->
 		<script src="assets/vendor/jquery-lazy/js/jquery.lazy.plugins.min.js"></script> <!-- jqueryLazy Plugins JS (http://jquery.eisbehr.de/lazy/) -->
 
+		<!-- Google maps JS (https://developers.google.com/maps/documentation/javascript/tutorial). Only for contact page!!! -->
+		<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAo5b533IB2iuDcTn2razvfjyc_rpZdiRw&callback=initMap"></script> 
+		<script src="assets/vendor/map.js"></script> 
+
 		<!-- Theme master JS -->
 		<script src="assets/js/theme.js"></script>
-		<script src="assets/js/script.js"></script>
 
 
 

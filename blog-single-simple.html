@@ -10,7 +10,7 @@
 	<head>
 
 		<!-- Title -->
-		<title>Aivo - Multipurpose Portfolio HTML Website Template</title>
+		<title>Blog / Aivo - Multipurpose Portfolio HTML Website Template</title>
 
 		<!-- Meta -->
 		<meta charset="utf-8">
@@ -78,7 +78,7 @@
 		* Use class "menu-align-right" to align menu to right.
 		* Use class "menu-align-center" to align menu to center (do not use with header classes!).
 		-->
-		<header id="header" class="header-show-hide-on-scroll header-transparent menu-align-right">
+		<header id="header" class="menu-align-center">
 
 			<!-- Begin header inner -->
 			<div class="header-inner tt-wrap"> <!-- add/remove class "tt-wrap" to enable/disable element boxed layout (class "tt-boxed" is required in <body> tag!). Note: additionally you can use prepared helper class "max-width-*" to add custom width to "tt-wrap". Example: "max-width-1500" (class "tt-wrap" is still required!). More info about helper classes in file "helper.css" -->
@@ -244,7 +244,7 @@
 
 							<!-- Begin submenu (submenu master)
 							==================================== -->
-							<li class="tt-submenu-wrap tt-submenu-master active">
+							<li class="tt-submenu-wrap tt-submenu-master">
 								<a href="#0">Home</a>
 								<div class="tt-submenu">
 									<ul class="tt-submenu-list">
@@ -253,7 +253,7 @@
 										<li><a href="home-landing-3.html">Home Landing 3</a></li>
 										<li><a href="home-full-screen-slideshow.html">Full Screen Slideshow</a></li>
 										<li><a href="home-full-screen-single-image.html">Full Screen Image</a></li>
-										<li class="active"><a href="home-full-screen-video.html">Full Screen Video</a></li>
+										<li><a href="home-full-screen-video.html">Full Screen Video</a></li>
 									</ul> <!-- /.tt-submenu-list -->
 								</div> <!-- /.tt-submenu -->
 							</li>
@@ -418,7 +418,7 @@
 
 							<!-- Begin submenu (submenu master)
 							==================================== -->
-							<li class="tt-submenu-wrap tt-submenu-master">
+							<li class="tt-submenu-wrap tt-submenu-master active">
 								<a href="#0">Blog</a>
 								<div class="tt-submenu">
 									<ul class="tt-submenu-list">
@@ -443,7 +443,7 @@
 
 										<!-- Begin submenu
 										=================== -->
-										<li class="tt-submenu-wrap">
+										<li class="tt-submenu-wrap active">
 											<a href="#0">Blog Single Post</a>
 											<div class="tt-submenu">
 												<ul class="tt-submenu-list">
@@ -452,7 +452,7 @@
 													<li><a href="blog-single-3.html">Single Post Style 3</a></li>
 													<li><a href="blog-single-4.html">Single Post Style 4</a></li>
 													<li><a href="blog-single-5.html">Single Post Style 5</a></li>
-													<li><a href="blog-single-simple.html">Single Post Simple</a></li>
+													<li class="active"><a href="blog-single-simple.html">Single Post Simple</a></li>
 												</ul> <!-- /.tt-submenu-list -->
 											</div> <!-- /.tt-submenu -->
 										</li>
@@ -722,89 +722,643 @@
 		<div id="body-content">
 
 
-			<!-- ==========================
-			///// Begin intro section /////
-			===============================
-			* Use classes "intro-xs", "intro-sm", "intro-lg" "intro-xlg" or "intro-full" to set intro size.
-			* Use class "intro-full-m" to set intro size for small screens only.
-			-->
-			<section id="tt-intro" class="intro-full">
-				<div class="tt-intro-inner"> <!-- add/remove class "tt-wrap" to enable/disable element boxed layout (class "tt-boxed" is required in <body> tag!). Note: additionally you can use prepared helper class "max-width-*" to add custom width to "tt-wrap". Example: "max-width-1500" (class "tt-wrap" is still required!). More info about helper classes in file "helper.css" -->
+			<!-- ====================================
+			/////// Begin blog single section ///////
+			===================================== -->
+			<section id="blog-single-section" class="blog-single-simple">
+				<div class="blog-single-inner tt-wrap"> <!-- add/remove class "tt-wrap" to enable/disable element boxed layout (class "tt-boxed" is required in <body> tag!). Note: additionally you can use prepared helper class "max-width-*" to add custom width to "tt-wrap". Example: "max-width-1500" (class "tt-wrap" is still required!). More info about helper classes in file "helper.css" -->
 
-					<!-- Begin YTPlayer (Youtube video background)
-					=======================================================
-					* NOTE: Replace videoURL with your own (videoURL:'your-youtube-video-URL'). 
-					* Do not forget to add your background image for mobile devices (because the video background doesn't work on mobile devices).
-					* YTPlayer may not work in the local computer. It works properly only if used under a web server.
-					* Read more info about YTPlayer: https://github.com/pupunzi/jquery.mb.YTPlayer
-					-->
-					<div class="youtube-bg-wrap parallax-6 bg-dark"> <!-- Class "parallax-6" is for tt-intro only!!! -->
-						<div class="youtube-bg" 
-						style="background-image: url(assets/img/video-bg/video-bg-1.jpg); background-position: 50% 50%;"
-						data-property="{
-							videoURL: 'https://www.youtube.com/watch?v=GCYlRFZQk2E',
-							containment: 'self',
-							quality: 'default',
-							startAt: 0,
-							stopAt: 0,
-							autoPlay: true,
-							loop: true,
-							mute: true,
-							showControls: false,
-							showYTLogo: false,
-							realfullscreen: true,
-							addRaster: false,
-							optimizeDisplay: true,
-							stopMovieOnBlur: true
-						}">
+					<div class="row no-margin">
 
-							<!-- Element cover 
-							===================
-							* Use class "cover-opacity-*" to set cover opasity (1, 1.5, 2, 2.5, ... 9.5). Example: "cover-opacity-2" or "cover-opacity-2-5".
-							* Aditional color classes you can use: "cover-color", "cover-light", "cover-red", "cover-pink", "cover-purple", "cover-green", "cover-blue", "cover-yellow" or "cover-brown" to set cover background color (note: class "cover-color" = template main color).
-							* Use class "cover-gradient-dark", "cover-gradient-light" or "cover-gradient-color" to enable cover gradient background.
-							-->
-							<div class="cover cover-opacity-6"></div>
+						<!-- Content column -->
+						<div class="col-md-12 no-padding-left no-padding-right">
 
-						</div> <!-- /.youtube-bg -->
-					</div>
-					<!-- End YTPlayer -->
+							<!-- Begin blog single post 
+							============================= -->
+							<article class="blog-single-post lightgallery">
 
-					<!-- Begin intro caption 
-					=========================
-					* Position classes: "top-left", "top-center", "top-right", "center-left", "center", "center-right", "bottom-left", "bottom-center", "bottom-right". 
-					* Size classes: "intro-caption-xs", "intro-caption-sm", "intro-caption-lg", "intro-caption-xlg", "intro-caption-xxlg".
-					* Use class "parallax-1" up to "parallax-6" to enable parallax effect (no effect on mobile devices!).
-					* Use class "fade-out-scroll-1" up to "fade-out-scroll-6" to enable fade out effect if page scrolls (no effect on mobile devices!).
-					-->
-					<div class="intro-caption-wrap caption-animate intro-caption-lg bottom-left parallax-4">
-						<div class="intro-caption-holder">
-							<div class="intro-caption center">
-								<h1 class="intro-title">What Are You<br>Waiting For?</h1>
-								<h2 class="intro-subtitle">Build your beautiful portfolio website today!</h2>
+								<!-- Begin blog single featured image -->
+								<a href="assets/img/blog/list/blog-1.jpg" class="blog-single-featured-image lg-trigger" data-exthumbnail="assets/img/blog/list/blog-1.jpg">
+									<img src="assets/img/blog/list/blog-1.jpg" alt="">
+								</a>
+								<!-- End blog single featured image -->
 
-								<!-- Begin intro description (recommended max 170 characters!) 
-								============================= -->
-								<div class="intro-description">
-									Aivo – is a complete HTML5 and CSS3 website template. It fits perfectly for freelancers, artists and design agencies. It looks great with all types of devices.
+								<!-- Begin blog single heading -->
+								<div class="blog-single-post-heading">
+									<div class="blog-single-post-category"><a href="blog-archive.html">Web Design</a> <a href="blog-archive.html">Coding</a></div>
+									<h1 class="blog-single-post-title">Responsive Web Design: 50 Examples and Best Practices</h1>
 								</div>
-								<!-- End intro-description -->
+								<!-- End blog single heading -->
 
-								<!-- Begin intro buttons -->
-								<button id="startButton">Start</button>
-									<div class="intro-buttons">
-									<a href="https://themeforest.net/item/aivo-multipurpose-portfolio-html-website-template/21587861?ref=Themetorium" class="btn btn-primary margin-top-5 margin-right-10" target="_blank">Buy It Now!</a> 
-									<a href="" class="btn btn-white-bordered margin-top-5">Discover More</a>
-						<!-- End intro buttons -->
+								<!-- Begin blog single post inner -->
+								<div class="blog-single-post-inner">
 
-							</div> <!-- /.intro-caption -->
-						</div> <!-- /.intro-caption-holder -->
-					</div>
-					<!-- End intro caption wrap -->
-					
-				</div> <!-- /.tt-intro-inner -->
+									<!-- Begin blog single attributes -->
+									<div class="blog-single-attributes">
+										<div class="row">
+											<div class="col-sm-8">
+
+												<!-- Begin blog single meta -->
+												<div class="blog-single-meta-wrap">
+
+													<!-- Blog single author avatar -->
+													<a href="" class="author-avatar pull-left bg-image" style="background-image: url(assets/img/blog/small/avatar/avatar-1.jpg);"></a>
+
+													<div class="blog-single-meta">
+														<div class="article-author">Author: <a href="#">Lucas Sanski</a></div>
+														<div class="article-time-cat">
+															<span class="article-time">May 26, 2017</span>
+														</div>
+													</div>
+
+												</div>
+												<!-- End blog single meta -->
+
+											</div> <!-- /.col -->
+
+											<div class="col-sm-4">
+
+												<!-- Begin blog single links -->
+												<ul class="blog-single-links list-unstyled list-inline">
+													<li>
+														<!-- Begin comments count -->
+														<a href="#blog-post-comments" class="blog-single-comment-count sm-scroll" title="Read the comments"><i class="far fa-comment"></i> 9</a>
+														<!-- End comments count -->
+													</li>
+												</ul>
+												<!-- End blog single links -->
+
+											</div> <!-- /.col -->
+										</div> <!-- /.row -->
+									</div>
+									<!-- End blog single attributes -->
+
+									<!-- Begin post content -->
+									<div class="post-content">
+
+										<p class="lead">Viverra ipsum libero consequatur sit lectus convallis in vehicula enim libero eget mauris consequat nonummy. Etiam varius porta. Quam nibh porta nam euismod in. Debitis sociis phasellus feugiat luctus diam. Vitae aenean odio ligula interdum suscipit. Viverra massa blandit. Tempor sit nam.</p>
+
+										<p>At tortor quis. Aut odio nibh. Aliquet neque dis gravida adipiscing feugiat. Elit amet metus. Magna suscipit risus. Arcu elementum accumsan. Pede tincidunt mauris lobortis aliquam sed fusce libero duis senectus nec ipsum. Libero amet mi. Tempor ante est non ut libero. Enim integer mauris dapibus rutrum hymenaeos leo bibendum quisque ac quis pellentesque. Tellus vestibulum aliquet praesent praesent rhoncus nam cras varius.</p>
+
+										<br>
+
+										<h3>Single Image</h3>
+
+										<p>Dolor elit condimentum erat dapibus ac purus eleifend amet sed ac pede. Condimentum volutpat nulla. Molestie est ac. Integer perferendis donec. Venenatis id diam at justo vulputate. Volutpat maecenas eget fugiat fringilla sapien. Ultrices quam habitant augue tincidunt a. Nulla lobortis commodo. Vivamus at tortor. Nunc eget volutpat eu fusce hac. Congue egestas reprehenderit vivamus amet quam est eu varius lacus elementum tellus. Non leo faucibus aenean a ut sed nam enim.</p> 
+
+										<!-- Begin single post image -->
+										<figure class="single-post-image">
+											<a href="assets/img/blog/single/big/img-4.jpg" class="sp-image-wrap lg-trigger" data-exthumbnail="assets/img/blog/single/thumb/img-4.jpg" data-sub-html="Yes, you can use image captions. :)">
+												<img class="sp-image lazy" data-src="assets/img/blog/single/img-4.jpg" alt="image">
+											</a>
+											<figcaption class="single-post-image-caption">
+												Photo by <a href="http://unsplash.com/">Unsplash</a>
+											</figcaption>
+										</figure>
+										<!-- End single post image -->
+
+										<br>
+
+										<h3>Slideshow</h3>
+
+										<p>Iaculis molestie rhoncus. Amet maecenas ut orci id dui. Et dui morbi. Non mauris nullam. Wisi gravida quis quisque mattis dolor. Etiam sociis turpis nesciunt sed lacus sed hendrerit diam. Accumsan varius venenatis arcu maecenas nulla. Aliquet tempus lobortis. Tortor nibh erat vel gravida est accumsan ut ad. Orci malesuada morbi. Luctus pharetra lectus. Vestibulum proin etiam etiam eget in. Nibh wisi velit. Pellentesque justo tellus est cras ligula. Feugiat fringilla sequi. A nunc adipiscing nisl lorem morbi tincidunt gravida ut. Totam tempor eget. Mauris nunc sodales nulla urna tortor erat scelerisque consequat ullamcorper est enim maecenas ultrices condimentum.</p>
+
+
+										<!-- Begin blog single slider
+										============================== -->
+										<div class="blog-single-slider">
+
+											<!-- Begin content carousel (https://owlcarousel2.github.io/OwlCarousel2/)
+											====================================================================
+											* Use class "nav-outside" for outside nav (requires boxed layout).
+											* Use class "nav-outside-top" for outside top nav (requires enough space at the top of the slider).
+											* Use class "nav-bottom-right" for bottom right nav.
+											* Use class "nav-rounded" for rounded nav.
+											* Use class "nav-light" to enable nav light style.
+											* Use class "dots-outside" for outside dots (requires enough space at the bottom of the slider).
+											* Use class "dots-left", "dots-right" or "dots-center-right" to align dots.
+											* Use class "dots-rounded" for rounded dots.
+											* Use class "owl-mousewheel" to enable mousewheel support.
+											* Use class "cursor-grab" to enable cursor grab icon (no effect on links!).
+											====================================================================
+											* Available carousel data attributes:
+													data-items="5".......................(items visible on desktop)
+													data-tablet-landscape="4"............(items visible on mobiles)
+													data-tablet-portrait="3".............(items visible on mobiles)
+													data-mobile-landscape="2"............(items visible on tablets)
+													data-mobile-portrait="1".............(items visible on tablets)
+													data-loop="true".....................(true/false)
+													data-margin="10".....................(space between items)
+													data-center="true"...................(true/false)
+													data-start-position="0"..............(item start position)
+													data-animate-in="fadeIn".............(more animations: http://daneden.github.io/animate.css/)
+													data-animate-out="fadeOut"...........(more animations: http://daneden.github.io/animate.css/)
+													data-mouse-drag="false"..............(true/false)
+													data-touch-drag="false"..............(true/false)
+													data-autoheight="true"...............(true/false)
+													data-autoplay="true".................(true/false)
+													data-autoplay-timeout="5000".........(milliseconds)
+													data-autoplay-hover-pause="true".....(true/false)
+													data-autoplay-speed="800"............(milliseconds)
+													data-drag-end-speed="800"............(milliseconds)
+													data-nav="true"......................(true/false)
+													data-nav-speed="800".................(milliseconds)
+													data-dots="false"....................(true/false)
+													data-dots-speed="800"................(milliseconds)
+											-->
+											<div class="owl-carousel dots-outside dots-rounded" data-lazy-load="true" data-items="1" data-nav="true" data-mouse-drag="false" data-loop="true">
+
+												<!-- Begin carousel item 
+												========================= -->
+												<div class="cc-item">
+
+													<!-- Begin single post image -->
+													<figure class="single-post-image">
+														<a href="assets/img/blog/single/big/img-1.jpg" class="sp-image-wrap lg-trigger" data-exthumbnail="assets/img/blog/single/thumb/img-1.jpg" data-sub-html="Yes, you can use image captions. :)">
+															<div class="sp-image owl-lazy bg-image" data-src="assets/img/blog/single/img-1.jpg"></div>
+														</a>
+													</figure>
+													<!-- End single post image -->
+
+												</div>
+												<!-- End carousel item -->
+
+												<!-- Begin carousel item 
+												========================= -->
+												<div class="cc-item">
+
+													<!-- Begin single post image -->
+													<figure class="single-post-image">
+														<a href="assets/img/blog/single/big/img-2.jpg" class="sp-image-wrap lg-trigger" data-exthumbnail="assets/img/blog/single/thumb/img-2.jpg" data-sub-html="Yes, you can use image captions. :)">
+															<div class="sp-image owl-lazy bg-image" data-src="assets/img/blog/single/img-2.jpg"></div>
+														</a>
+													</figure>
+													<!-- End single post image -->
+
+												</div>
+												<!-- End carousel item -->
+
+												<!-- Begin carousel item 
+												========================= -->
+												<div class="cc-item">
+
+													<!-- Begin single post image -->
+													<figure class="single-post-image">
+														<a href="assets/img/blog/single/big/img-3.jpg" class="sp-image-wrap lg-trigger" data-exthumbnail="assets/img/blog/single/thumb/img-3.jpg" data-sub-html="Yes, you can use image captions. :)">
+															<div class="sp-image owl-lazy bg-image" data-src="assets/img/blog/single/img-3.jpg"></div>
+														</a>
+													</figure>
+													<!-- End single post image -->
+
+												</div>
+												<!-- End carousel item -->
+
+											</div>
+											<!-- End content carousel -->
+
+										</div>
+										<!-- End blog single slider -->
+
+										<p>Purus pede eget neque eget a. Eget mauris justo vehicula et metus nec primis tincidunt. Sollicitudin mattis felis cursus magna mauris mus praesent nisl enim aenean fusce vehicula libero mauris vestibulum dictumst nunc luctus mollis vel. Et con nulla proin blandit.</p>
+
+										<br>
+
+										<h3>Blockquote</h3>
+
+										<blockquote>Non mauris nullam. Wisi gravida quis quisque mattis dolor. Etiam sociis turpis nesciunt sed lacus sed hendrerit diam. Accumsan varius venenatis arcu maecenas nulla. Aliquet tempus lobortis. Tortor nibh erat vel gravida est accumsan ut ad. Orci malesuada morbi. Luctus pharetra lectus.</blockquote>
+
+										<br>
+
+										<h3>Video Embed</h3>
+
+										<p>Quis ante id eros orci eget. Ac egestas praesent aliquam nisl in vitae aliquam vitae. Vivamus sed elementum. Sem sed sed. Hendrerit elit eget sem pellentesque a. Velit elit lacinia mattis amet nunc. Fames ipsum rhoncus. Natoque posuere nam commodo mattis orci. Aliquet praesent tempor ac dolor aliquet. Risus mi vitae hendrerit orci vitae amet libero id eget quis nullam. Sed elit cubilia blandit viverra dui semper donec congue. Ac vestibulum venenatis. Risus commodo senectus et natoque euismod quis eros mollis. Vel commodo sem vel nonummy purus.</p>
+
+										<!-- Begin Vimeo embed video -->
+										<div class="embed-responsive embed-responsive-16by9">
+											<iframe class="lazy" data-src="https://player.vimeo.com/video/126945693" allowfullscreen=""></iframe>
+										</div>
+										<!-- End Vimeo embed video -->
+
+									</div>
+									<!-- End post content -->
+
+									<!-- Begin blog single attributes -->
+									<div class="blog-single-attributes margin-top-60">
+										<div class="row">
+											<div class="col-sm-8">
+
+												<!-- Begin blog single tags -->
+												<div class="blog-single-tags">
+													<ul>
+														<li><span>Tags:</span></li>
+														<li><a href="">#photography</a> </li> 
+														<li><a href="">#travel</a> </li>
+														<li><a href="">#motion</a></li>
+													</ul>
+												</div>
+												<!-- End blog single tags -->
+
+											</div> <!-- /.col -->
+
+											<div class="col-sm-4 text-right">
+
+												<!-- Begin blog single links -->
+												<ul class="blog-single-links list-unstyled list-inline">
+													<li>
+														<!-- Begin leave a comment button -->
+														<a href="#post-comment-form" class="leave-comment-btn sm-scroll">Leave a Comment</a>
+														<!-- End leave a comment button -->
+													</li>
+												</ul>
+												<!-- End blog single links -->
+
+											</div> <!-- /.col -->
+										</div> <!-- /.col -->
+									</div>
+									<!-- End blog single attributes -->
+
+									<!-- Begin blog single post share 
+									================================== 
+									* Use class "bss-fixed-bottom" to enable post share fixed bottom position (effect only on small screens!!!).
+									-->
+									<div class="blog-single-share bss-fixed-bottom">
+										<div class="bss-text">Share This Post:</div>
+										<ul>
+											<li><a href="#0" class="btn btn-social-min btn-facebook" title="Share on facebook"><i class="fab fa-facebook-f"></i></a></li>
+											<li><a href="#0" class="btn btn-social-min btn-twitter" title="Share on twitter"><i class="fab fa-twitter"></i></a></li>
+											<li><a href="#0" class="btn btn-social-min btn-google" title="Share on google+"><i class="fab fa-google-plus-g"></i></a></li>
+											<li><a href="#0" class="btn btn-social-min btn-pinterest" title="Share on pinterest"><i class="fab fa-pinterest-p"></i></a></li>
+											<li><a href="#0" class="btn btn-social-min btn-linkedin" title="Share on linkedin"><i class="fab fa-linkedin-in"></i></a></li>
+										</ul>
+									</div>
+									<!-- End blog single post share -->
+
+								</div>
+								<!-- End blog single post inner -->
+
+							</article> 
+							<!-- End blog single post -->
+
+
+							<!-- Begin blog single nav 
+							=========================== -->
+							<div class="blog-single-nav">
+								<div class="bs-nav-col bs-nav-left">
+									<div class="bs-nav-text"><i class="fas fa-angle-left"></i> Prew Post</div>
+									<a href="" class="bs-nav-title"><h4>25 Free and Premium Admin HTML Website Templates and Layouts</h4></a>
+								</div>
+								<div class="bs-nav-col bs-nav-right">
+									<div class="bs-nav-text">Next Post <i class="fas fa-angle-right"></i></div>
+									<a href="" class="bs-nav-title"><h4>Why Designers and Web Developers Must Work Together</h4></a>
+								</div>
+							</div>
+							<!-- End blog single nav -->
+
+
+							<!-- Begin related posts 
+							========================= -->
+							<div class="related-posts">
+								<h3 class="related-posts-heading">You Might Also Like:</h3>
+
+								<!-- Begin related posts carousel
+								================================== -->
+								<div class="related-posts-carousel">
+
+									<!-- Begin content carousel (https://owlcarousel2.github.io/OwlCarousel2/)
+									====================================================================
+									* Use class "nav-outside" for outside nav (requires boxed layout).
+									* Use class "nav-outside-top" for outside top nav (requires enough space at the top of the slider).
+									* Use class "nav-bottom-right" for bottom right nav.
+									* Use class "nav-rounded" for rounded nav.
+									* Use class "nav-light" to enable nav light style.
+									* Use class "dots-outside" for outside dots (requires enough space at the bottom of the slider).
+									* Use class "dots-left", "dots-right" or "dots-center-right" to align dots.
+									* Use class "dots-rounded" for rounded dots.
+									* Use class "owl-mousewheel" to enable mousewheel support.
+									* Use class "cursor-grab" to enable cursor grab icon (no effect on links!).
+									====================================================================
+									* Available carousel data attributes:
+											data-items="5".......................(items visible on desktop)
+											data-tablet-landscape="4"............(items visible on mobiles)
+											data-tablet-portrait="3".............(items visible on mobiles)
+											data-mobile-landscape="2"............(items visible on tablets)
+											data-mobile-portrait="1".............(items visible on tablets)
+											data-loop="true".....................(true/false)
+											data-margin="10".....................(space between items)
+											data-center="true"...................(true/false)
+											data-start-position="0"..............(item start position)
+											data-animate-in="fadeIn".............(more animations: http://daneden.github.io/animate.css/)
+											data-animate-out="fadeOut"...........(more animations: http://daneden.github.io/animate.css/)
+											data-mouse-drag="false"..............(true/false)
+											data-touch-drag="false"..............(true/false)
+											data-autoheight="true"...............(true/false)
+											data-autoplay="true".................(true/false)
+											data-autoplay-timeout="5000".........(milliseconds)
+											data-autoplay-hover-pause="true".....(true/false)
+											data-autoplay-speed="800"............(milliseconds)
+											data-drag-end-speed="800"............(milliseconds)
+											data-nav="true"......................(true/false)
+											data-nav-speed="800".................(milliseconds)
+											data-dots="false"....................(true/false)
+											data-dots-speed="800"................(milliseconds)
+									-->
+									<div class="owl-carousel nav-outside-top" data-lazy-load="true" data-items="3" data-margin="20" data-nav="true" data-dots="false" data-mobile-landscape="2" data-mobile-portrait="1">
+
+										<!-- Begin carousel item 
+										========================= -->
+										<div class="cc-item">
+
+											<!-- Begin related posts item -->
+											<div class="related-posts-item">
+												<div class="rp-item-image-wrap">
+													<a href="" class="rp-item-image owl-lazy bg-image" data-src="assets/img/blog/list/blog-4.jpg"></a>
+												</div>
+												<div class="rp-item-info">
+													<div class="rp-item-category"><a href="blog-archive.html">Resources</a></div>
+													<a href="" class="rp-item-title"><h4>Time-Saving Tools and Resources for Freelance Designers</h4></a>
+												</div>
+											</div>
+											<!-- End related posts item -->
+
+										</div>
+										<!-- End carousel item -->
+
+										<!-- Begin carousel item 
+										========================= -->
+										<div class="cc-item">
+
+											<!-- Begin related posts item -->
+											<div class="related-posts-item">
+												<div class="rp-item-image-wrap">
+													<a href="" class="rp-item-image owl-lazy bg-image" data-src="assets/img/blog/list/blog-5.jpg"></a>
+												</div>
+												<div class="rp-item-info">
+													<div class="rp-item-category"><a href="blog-archive.html">Tutorials</a></div>
+													<a href="" class="rp-item-title"><h4>How to Create a Flat Cityscape in Adobe Illustrator</h4></a>
+												</div>
+											</div>
+											<!-- End related posts item -->
+
+										</div>
+										<!-- End carousel item -->
+
+										<!-- Begin carousel item 
+										========================= -->
+										<div class="cc-item">
+
+											<!-- Begin related posts item -->
+											<div class="related-posts-item">
+												<div class="rp-item-image-wrap">
+													<a href="" class="rp-item-image owl-lazy bg-image" data-src="assets/img/blog/list/blog-6.jpg"></a>
+												</div>
+												<div class="rp-item-info">
+													<div class="rp-item-category"><a href="blog-archive.html">Resources</a></div>
+													<a href="" class="rp-item-title"><h4>Premium Web Tools &amp; Services Recommended By Professionals</h4></a>
+												</div>
+											</div>
+											<!-- End related posts item -->
+
+										</div>
+										<!-- End carousel item -->
+
+										<!-- Begin carousel item 
+										========================= -->
+										<div class="cc-item">
+
+											<!-- Begin related posts item -->
+											<div class="related-posts-item">
+												<div class="rp-item-image-wrap">
+													<a href="" class="rp-item-image owl-lazy bg-image" data-src="assets/img/blog/list/blog-2.jpg"></a>
+												</div>
+												<div class="rp-item-info">
+													<div class="rp-item-category"><a href="blog-archive.html">Resources</a></div>
+													<a href="" class="rp-item-title"><h4>25 Free and Premium Admin HTML Website Templates and Layouts</h4></a>
+												</div>
+											</div>
+											<!-- End related posts item -->
+
+										</div>
+										<!-- End carousel item -->
+
+										<!-- Begin carousel item 
+										========================= -->
+										<div class="cc-item">
+
+											<!-- Begin related posts item -->
+											<div class="related-posts-item">
+												<div class="rp-item-image-wrap">
+													<a href="" class="rp-item-image owl-lazy bg-image" data-src="assets/img/blog/list/blog-3.jpg"></a>
+												</div>
+												<div class="rp-item-info">
+													<div class="rp-item-category"><a href="blog-archive.html">Coding</a></div>
+													<a href="" class="rp-item-title"><h4>Why Designers and Web Developers Must Work Together</h4></a>
+												</div>
+											</div>
+											<!-- End related posts item -->
+
+										</div>
+										<!-- End carousel item -->
+
+									</div>
+									<!-- End content carousel -->
+
+								</div>
+								<!-- End related posts carousel -->
+
+							</div>
+							<!-- End related posts -->
+
+
+							<!-- Begin post comments 
+							========================= -->
+							<div id="blog-post-comments">
+
+								<h4 class="comments-heading"><span>9</span> comments:</h4>
+								
+								<!-- Begin media list -->
+								<ul class="media-list">
+
+									<!-- Begin media -->
+									<li class="media">
+										<a href="#" class="media-object pull-left bg-image" style="background-image: url(assets/img/blog/small/avatar/avatar-1.jpg);"></a>
+										
+										<div class="media-body">
+											<h4 class="media-heading"><a href="#">Lucas Sanski</a></h4>
+											<span class="article-time pull-left">May 26, 2017 at - 12:00am</span>
+											<span class="media-reply pull-right"><a href="#">Reply</a></span>
+											<p class="media-text">Quis ante id eros orci eget. Ac egestas praesent aliquam nisl in vitae aliquam vitae. Vivamus sed elementum. Sem sed sed. Hendrerit elit eget sem pellentesque a. Velit elit lacinia mattis amet nunc. Fames ipsum rhoncus. Natoque posuere nam commodo mattis orci. Aliquet praesent tempor ac dolor aliquet.</p>
+										</div>
+									</li>
+									<!-- End media -->
+
+									<!-- Begin media -->
+									<li class="media">
+										<a href="#" class="media-object pull-left bg-image" style="background-image: url(assets/img/blog/small/avatar/avatar-2.jpg);"></a>
+										
+										<div class="media-body">
+											<h4 class="media-heading"><a href="#">Katie Ryan</a></h4>
+											<span class="article-time pull-left">May 26, 2017 at - 12:02am</span>
+											<span class="media-reply pull-right"><a href="#">Reply</a></span>
+											<p class="media-text">Deleniti lucilius appellantur pri at, nullam putent sea ad. Mutat liber saperet ex eum, omnium aliquando an qui. An pro solum iudico, per ea congue soluta saperet. Ex exerci commodo apeirian per, at invidunt mnesarchum pro.</p>
+										</div>
+									</li>
+									<!-- End media -->
+
+									<!-- Begin media -->
+									<li class="media">
+										<a href="#" class="media-object pull-left bg-image" style="background-image: url(assets/img/blog/small/avatar/avatar-3.jpg);"></a>
+										
+										<div class="media-body">
+											<h4 class="media-heading"><a href="#">Ashton Brown</a></h4>
+											<span class="article-time pull-left">May 26, 2017 at - 12:12am</span>
+											<span class="media-reply pull-right"><a href="#">Reply</a></span>
+											<p class="media-text">Usu in labore bonorum. Te est dicant viderer, mei ea verear detraxit consulatu. Mei graeco omnesque ex, case oratio detraxit vim ex, has eu aeque similique.</p>
+
+											<!-- Begin nested media -->
+											<div class="media">
+												<a href="#" class="media-object pull-left bg-image" style="background-image: url(assets/img/blog/small/avatar/avatar-4.jpg);"></a>
+
+												<div class="media-body">
+													<h4 class="media-heading"><a href="#">Johnny Stevens</a></h4>
+													<span class="article-time pull-left">May 26, 2017 at - 12:25am</span>
+													<span class="media-reply pull-right"><a href="#">Reply</a></span>
+													<p class="media-text">Et prima luptatum dissentias pro. Legere percipit his id. At vidit facilis theophrastus per. Nec eu tale graece aeterno, ex sint nominati reformidans vim. Quidam eleifend ei eum, alienum voluptatibus ad vix.</p>
+
+													<!-- Begin nested media -->
+													<div class="media">
+														<a href="#" class="media-object pull-left bg-image" style="background-image: url(assets/img/blog/small/avatar/avatar-5.jpg);"></a>
+
+														<div class="media-body">
+															<h4 class="media-heading"><a href="#">Leslie Andrews</a></h4>
+															<span class="article-time pull-left">May 26, 2017 at - 12:34am</span>
+															<span class="media-reply pull-right"><a href="#">Reply</a></span>
+															<p class="media-text">Justo quando ex nec. Tation aliquid eam ne, eu modo illud mei, possim nonumes cum ad. Mea solet eloquentiam ad, nec at erat munere maluisset, in errem aliquam qui. Te mei ceteros maiorum, erant suavitate deseruisse ea nam, ea ferri convenire eam. Mel et malorum ullamcorper, mediocrem dissentias nec ex, vel te feugait consulatu. Ex luptatum vituperata sit, no graece comprehensam mea.</p>
+														</div>
+
+													</div>
+													<!-- End nested media -->
+
+												</div>
+											</div>
+											<!-- End nested media -->
+
+											<!-- Begin nested media -->
+											<div class="media">
+												<a href="#" class="media-object pull-left bg-image" style="background-image: url(assets/img/blog/small/avatar/avatar-3.jpg);"></a>
+
+												<div class="media-body">
+													<h4 class="media-heading"><a href="#">Ashton Brown</a></h4>
+													<span class="article-time pull-left">May 26, 2017 at - 12:43am</span>
+													<span class="media-reply pull-right"><a href="#">Reply</a></span>
+													<p class="media-text">Te duo luptatum insolens maluisset, ius te dicam prodesset. Idque adipisci adipiscing ea vix, eu sea audire scriptorem. Qui eu accusamus moderatius, at pericula persecuti moderatius pri, id duo facete tibique. Movet possit eum ea. Pri ne odio tation. At detraxit menandri mea, pri latine conceptam an. An quod torquatos gloriatur eos, est suas illum libris no, graeco tincidunt mel ut.</p>
+												</div>
+
+											</div>
+											<!-- End nested media -->
+
+										</div>
+									</li>
+									<!-- End media -->
+
+									<!-- Begin media -->
+									<li class="media">
+										<a href="#" class="media-object pull-left bg-image" style="background-image: url(assets/img/blog/small/avatar/avatar-7.jpg);"></a>
+										
+										<div class="media-body">
+											<h4 class="media-heading"><a href="#">Kate Dixon</a></h4>
+											<span class="article-time pull-left">May 26, 2017 at 12:49am</span>
+											<span class="media-reply pull-right"><a href="#">Reply</a></span>
+											<p class="media-text">At vim omnes lucilius corrumpit, integre menandri hendrerit mea ut, affert alterum per et. Velit timeam inimicus vis te, vis ex offendit concludaturque. Est id hinc mutat. Cum te populo facete. Usu fugit oblique adolescens ut, modo congue vituperatoribus id mea. Mel ut dolor veniam.</p>
+										</div>
+									</li>
+									<!-- End media -->
+
+									<!-- Begin media -->
+									<li class="media">
+										<a href="#" class="media-object pull-left bg-image" style="background-image: url(assets/img/blog/small/avatar/avatar-8.jpg);"></a>
+										
+										<div class="media-body">
+											<h4 class="media-heading"><a href="#">David Bradley</a></h4>
+											<span class="article-time pull-left">May 26, 2017 at - 12:51am</span>
+											<span class="media-reply pull-right"><a href="#">Reply</a></span>
+											<p class="media-text">Erat mutat eleifend te ius. Hinc volumus accusam cu sea. Sea possit quodsi ex. No nostrud interpretaris est. Sea ex pertinacia dissentiunt, ex ius omittam sapientem, vim apeirian splendide cotidieque in.</p>
+										</div>
+									</li>
+									<!-- End media -->
+
+									<!-- Begin media -->
+									<li class="media">
+										<a href="#" class="media-object pull-left bg-image" style="background-image: url(assets/img/blog/small/avatar/avatar-9.jpg);"></a>
+										
+										<div class="media-body">
+											<h4 class="media-heading"><a href="#">Brayan Peterson</a></h4>
+											<span class="article-time pull-left">May 26, 2017 at - 12:56am</span>
+											<span class="media-reply pull-right"><a href="#">Reply</a></span>
+											<p class="media-text">Enim nonumes nominati cu mel, an nec stet iriure neglegentur. Possim verear adipiscing eum ne. Nec ex option oportere, sed ex clita mollis accusamus. Duis vitae nonumes mea et. Vix ei nibh recteque signiferumque. Aeque malorum molestiae ei nam, at tollit blandit mnesarchum vim, ea ocurreret patrioque est.</p>
+										</div>
+									</li>
+									<!-- End media -->
+
+								</ul>
+								<!-- End media list -->
+
+								<!-- Begin post comment form -->
+								<form id="post-comment-form">
+									<h4>Leave a Comment:</h4>
+									<div class="row">
+										<div class="col-lg-6">
+											<div class="form-group">
+												<input type="text" class="form-control" name="name" placeholder="Your Name*" required>
+											</div>
+										</div> <!-- /.col -->
+										<div class="col-lg-6">
+											<div class="form-group">
+												<input type="email" class="form-control" name="email" placeholder="Your Email*" required>
+											</div>
+										</div> <!-- /.col -->
+									</div> <!-- /.row -->
+									<div class="row">
+										<div class="col-lg-12">
+											<div class="form-group">
+												<textarea class="form-control" name="message" rows="5" placeholder="Your Comment*" required></textarea>
+											</div>
+										</div> <!-- /.col -->
+									</div> <!-- /.row -->
+									<div class="row">
+										<div class="col-lg-12">
+											<button type="submit" class="btn btn-primary">Submit Comment</button>
+
+											<!-- Begin post comment reminder -->
+											<div class="post-comment-reminder">
+												<div class="checkbox-styled">
+													<label>
+														<input type="checkbox" id="notify-me-new-comment" class="reminder-checkbox" value="Email me when this comment receives a reply." checked> 
+														<span class="box"></span> Email me when this comment receives a reply.
+													</label>
+												</div>
+												<div class="checkbox-styled">
+													<label>
+														<input type="checkbox" id="notify-me-new-post" class="reminder-checkbox" value="Notify me of new posts by email." checked> 
+														<span class="box"></span> Notify me of new posts by email.
+													</label>
+												</div>
+											</div>
+											<!-- End post comment reminder -->
+										</div> <!-- /.col -->
+									</div> <!-- /.row -->
+								</form>
+								<!-- End post comment form -->
+
+							</div>
+							<!-- End post comments -->
+
+						</div> <!-- /.col (Content column) -->
+
+					</div> <!-- /.row -->
+
+				</div> <!-- /.blog-single-inner -->
 			</section>
-			<!-- End intro section -->
+			<!-- End blog single section -->
 
 
          <!-- ===========================
@@ -813,7 +1367,7 @@
 			* Use class "footer-dark" to enable dark footer.
 			* Use class "no-margin-top" if needed. 
 			-->
-			<section id="footer" class="no-margin-top">
+			<section id="footer" class="footer-dark">
 				<div class="footer-inner">
 					<div class="footer-container tt-wrap">
 						<div class="row">
@@ -967,7 +1521,6 @@
 
 		<!-- Theme master JS -->
 		<script src="assets/js/theme.js"></script>
-		<script src="assets/js/script.js"></script>
 
 
 

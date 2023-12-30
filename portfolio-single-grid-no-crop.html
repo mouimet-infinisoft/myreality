@@ -10,7 +10,7 @@
 	<head>
 
 		<!-- Title -->
-		<title>Aivo - Multipurpose Portfolio HTML Website Template</title>
+		<title>The Project / Aivo - Multipurpose Portfolio HTML Website Template</title>
 
 		<!-- Meta -->
 		<meta charset="utf-8">
@@ -78,7 +78,7 @@
 		* Use class "menu-align-right" to align menu to right.
 		* Use class "menu-align-center" to align menu to center (do not use with header classes!).
 		-->
-		<header id="header" class="header-show-hide-on-scroll header-transparent menu-align-right">
+		<header id="header" class="header-show-hide-on-scroll menu-align-right">
 
 			<!-- Begin header inner -->
 			<div class="header-inner tt-wrap"> <!-- add/remove class "tt-wrap" to enable/disable element boxed layout (class "tt-boxed" is required in <body> tag!). Note: additionally you can use prepared helper class "max-width-*" to add custom width to "tt-wrap". Example: "max-width-1500" (class "tt-wrap" is still required!). More info about helper classes in file "helper.css" -->
@@ -244,7 +244,7 @@
 
 							<!-- Begin submenu (submenu master)
 							==================================== -->
-							<li class="tt-submenu-wrap tt-submenu-master active">
+							<li class="tt-submenu-wrap tt-submenu-master">
 								<a href="#0">Home</a>
 								<div class="tt-submenu">
 									<ul class="tt-submenu-list">
@@ -253,7 +253,7 @@
 										<li><a href="home-landing-3.html">Home Landing 3</a></li>
 										<li><a href="home-full-screen-slideshow.html">Full Screen Slideshow</a></li>
 										<li><a href="home-full-screen-single-image.html">Full Screen Image</a></li>
-										<li class="active"><a href="home-full-screen-video.html">Full Screen Video</a></li>
+										<li><a href="home-full-screen-video.html">Full Screen Video</a></li>
 									</ul> <!-- /.tt-submenu-list -->
 								</div> <!-- /.tt-submenu -->
 							</li>
@@ -316,7 +316,7 @@
 
 							<!-- Begin submenu (submenu master)
 							==================================== -->
-							<li class="tt-submenu-wrap tt-submenu-master">
+							<li class="tt-submenu-wrap tt-submenu-master active">
 								<a href="#0">Portfolio</a>
 								<div class="tt-submenu">
 									<ul class="tt-submenu-list">
@@ -373,7 +373,7 @@
 
 										<!-- Begin submenu
 										=================== -->
-										<li class="tt-submenu-wrap">
+										<li class="tt-submenu-wrap active">
 											<a href="#0">Portfolio Single</a>
 											<div class="tt-submenu">
 												<ul class="tt-submenu-list">
@@ -389,7 +389,7 @@
 													<li><a href="portfolio-single-10.html">Portfolio Single 10</a></li>
 													<li><a href="portfolio-single-11.html">Portfolio Single 11</a></li>
 													<li><a href="portfolio-single-12.html">Portfolio Single 12</a></li>
-													<li><a href="portfolio-single-grid-no-crop.html">Single Grid No Crop</a></li>
+													<li class="active"><a href="portfolio-single-grid-no-crop.html">Single Grid No Crop</a></li>
 												</ul> <!-- /.tt-submenu-list -->
 											</div> <!-- /.tt-submenu -->
 										</li>
@@ -722,89 +722,754 @@
 		<div id="body-content">
 
 
-			<!-- ==========================
-			///// Begin intro section /////
-			===============================
-			* Use classes "intro-xs", "intro-sm", "intro-lg" "intro-xlg" or "intro-full" to set intro size.
-			* Use class "intro-full-m" to set intro size for small screens only.
-			-->
-			<section id="tt-intro" class="intro-full">
-				<div class="tt-intro-inner"> <!-- add/remove class "tt-wrap" to enable/disable element boxed layout (class "tt-boxed" is required in <body> tag!). Note: additionally you can use prepared helper class "max-width-*" to add custom width to "tt-wrap". Example: "max-width-1500" (class "tt-wrap" is still required!). More info about helper classes in file "helper.css" -->
+			<!-- =====================================
+			///// Begin portfolio single section /////
+			====================================== -->
+			<section id="portfolio-single-section">
+				<div class="portfolio-single-inner"> <!-- add/remove class "tt-wrap" to enable/disable element boxed layout (class "tt-boxed" is required in <body> tag!). Note: additionally you can use prepared helper class "max-width-*" to add custom width to "tt-wrap". Example: "max-width-1500" (class "tt-wrap" is still required!). More info about helper classes in file "helper.css" -->
 
-					<!-- Begin YTPlayer (Youtube video background)
-					=======================================================
-					* NOTE: Replace videoURL with your own (videoURL:'your-youtube-video-URL'). 
-					* Do not forget to add your background image for mobile devices (because the video background doesn't work on mobile devices).
-					* YTPlayer may not work in the local computer. It works properly only if used under a web server.
-					* Read more info about YTPlayer: https://github.com/pupunzi/jquery.mb.YTPlayer
+
+					<!-- Begin portfolio single gallery 
+					==================================== 
+					* Use class "psi-zoom" to enable portfolio single image hover zoom effect.
+					* Use class "psi-colored" or "psi-multi-colored" to enable portfolio single image colored hover overlay.
+					* Use class "psi-dark" to enable portfolio single image dark hover overlay.
+					* Use class "psi-white" to enable portfolio single image white hover overlay.
 					-->
-					<div class="youtube-bg-wrap parallax-6 bg-dark"> <!-- Class "parallax-6" is for tt-intro only!!! -->
-						<div class="youtube-bg" 
-						style="background-image: url(assets/img/video-bg/video-bg-1.jpg); background-position: 50% 50%;"
-						data-property="{
-							videoURL: 'https://www.youtube.com/watch?v=GCYlRFZQk2E',
-							containment: 'self',
-							quality: 'default',
-							startAt: 0,
-							stopAt: 0,
-							autoPlay: true,
-							loop: true,
-							mute: true,
-							showControls: false,
-							showYTLogo: false,
-							realfullscreen: true,
-							addRaster: false,
-							optimizeDisplay: true,
-							stopMovieOnBlur: true
-						}">
+					<div class="portfolio-single-gallery lightgallery psi-zoom psi-dark">
 
-							<!-- Element cover 
-							===================
-							* Use class "cover-opacity-*" to set cover opasity (1, 1.5, 2, 2.5, ... 9.5). Example: "cover-opacity-2" or "cover-opacity-2-5".
-							* Aditional color classes you can use: "cover-color", "cover-light", "cover-red", "cover-pink", "cover-purple", "cover-green", "cover-blue", "cover-yellow" or "cover-brown" to set cover background color (note: class "cover-color" = template main color).
-							* Use class "cover-gradient-dark", "cover-gradient-light" or "cover-gradient-color" to enable cover gradient background.
-							-->
-							<div class="cover cover-opacity-6"></div>
+						<!-- Begin isotope
+						===================
+						* Use class "gutter-1", "gutter-2", "gutter-3", "gutter-4", "gutter-5" or "gutter-6" to add more space between items.
+						* Use class "col-1", "col-2", "col-3", "col-4", "col-5" or "col-6" for columns.
+						-->
+						<div class="isotope col-4 gutter-3">
 
-						</div> <!-- /.youtube-bg -->
-					</div>
-					<!-- End YTPlayer -->
+							<!-- Begin isotope items wrap -->
+							<div class="isotope-items-wrap">
 
-					<!-- Begin intro caption 
-					=========================
-					* Position classes: "top-left", "top-center", "top-right", "center-left", "center", "center-right", "bottom-left", "bottom-center", "bottom-right". 
-					* Size classes: "intro-caption-xs", "intro-caption-sm", "intro-caption-lg", "intro-caption-xlg", "intro-caption-xxlg".
-					* Use class "parallax-1" up to "parallax-6" to enable parallax effect (no effect on mobile devices!).
-					* Use class "fade-out-scroll-1" up to "fade-out-scroll-6" to enable fade out effect if page scrolls (no effect on mobile devices!).
-					-->
-					<div class="intro-caption-wrap caption-animate intro-caption-lg bottom-left parallax-4">
-						<div class="intro-caption-holder">
-							<div class="intro-caption center">
-								<h1 class="intro-title">What Are You<br>Waiting For?</h1>
-								<h2 class="intro-subtitle">Build your beautiful portfolio website today!</h2>
+								<!-- Grid sizer (do not remove!!!) -->
+								<div class="grid-sizer"></div>
 
-								<!-- Begin intro description (recommended max 170 characters!) 
-								============================= -->
-								<div class="intro-description">
-									Aivo – is a complete HTML5 and CSS3 website template. It fits perfectly for freelancers, artists and design agencies. It looks great with all types of devices.
+
+								<!-- ===================== 
+								/// Begin isotope item ///
+								========================== 
+								* If you use background image on isotope-item child element, then you need to use class "iso-height-1" or "iso-height-2" to set the item height. If you use simple image tag, then don't use height classes.
+								-->
+								<div class="isotope-item digital">
+
+									<!-- Begin portfolio single image -->
+									<figure class="portfolio-single-image-holder">
+										<a href="assets/img/portfolio/single/single-2/big/portfolio-single-1.jpg" class="ps-image-link lg-trigger" data-exthumbnail="assets/img/portfolio/single/single-2/thumb/portfolio-single-1.jpg" data-sub-html="Yes, you can use image captions. :)">
+											<div class="portfolio-single-image">
+												<img src="assets/img/portfolio/single/single-2/portfolio-single-1.jpg" alt="image">
+												<div class="ps-image-icon">
+													<span class="lnr lnr-eye"></span>
+												</div>
+											</div>
+										</a>
+									</figure>
+									<!-- End portfolio single image -->
+
 								</div>
-								<!-- End intro-description -->
+								<!-- End isotope item -->
 
-								<!-- Begin intro buttons -->
-								<button id="startButton">Start</button>
-									<div class="intro-buttons">
-									<a href="https://themeforest.net/item/aivo-multipurpose-portfolio-html-website-template/21587861?ref=Themetorium" class="btn btn-primary margin-top-5 margin-right-10" target="_blank">Buy It Now!</a> 
-									<a href="" class="btn btn-white-bordered margin-top-5">Discover More</a>
-						<!-- End intro buttons -->
+								<!-- ===================== 
+								/// Begin isotope item ///
+								========================== 
+								* If you use background image on isotope-item child element, then you need to use class "iso-height-1" or "iso-height-2" to set the item height. If you use simple image tag, then don't use height classes.
+								-->
+								<div class="isotope-item digital">
 
-							</div> <!-- /.intro-caption -->
-						</div> <!-- /.intro-caption-holder -->
+									<!-- Begin portfolio single image -->
+									<figure class="portfolio-single-image-holder">
+										<a href="assets/img/portfolio/single/single-2/big/portfolio-single-5.jpg" class="ps-image-link lg-trigger" data-exthumbnail="assets/img/portfolio/single/single-2/thumb/portfolio-single-5.jpg">
+											<div class="portfolio-single-image">
+												<img src="assets/img/portfolio/single/single-2/portfolio-single-5.jpg" alt="image">
+												<div class="ps-image-icon">
+													<span class="lnr lnr-eye"></span>
+												</div>
+											</div>
+										</a>
+									</figure>
+									<!-- End portfolio single image -->
+
+								</div>
+								<!-- End isotope item -->
+
+								<!-- ===================== 
+								/// Begin isotope item ///
+								========================== 
+								* If you use background image on isotope-item child element, then you need to use class "iso-height-1" or "iso-height-2" to set the item height. If you use simple image tag, then don't use height classes.
+								-->
+								<div class="isotope-item digital">
+
+									<!-- Begin portfolio single image (Youtube or Vimeo link) -->
+									<figure class="portfolio-single-image-holder">
+										<a href="https://www.youtube.com/watch?v=xK5HkSpKLVA" class="ps-image-link lg-trigger">
+											<div class="portfolio-single-image">
+												<img src="assets/img/portfolio/single/single-2/portfolio-single-4.jpg" alt="image">
+												<div class="ps-image-icon">
+													<span class="lnr lnr-eye"></span>
+												</div>
+											</div>
+										</a>
+									</figure>
+									<!-- End portfolio single image -->
+
+								</div>
+								<!-- End isotope item -->
+
+								<!-- ===================== 
+								/// Begin isotope item ///
+								========================== 
+								* If you use background image on isotope-item child element, then you need to use class "iso-height-1" or "iso-height-2" to set the item height. If you use simple image tag, then don't use height classes.
+								-->
+								<div class="isotope-item digital">
+
+									<!-- Begin portfolio single image -->
+									<figure class="portfolio-single-image-holder">
+										<a href="assets/img/portfolio/single/single-2/big/portfolio-single-3.jpg" class="ps-image-link lg-trigger" data-exthumbnail="assets/img/portfolio/single/single-2/thumb/portfolio-single-3.jpg">
+											<div class="portfolio-single-image">
+												<img src="assets/img/portfolio/single/single-2/portfolio-single-3.jpg" alt="image">
+												<div class="ps-image-icon">
+													<span class="lnr lnr-eye"></span>
+												</div>
+											</div>
+										</a>
+									</figure>
+									<!-- End portfolio single image -->
+
+								</div>
+								<!-- End isotope item -->
+
+								<!-- ===================== 
+								/// Begin isotope item ///
+								========================== 
+								* If you use background image on isotope-item child element, then you need to use class "iso-height-1" or "iso-height-2" to set the item height. If you use simple image tag, then don't use height classes.
+								-->
+								<div class="isotope-item digital">
+
+									<!-- Begin portfolio single image -->
+									<figure class="portfolio-single-image-holder">
+										<a href="assets/img/portfolio/single/single-2/big/portfolio-single-2.jpg" class="ps-image-link lg-trigger" data-exthumbnail="assets/img/portfolio/single/single-2/thumb/portfolio-single-2.jpg">
+											<div class="portfolio-single-image">
+												<img src="assets/img/portfolio/single/single-2/portfolio-single-2.jpg" alt="image">
+												<div class="ps-image-icon">
+													<span class="lnr lnr-eye"></span>
+												</div>
+											</div>
+										</a>
+									</figure>
+									<!-- End portfolio single image -->
+
+								</div>
+								<!-- End isotope item -->
+
+								<!-- ===================== 
+								/// Begin isotope item ///
+								========================== 
+								* If you use background image on isotope-item child element, then you need to use class "iso-height-1" or "iso-height-2" to set the item height. If you use simple image tag, then don't use height classes.
+								-->
+								<div class="isotope-item digital">
+
+									<!-- Begin portfolio single image -->
+									<figure class="portfolio-single-image-holder">
+										<a href="assets/img/portfolio/single/single-2/big/portfolio-single-6.jpg" class="ps-image-link lg-trigger" data-exthumbnail="assets/img/portfolio/single/single-2/thumb/portfolio-single-6.jpg">
+											<div class="portfolio-single-image">
+												<img src="assets/img/portfolio/single/single-2/portfolio-single-6.jpg" alt="image">
+												<div class="ps-image-icon">
+													<span class="lnr lnr-eye"></span>
+												</div>
+											</div>
+										</a>
+									</figure>
+									<!-- End portfolio single image -->
+
+								</div>
+								<!-- End isotope item -->
+
+								<!-- ===================== 
+								/// Begin isotope item ///
+								========================== 
+								* If you use background image on isotope-item child element, then you need to use class "iso-height-1" or "iso-height-2" to set the item height. If you use simple image tag, then don't use height classes.
+								-->
+								<div class="isotope-item digital">
+
+									<!-- Begin portfolio single image -->
+									<figure class="portfolio-single-image-holder">
+										<a href="assets/img/portfolio/single/single-2/big/portfolio-single-7.jpg" class="ps-image-link lg-trigger" data-exthumbnail="assets/img/portfolio/single/single-2/thumb/portfolio-single-7.jpg">
+											<div class="portfolio-single-image">
+												<img src="assets/img/portfolio/single/single-2/portfolio-single-7.jpg" alt="image">
+												<div class="ps-image-icon">
+													<span class="lnr lnr-eye"></span>
+												</div>
+											</div>
+										</a>
+									</figure>
+									<!-- End portfolio single image -->
+
+								</div>
+								<!-- End isotope item -->
+
+								<!-- ===================== 
+								/// Begin isotope item ///
+								========================== 
+								* If you use background image on isotope-item child element, then you need to use class "iso-height-1" or "iso-height-2" to set the item height. If you use simple image tag, then don't use height classes.
+								-->
+								<div class="isotope-item digital">
+
+									<!-- Begin portfolio single image -->
+									<figure class="portfolio-single-image-holder">
+										<a href="assets/img/portfolio/single/single-2/big/portfolio-single-8.jpg" class="ps-image-link lg-trigger" data-exthumbnail="assets/img/portfolio/single/single-2/thumb/portfolio-single-8.jpg">
+											<div class="portfolio-single-image">
+												<img src="assets/img/portfolio/single/single-2/portfolio-single-8.jpg" alt="image">
+												<div class="ps-image-icon">
+													<span class="lnr lnr-eye"></span>
+												</div>
+											</div>
+										</a>
+									</figure>
+									<!-- End portfolio single image -->
+
+								</div>
+								<!-- End isotope item -->
+
+								<!-- ===================== 
+								/// Begin isotope item ///
+								========================== 
+								* If you use background image on isotope-item child element, then you need to use class "iso-height-1" or "iso-height-2" to set the item height. If you use simple image tag, then don't use height classes.
+								-->
+								<div class="isotope-item digital">
+
+									<!-- Begin portfolio single image -->
+									<figure class="portfolio-single-image-holder">
+										<a href="assets/img/portfolio/single/single-2/big/portfolio-single-9.jpg" class="ps-image-link lg-trigger" data-exthumbnail="assets/img/portfolio/single/single-2/thumb/portfolio-single-9.jpg">
+											<div class="portfolio-single-image">
+												<img src="assets/img/portfolio/single/single-2/portfolio-single-9.jpg" alt="image">
+												<div class="ps-image-icon">
+													<span class="lnr lnr-eye"></span>
+												</div>
+											</div>
+										</a>
+									</figure>
+									<!-- End portfolio single image -->
+
+								</div>
+								<!-- End isotope item -->
+
+								<!-- ===================== 
+								/// Begin isotope item ///
+								========================== 
+								* If you use background image on isotope-item child element, then you need to use class "iso-height-1" or "iso-height-2" to set the item height. If you use simple image tag, then don't use height classes.
+								-->
+								<div class="isotope-item digital">
+
+									<!-- Begin portfolio single image -->
+									<figure class="portfolio-single-image-holder">
+										<a href="assets/img/portfolio/single/single-2/big/portfolio-single-10.jpg" class="ps-image-link lg-trigger" data-exthumbnail="assets/img/portfolio/single/single-2/thumb/portfolio-single-10.jpg">
+											<div class="portfolio-single-image">
+												<img src="assets/img/portfolio/single/single-2/portfolio-single-10.jpg" alt="image">
+												<div class="ps-image-icon">
+													<span class="lnr lnr-eye"></span>
+												</div>
+											</div>
+										</a>
+									</figure>
+									<!-- End portfolio single image -->
+
+								</div>
+								<!-- End isotope item -->
+
+								<!-- ===================== 
+								/// Begin isotope item ///
+								========================== 
+								* If you use background image on isotope-item child element, then you need to use class "iso-height-1" or "iso-height-2" to set the item height. If you use simple image tag, then don't use height classes.
+								-->
+								<div class="isotope-item digital">
+
+									<!-- Begin portfolio single image -->
+									<figure class="portfolio-single-image-holder">
+										<a href="assets/img/portfolio/single/single-2/big/portfolio-single-13.jpg" class="ps-image-link lg-trigger" data-exthumbnail="assets/img/portfolio/single/single-2/thumb/portfolio-single-13.jpg">
+											<div class="portfolio-single-image">
+												<img src="assets/img/portfolio/single/single-2/portfolio-single-13.jpg" alt="image">
+												<div class="ps-image-icon">
+													<span class="lnr lnr-eye"></span>
+												</div>
+											</div>
+										</a>
+									</figure>
+									<!-- End portfolio single image -->
+
+								</div>
+								<!-- End isotope item -->
+
+								<!-- ===================== 
+								/// Begin isotope item ///
+								========================== 
+								* If you use background image on isotope-item child element, then you need to use class "iso-height-1" or "iso-height-2" to set the item height. If you use simple image tag, then don't use height classes.
+								-->
+								<div class="isotope-item digital">
+
+									<!-- Begin portfolio single image -->
+									<figure class="portfolio-single-image-holder">
+										<a href="assets/img/portfolio/single/single-2/big/portfolio-single-12.jpg" class="ps-image-link lg-trigger" data-exthumbnail="assets/img/portfolio/single/single-2/thumb/portfolio-single-12.jpg">
+											<div class="portfolio-single-image">
+												<img src="assets/img/portfolio/single/single-2/portfolio-single-12.jpg" alt="image">
+												<div class="ps-image-icon">
+													<span class="lnr lnr-eye"></span>
+												</div>
+											</div>
+										</a>
+									</figure>
+									<!-- End portfolio single image -->
+
+								</div>
+								<!-- End isotope item -->
+
+							</div>
+							<!-- End isotope items wrap -->
+
+
+							<!-- Begin tt-pagination 
+							========================= 
+							* Use class "tt-pagin-center" or "tt-pagin-right" to align pagination 
+							* Use class "tt-pagin-rounded" to enable pagination rounded style -->
+							<!-- <div class="tt-pagination-wrap">
+								<ul class="tt-pagination">
+									<li><a href="" title="Go to the first page">First</a></li>
+									<li><a href="" title="Go to the previous page">Prev</a></li>
+									<li class="active"><a href="#0">1</a></li>
+									<li><a href="">2</a></li>
+									<li><a href="">3</a></li>
+									<li><span>...</span></li>
+									<li><a href="">6</a></li>
+									<li><a href="">7</a></li>
+									<li><a href="">8</a></li>
+									<li><a href="" title="Go to the next page">Next</a></li>
+									<li><a href="" title="Go to the last page">Last</a></li>
+								</ul>
+
+								<div class="tt-pagination-info">
+									<span>Showing page 1 of 8</span>
+									<span>Portfolios 1-15 of 114</span>
+								</div>
+							</div> -->
+							<!-- End tt-pagination -->
+
+
+							<!-- Begin isotope pagination (Note: "Load More" button is for design purposes only!)
+							============================== -->
+							<!-- <div class="iso-load-more-wrap">
+								<div class="iso-load-more">
+									<button class="iso-load-more-button">Load More</button>
+								</div>
+							</div> -->
+							<!-- End isotope pagination -->
+
+						</div>
+						<!-- End isotope -->
+
 					</div>
-					<!-- End intro caption wrap -->
-					
-				</div> <!-- /.tt-intro-inner -->
+					<!-- End portfolio single gallery -->
+
+				</div> <!-- /.portfolio-single-inner -->
 			</section>
-			<!-- End intro section -->
+			<!-- End portfolio single section -->
+
+
+			<!-- ==========================================
+			///// Begin project carousel section /////
+			=========================================== -->
+			<section id="project-carousel-section">
+				<div class="project-carousel-inner"> <!-- add/remove class "tt-wrap" to enable/disable element boxed layout (class "tt-boxed" is required in <body> tag!). Note: additionally you can use prepared helper class "max-width-*" to add custom width to "tt-wrap". Example: "max-width-1500" (class "tt-wrap" is still required!). More info about helper classes in file "helper.css" -->
+
+					<!-- Begin tt-heading 
+					====================== 
+					* Use class "padding-on" to enable heading paddings (useful if you use tt-heading as stand alone element).
+					* Use class "text-center" or "text-right" to align tt-heading.
+					* Use classes "tt-heading-xs", "tt-heading-sm", "tt-heading-lg", "tt-heading-xlg" or "tt-heading-xxlg" to set tt-heading size.
+					-->
+					<div class="tt-heading tt-heading-xlg margin-bottom-80 text-center">
+						<div class="tt-heading-inner tt-wrap">
+							<h1 class="tt-heading-title">More Projects</h1>
+							<div class="tt-heading-subtitle">Other projects you might like</div>
+							
+							<!-- Begin zig-zag separator 
+							============================= 
+							* Use classes "zig-zag-xs", "zig-zag-sm", "zig-zag-lg" or "zig-zag-xlg" to set separator size. 
+							* Use classes "zig-zag-light" or "zig-zag-dark" to change zig-zag separator style.
+							-->
+							<div class="zig-zag-separator">
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+							</div>
+							<!-- End zig-zag separator -->
+
+						</div> <!-- /.tt-heading-inner -->
+					</div>
+					<!-- End tt-heading -->
+
+
+					<!-- Begin isotope items wrap 
+					==============================
+					* Use class "pli-alter-1", "pli-alter-2", "pli-alter-3", "pli-alter-4" or "pli-alter-5" to change portfolio list item style. Note: style "pli-alter-4" is no effect on small screens (for better user experience)!
+					* Use class "pli-dark" to enable dark hover overlay (effect only with default hover overlay and "pli-alter-4", "pli-alter-5" classes!).
+					* Use class "pli-colored" or "pli-multi-colored" to enable colored hover overlay (effect only with default hover overlay and "pli-alter-4", "pli-alter-5" classes!).
+					* Use class "pli-frame" to enable image frames.
+					-->
+					<div class="project-carousel pli-dark pli-alter-4">
+
+						<!-- Begin content carousel (https://owlcarousel2.github.io/OwlCarousel2/)
+						====================================================================
+						* Use class "nav-outside" for outside nav (requires boxed layout).
+						* Use class "nav-outside-top" for outside top nav (requires enough space at the top of the slider).
+						* Use class "nav-bottom-right" for bottom right nav.
+						* Use class "nav-rounded" for rounded nav.
+						* Use class "nav-light" to enable nav light style.
+						* Use class "dots-outside" for outside dots (requires enough space at the bottom of the slider).
+						* Use class "dots-left", "dots-right" or "dots-center-right" to align dots.
+						* Use class "dots-rounded" for rounded dots.
+						* Use class "owl-mousewheel" to enable mousewheel support.
+						* Use class "cursor-grab" to enable cursor grab icon (no effect on links!).
+						====================================================================
+						* Available carousel data attributes:
+								data-items="5".......................(items visible on desktop)
+								data-tablet-landscape="4"............(items visible on mobiles)
+								data-tablet-portrait="3".............(items visible on mobiles)
+								data-mobile-landscape="2"............(items visible on tablets)
+								data-mobile-portrait="1".............(items visible on tablets)
+								data-loop="true".....................(true/false)
+								data-margin="10".....................(space between items)
+								data-center="true"...................(true/false)
+								data-start-position="0"..............(item start position)
+								data-animate-in="fadeIn".............(more animations: http://daneden.github.io/animate.css/)
+								data-animate-out="fadeOut"...........(more animations: http://daneden.github.io/animate.css/)
+								data-mouse-drag="false"..............(true/false)
+								data-touch-drag="false"..............(true/false)
+								data-autoheight="true"...............(true/false)
+								data-autoplay="true".................(true/false)
+								data-autoplay-timeout="5000".........(milliseconds)
+								data-autoplay-hover-pause="true".....(true/false)
+								data-autoplay-speed="800"............(milliseconds)
+								data-drag-end-speed="800"............(milliseconds)
+								data-nav="true"......................(true/false)
+								data-nav-speed="800".................(milliseconds)
+								data-dots="false"....................(true/false)
+								data-dots-speed="800"................(milliseconds)
+						-->
+						<div class="owl-carousel nav-outside-top nav-rounded" data-lazy-load="true" data-items="4" data-margin="40" data-dots="false" data-nav="true" data-nav-speed="800" data-tablet-landscape="3" data-tablet-portrait="2" data-mobile-landscape="2" data-mobile-portrait="1">
+
+							<!-- Begin carousel item 
+							========================= -->
+							<div class="cc-item iso-height-1">
+
+								<!-- Begin portfolio list item -->
+								<div class="portfolio-list-item">
+
+									<!-- Begin portfolio list item image -->
+									<div class="pl-item-image-wrap">
+
+										<!-- Begin portfolio list item image inner -->
+										<a href="portfolio-single-12.html" class="pl-item-image-inner">
+											<div class="pl-item-image bg-image owl-lazy" data-src="assets/img/portfolio/list/list-2/portfolio-list-1.jpg"></div>
+											
+											<!-- Portfolio list item icon (displayed only with default hover overlay and "pli-alter-4" class in isotope-items-wrap) -->
+											<div class="pl-item-icon"><span class="lnr lnr-link"></span></div>
+										</a>
+										<!-- End portfolio list item image inner -->
+
+									</div>
+									<!-- End portfolio list item image -->
+									
+									<!-- Begin portfolio list item info -->
+									<div class="pl-item-info">
+										<div class="pl-item-caption">
+											<h2 class="pl-item-title"><a href="portfolio-single-12.html">Elper Nomadis</a></h2>
+											<div class="pl-item-category"><a href="">Digital</a></div>
+										</div>
+									</div>
+									<!-- End portfolio list item info -->
+
+								</div>
+								<!-- End portfolio list item -->
+
+							</div>
+							<!-- End carousel item -->
+
+							<!-- Begin carousel item 
+							========================= -->
+							<div class="cc-item iso-height-1">
+
+								<!-- Begin portfolio list item -->
+								<div class="portfolio-list-item">
+
+									<!-- Begin portfolio list item image -->
+									<div class="pl-item-image-wrap">
+
+										<!-- Begin portfolio list item image inner -->
+										<a href="portfolio-single-11.html" class="pl-item-image-inner">
+											<div class="pl-item-image bg-image owl-lazy" data-src="assets/img/portfolio/list/list-2/portfolio-list-19.gif"></div>
+											
+											<!-- Portfolio list item icon (displayed only with default hover overlay and "pli-alter-4" class in isotope-items-wrap) -->
+											<div class="pl-item-icon"><span class="lnr lnr-link"></span></div>
+										</a>
+										<!-- End portfolio list item image inner -->
+
+									</div>
+									<!-- End portfolio list item image -->
+									
+									<!-- Begin portfolio list item info -->
+									<div class="pl-item-info">
+										<div class="pl-item-caption">
+											<h2 class="pl-item-title"><a href="portfolio-single-11.html">Futter Samantis</a></h2>
+											<div class="pl-item-category"><a href="">Print</a></div>
+										</div>
+									</div>
+									<!-- End portfolio list item info -->
+
+								</div>
+								<!-- End portfolio list item -->
+
+							</div>
+							<!-- End carousel item -->
+
+							<!-- Begin carousel item 
+							========================= -->
+							<div class="cc-item iso-height-1">
+
+								<!-- Begin portfolio list item -->
+								<div class="portfolio-list-item">
+
+									<!-- Begin portfolio list item image -->
+									<div class="pl-item-image-wrap">
+
+										<!-- Begin portfolio list item image inner -->
+										<a href="portfolio-single-10.html" class="pl-item-image-inner">
+											<div class="pl-item-image bg-image owl-lazy" data-src="assets/img/portfolio/list/list-2/portfolio-list-3.jpg"></div>
+											
+											<!-- Portfolio list item icon (displayed only with default hover overlay and "pli-alter-4" class in isotope-items-wrap) -->
+											<div class="pl-item-icon"><span class="lnr lnr-link"></span></div>
+										</a>
+										<!-- End portfolio list item image inner -->
+
+									</div>
+									<!-- End portfolio list item image -->
+									
+									<!-- Begin portfolio list item info -->
+									<div class="pl-item-info">
+										<div class="pl-item-caption">
+											<h2 class="pl-item-title"><a href="portfolio-single-10.html">Tartumi Sandera Naomis</a></h2>
+											<div class="pl-item-category"><a href="">Branding</a></div>
+										</div>
+									</div>
+									<!-- End portfolio list item info -->
+
+								</div>
+								<!-- End portfolio list item -->
+
+							</div>
+							<!-- End carousel item -->
+
+							<!-- Begin carousel item 
+							========================= -->
+							<div class="cc-item iso-height-1">
+
+								<!-- Begin portfolio list item -->
+								<div class="portfolio-list-item">
+
+									<!-- Begin portfolio list item image -->
+									<div class="pl-item-image-wrap">
+
+										<!-- Begin portfolio list item image inner -->
+										<a href="portfolio-single-9.html" class="pl-item-image-inner">
+											<div class="pl-item-image bg-image owl-lazy" data-src="assets/img/portfolio/list/list-2/portfolio-list-4.jpg"></div>
+											
+											<!-- Portfolio list item icon (displayed only with default hover overlay and "pli-alter-4" class in isotope-items-wrap) -->
+											<div class="pl-item-icon"><span class="lnr lnr-link"></span></div>
+										</a>
+										<!-- End portfolio list item image inner -->
+										
+									</div>
+									<!-- End portfolio list item image -->
+									
+									<!-- Begin portfolio list item info -->
+									<div class="pl-item-info">
+										<div class="pl-item-caption">
+											<h2 class="pl-item-title"><a href="portfolio-single-9.html">Tetera Laktus</a></h2>
+											<div class="pl-item-category"><a href="">Digital</a></div>
+										</div>
+									</div>
+									<!-- End portfolio list item info -->
+
+								</div>
+								<!-- End portfolio list item -->
+
+							</div>
+							<!-- End carousel item -->
+
+							<!-- Begin carousel item 
+							========================= -->
+							<div class="cc-item iso-height-1">
+
+								<!-- Begin portfolio list item -->
+								<div class="portfolio-list-item">
+
+									<!-- Begin portfolio list item image -->
+									<div class="pl-item-image-wrap">
+
+										<!-- Begin portfolio list item image inner -->
+										<a href="portfolio-single-12.html" class="pl-item-image-inner">
+											<div class="pl-item-image bg-image owl-lazy" data-src="assets/img/portfolio/list/list-2/portfolio-list-5.jpg"></div>
+											
+											<!-- Portfolio list item icon (displayed only with default hover overlay and "pli-alter-4" class in isotope-items-wrap) -->
+											<div class="pl-item-icon"><span class="lnr lnr-link"></span></div>
+										</a>
+										<!-- End portfolio list item image inner -->
+
+									</div>
+									<!-- End portfolio list item image -->
+									
+									<!-- Begin portfolio list item info -->
+									<div class="pl-item-info">
+										<div class="pl-item-caption">
+											<h2 class="pl-item-title"><a href="portfolio-single-12.html">Tant Saktra Memis</a></h2>
+											<div class="pl-item-category"><a href="">Motion</a></div>
+										</div>
+									</div>
+									<!-- End portfolio list item info -->
+
+								</div>
+								<!-- End portfolio list item -->
+
+							</div>
+							<!-- End carousel item -->
+
+							<!-- Begin carousel item 
+							========================= -->
+							<div class="cc-item iso-height-1">
+
+								<!-- Begin portfolio list item -->
+								<div class="portfolio-list-item">
+
+									<!-- Begin portfolio list item image -->
+									<div class="pl-item-image-wrap">
+
+										<!-- Begin portfolio list item image inner -->
+										<a href="portfolio-single-11.html" class="pl-item-image-inner">
+											<div class="pl-item-image bg-image owl-lazy" data-src="assets/img/portfolio/list/list-2/portfolio-list-6.jpg"></div>
+											
+											<!-- Portfolio list item icon (displayed only with default hover overlay and "pli-alter-4" class in isotope-items-wrap) -->
+											<div class="pl-item-icon"><span class="lnr lnr-link"></span></div>
+										</a>
+										<!-- End portfolio list item image inner -->
+
+									</div>
+									<!-- End portfolio list item image -->
+									
+									<!-- Begin portfolio list item info -->
+									<div class="pl-item-info">
+										<div class="pl-item-caption">
+											<h2 class="pl-item-title"><a href="portfolio-single-11.html">Intuisa Jacobis Untra</a></h2>
+											<div class="pl-item-category"><a href="">Branding</a>, <a href="">Digital</a></div>
+										</div>
+									</div>
+									<!-- End portfolio list item info -->
+
+								</div>
+								<!-- End portfolio list item -->
+
+							</div>
+							<!-- End carousel item -->
+
+						</div>
+						<!-- End content carousel -->
+
+					</div> 
+					<!-- End project carousel -->
+
+				</div> <!-- /.project-carousel-inner -->
+			</section>
+			<!-- End project carousel section -->
+
+
+			<!-- =========================================
+			///// Begin portfolio single nav section /////
+			==============================================
+			* Use class "ps-nav-thumb" to enable nav thumbnails.
+			* Use class "ps-nav-dark" to enable dark nav style.
+			* Use class "border-top" to enable nav top border.
+			-->
+			<section id="portfolio-single-nav-section" class="ps-nav-thumb border-top">
+				<div class="portfolio-single-nav-inner tt-wrap"> <!-- add/remove class "tt-wrap" to enable/disable element boxed layout (class "tt-boxed" is required in <body> tag!). Note: additionally you can use prepared helper class "max-width-*" to add custom width to "tt-wrap". Example: "max-width-1500" (class "tt-wrap" is still required!). More info about helper classes in file "helper.css" -->
+					<div class="row">
+						<div class="col-xs-5 ps-nav-col">
+
+							<a href="portfolio-single-12.html" class="ps-nav ps-nav-left">
+								<div class="ps-nav-image bg-image" style="background-image: url(assets/img/portfolio/list/list-1/portfolio-list-7.jpg);"></div>
+								<div class="ps-nav-info">
+									<div class="ps-nav-subtitle">
+										<span class="ps-nav-icon"><span class="lnr lnr-arrow-left"></span></span> Previous<span class="hide-from-sm"> Project</span>
+									</div>
+									<h3 class="ps-nav-title">Marevik Trastis</h3>
+								</div> <!-- /.ps-nav-info -->
+							</a> <!-- /.ps-nav -->
+
+						</div> <!-- /.col -->
+
+						<div class="col-xs-2 ps-nav-col text-center">
+
+							<div class="ps-nav ps-nav-list">
+								<a href="portfolio-grid-1.html" title="Back to portfolio list">
+									<span class="ps-nav-icon"><span class="lnr lnr-layers"></span></span>
+								</a>
+							</div> <!-- /.ps-nav -->
+
+						</div> <!-- /.col -->
+
+						<div class="col-xs-5 ps-nav-col text-right">
+
+							<a href="portfolio-single-1.html" class="ps-nav ps-nav-right">
+								<div class="ps-nav-image bg-image" style="background-image: url(assets/img/portfolio/list/list-1/portfolio-list-8.jpg);"></div>
+								<div class="ps-nav-info">
+									<div class="ps-nav-subtitle">
+										Next<span class="hide-from-sm"> Project</span> <span class="ps-nav-icon"><span class="lnr lnr-arrow-right"></span></span>
+									</div>
+									<h3 class="ps-nav-title">Kampur &amp; Brena</h3>
+								</div> <!-- /.ps-nav-info -->
+							</a> <!-- /.ps-nav -->
+
+						</div> <!-- /.col -->
+					</div> <!-- /.row -->
+				</div> <!-- /.portfolio-single-nav-inner -->
+			</section>
+			<!-- End portfolio single nav section -->
+
+
+			<!-- =========================
+			///// Begin sticky share /////
+			==============================
+			* Use class "ss-right" to enable right align.
+			-->
+			<div class="sticky-share ss-right">
+				<div class="sticky-share-button">
+					<span class="ss-icon"><i class="fas fa-share-alt"></i></span>
+					<span class="ss-close"><i class="fas fa-times"></i></span>
+				</div> <!-- /.sticky-share-button -->
+				<div class="sticky-share-inner">
+					<ul class="sticky-share-list">
+						<li><span class="sticky-share-title">Share</span></li>
+						<li><a href="" class="btn btn-default btn-social-min btn-facebook btn-sm"><i class="fab fa-facebook-f"></i></a></li>
+						<li><a href="" class="btn btn-default btn-social-min btn-twitter btn-sm"><i class="fab fa-twitter"></i></a></li>
+						<li><a href="" class="btn btn-default btn-social-min btn-pinterest btn-sm"><i class="fab fa-pinterest-p"></i></a></li>
+						<li><a href="" class="btn btn-default btn-social-min btn-google btn-sm"><i class="fab fa-google-plus-g"></i></a></li>
+					</ul> <!-- /.sticky-share-list -->
+				</div> <!-- /.sticky-share-inner -->
+			</div>
+			<!-- End sticky share -->
 
 
          <!-- ===========================
@@ -813,7 +1478,7 @@
 			* Use class "footer-dark" to enable dark footer.
 			* Use class "no-margin-top" if needed. 
 			-->
-			<section id="footer" class="no-margin-top">
+			<section id="footer" class="footer-dark no-margin-top">
 				<div class="footer-inner">
 					<div class="footer-container tt-wrap">
 						<div class="row">
@@ -967,7 +1632,6 @@
 
 		<!-- Theme master JS -->
 		<script src="assets/js/theme.js"></script>
-		<script src="assets/js/script.js"></script>
 
 
 

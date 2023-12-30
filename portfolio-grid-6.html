@@ -10,7 +10,7 @@
 	<head>
 
 		<!-- Title -->
-		<title>Aivo - Multipurpose Portfolio HTML Website Template</title>
+		<title>Portfolio / Aivo - Multipurpose Portfolio HTML Website Template</title>
 
 		<!-- Meta -->
 		<meta charset="utf-8">
@@ -244,7 +244,7 @@
 
 							<!-- Begin submenu (submenu master)
 							==================================== -->
-							<li class="tt-submenu-wrap tt-submenu-master active">
+							<li class="tt-submenu-wrap tt-submenu-master">
 								<a href="#0">Home</a>
 								<div class="tt-submenu">
 									<ul class="tt-submenu-list">
@@ -253,7 +253,7 @@
 										<li><a href="home-landing-3.html">Home Landing 3</a></li>
 										<li><a href="home-full-screen-slideshow.html">Full Screen Slideshow</a></li>
 										<li><a href="home-full-screen-single-image.html">Full Screen Image</a></li>
-										<li class="active"><a href="home-full-screen-video.html">Full Screen Video</a></li>
+										<li><a href="home-full-screen-video.html">Full Screen Video</a></li>
 									</ul> <!-- /.tt-submenu-list -->
 								</div> <!-- /.tt-submenu -->
 							</li>
@@ -316,14 +316,14 @@
 
 							<!-- Begin submenu (submenu master)
 							==================================== -->
-							<li class="tt-submenu-wrap tt-submenu-master">
+							<li class="tt-submenu-wrap tt-submenu-master active">
 								<a href="#0">Portfolio</a>
 								<div class="tt-submenu">
 									<ul class="tt-submenu-list">
 										
 										<!-- Begin submenu
 										=================== -->
-										<li class="tt-submenu-wrap">
+										<li class="tt-submenu-wrap active">
 											<a href="#0">Portfolio Grid</a>
 											<div class="tt-submenu">
 												<ul class="tt-submenu-list">
@@ -332,7 +332,7 @@
 													<li><a href="portfolio-grid-3.html">Portfolio Grid 3</a></li>
 													<li><a href="portfolio-grid-4.html">Portfolio Grid 4</a></li>
 													<li><a href="portfolio-grid-5.html">Portfolio Grid 5</a></li>
-													<li><a href="portfolio-grid-6.html">Portfolio Grid 6</a></li>
+													<li class="active"><a href="portfolio-grid-6.html">Portfolio Grid 6</a></li>
 													<li><a href="portfolio-grid-7.html">Portfolio Grid 7</a></li>
 													<li><a href="portfolio-grid-no-crop.html">Grid No Crop</a></li>
 													<li><a href="portfolio-grid-one-column-1.html">Grid One Column 1</a></li>
@@ -722,89 +722,831 @@
 		<div id="body-content">
 
 
-			<!-- ==========================
-			///// Begin intro section /////
-			===============================
-			* Use classes "intro-xs", "intro-sm", "intro-lg" "intro-xlg" or "intro-full" to set intro size.
-			* Use class "intro-full-m" to set intro size for small screens only.
+			<!-- ========================
+			///// Begin page header /////
+			=============================
+			* Use classes "ph-xs", "ph-sm", "ph-lg" or "ph-xlg" to set page header size.
+			* Use class "ph-center" or "ph-right" to align page header caption.
 			-->
-			<section id="tt-intro" class="intro-full">
-				<div class="tt-intro-inner"> <!-- add/remove class "tt-wrap" to enable/disable element boxed layout (class "tt-boxed" is required in <body> tag!). Note: additionally you can use prepared helper class "max-width-*" to add custom width to "tt-wrap". Example: "max-width-1500" (class "tt-wrap" is still required!). More info about helper classes in file "helper.css" -->
+			<section id="page-header" class="ph-xlg">
 
-					<!-- Begin YTPlayer (Youtube video background)
-					=======================================================
-					* NOTE: Replace videoURL with your own (videoURL:'your-youtube-video-URL'). 
-					* Do not forget to add your background image for mobile devices (because the video background doesn't work on mobile devices).
-					* YTPlayer may not work in the local computer. It works properly only if used under a web server.
-					* Read more info about YTPlayer: https://github.com/pupunzi/jquery.mb.YTPlayer
+				<!-- Begin page header image 
+				============================= 
+				* Use class "parallax-1" up to "parallax-8" to enable image parallax effect (number 1-8 represents the speed).
+				* Use class "hide-ph-image" to hide page header image without removing the code.
+				-->
+				<div class="page-header-image parallax-6 bg-image" style="background-image: url(assets/img/page-header/page-header-bg-21.jpg);">
+					
+					<!-- Element cover 
+					===================
+					* Use class "cover-opacity-*" to set cover opasity (1, 1.5, 2, 2.5, ... 9.5). Example: "cover-opacity-2" or "cover-opacity-2-5".
+					* Aditional color classes you can use: "cover-color", "cover-light", "cover-red", "cover-pink", "cover-purple", "cover-green", "cover-blue", "cover-yellow" or "cover-brown" to set cover background color (note: class "cover-color" = template main color).
+					* Use class "cover-gradient-dark", "cover-gradient-light" or "cover-gradient-color" to enable cover gradient background.
 					-->
-					<div class="youtube-bg-wrap parallax-6 bg-dark"> <!-- Class "parallax-6" is for tt-intro only!!! -->
-						<div class="youtube-bg" 
-						style="background-image: url(assets/img/video-bg/video-bg-1.jpg); background-position: 50% 50%;"
-						data-property="{
-							videoURL: 'https://www.youtube.com/watch?v=GCYlRFZQk2E',
-							containment: 'self',
-							quality: 'default',
-							startAt: 0,
-							stopAt: 0,
-							autoPlay: true,
-							loop: true,
-							mute: true,
-							showControls: false,
-							showYTLogo: false,
-							realfullscreen: true,
-							addRaster: false,
-							optimizeDisplay: true,
-							stopMovieOnBlur: true
-						}">
+					<div class="cover cover-opacity-4"></div>
+					
+				</div>
+				<!-- End page header image -->
 
-							<!-- Element cover 
-							===================
-							* Use class "cover-opacity-*" to set cover opasity (1, 1.5, 2, 2.5, ... 9.5). Example: "cover-opacity-2" or "cover-opacity-2-5".
-							* Aditional color classes you can use: "cover-color", "cover-light", "cover-red", "cover-pink", "cover-purple", "cover-green", "cover-blue", "cover-yellow" or "cover-brown" to set cover background color (note: class "cover-color" = template main color).
-							* Use class "cover-gradient-dark", "cover-gradient-light" or "cover-gradient-color" to enable cover gradient background.
-							-->
-							<div class="cover cover-opacity-6"></div>
+				<!-- Begin page header inner -->
+				<div class="page-header-inner tt-wrap">
 
-						</div> <!-- /.youtube-bg -->
-					</div>
-					<!-- End YTPlayer -->
-
-					<!-- Begin intro caption 
-					=========================
-					* Position classes: "top-left", "top-center", "top-right", "center-left", "center", "center-right", "bottom-left", "bottom-center", "bottom-right". 
-					* Size classes: "intro-caption-xs", "intro-caption-sm", "intro-caption-lg", "intro-caption-xlg", "intro-caption-xxlg".
+					<!-- Begin page header caption 
+					===============================
+					* Use classes "ph-cap-xs", "ph-cap-sm", "ph-cap-lg" or "ph-cap-xlg" to set caption size.
+					* Use classes "ph-cap-light" to enable caption light color style (useful if you use dark background images).
+					* Use classes "ph-cap-shadow" to enable caption text shadow.
 					* Use class "parallax-1" up to "parallax-6" to enable parallax effect (no effect on mobile devices!).
 					* Use class "fade-out-scroll-1" up to "fade-out-scroll-6" to enable fade out effect if page scrolls (no effect on mobile devices!).
 					-->
-					<div class="intro-caption-wrap caption-animate intro-caption-lg bottom-left parallax-4">
-						<div class="intro-caption-holder">
-							<div class="intro-caption center">
-								<h1 class="intro-title">What Are You<br>Waiting For?</h1>
-								<h2 class="intro-subtitle">Build your beautiful portfolio website today!</h2>
+					<div class="page-header-caption ph-cap-xlg ph-cap-light ph-cap-shadow parallax-4 fade-out-scroll-5">
+						<div class="ph-title-wrap">
+							<h1 class="page-header-title">Portfolio</h1>
+						</div>
+						<div class="ph-subtitle-wrap">
+							<h2 class="page-header-subtitle">Our Awesome Work</h2>
+						</div>
 
-								<!-- Begin intro description (recommended max 170 characters!) 
-								============================= -->
-								<div class="intro-description">
-									Aivo – is a complete HTML5 and CSS3 website template. It fits perfectly for freelancers, artists and design agencies. It looks great with all types of devices.
-								</div>
-								<!-- End intro-description -->
+						<!-- Begin zig-zag separator 
+						============================= 
+						* Use classes "zig-zag-xs", "zig-zag-sm", "zig-zag-lg" or "zig-zag-xlg" to set separator size. 
+						* Use classes "zig-zag-light" or "zig-zag-dark" to change zig-zag separator style.
+						-->
+						<div class="zig-zag-separator zig-zag-lg">
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+						</div>
+						<!-- End zig-zag separator -->
 
-								<!-- Begin intro buttons -->
-								<button id="startButton">Start</button>
-									<div class="intro-buttons">
-									<a href="https://themeforest.net/item/aivo-multipurpose-portfolio-html-website-template/21587861?ref=Themetorium" class="btn btn-primary margin-top-5 margin-right-10" target="_blank">Buy It Now!</a> 
-									<a href="" class="btn btn-white-bordered margin-top-5">Discover More</a>
-						<!-- End intro buttons -->
-
-							</div> <!-- /.intro-caption -->
-						</div> <!-- /.intro-caption-holder -->
+						<!-- Begin page header description (recommended max 170 characters!) 
+						=================================== -->
+						<!-- <div class="page-header-description">
+							<div class="ph-desc-inner">
+								Fusce imperdiet, arcu non tempor aliquam, justo tortor cursus est, sed facilisis eros purus et felis. Sed eros sapien, iaculis eget gravida euismod, dapibus vitae turpis entomeric santes turitum caeser.
+							</div>
+						</div> -->
+						<!-- End page header description -->
+						
 					</div>
-					<!-- End intro caption wrap -->
-					
-				</div> <!-- /.tt-intro-inner -->
+					<!-- End page header caption -->
+
+				</div> 
+				<!-- End page header inner -->
+
+				<!-- Begin page header animated element
+				========================================
+				* Use class "ph-anim-circle" to enable element circle style.
+				* Use class "ph-anim-center" or "ph-anim-right" to align animated element.
+				* Use class "parallax-1" up to "parallax-6" to enable parallax effect.
+				* Use class "fade-out-scroll-1" up to "fade-out-scroll-6" to enable fade out effect if page scroll.
+				* Use class "hide-ph-anim" to disable animated element without removing the code.
+				-->
+				<div class="ph-anim-element-wrap hide-ph-anim parallax-4 fade-out-scroll-4">
+					<div class="ph-anim-element-holder">
+						<div class="ph-anim-element"></div>
+					</div>
+				</div>
+				<!-- End page header animated element -->
+
 			</section>
-			<!-- End intro section -->
+			<!-- End page header -->
+
+
+			<!-- ===================================
+			///// Begin portfolio list section /////
+			==================================== -->
+			<section id="portfolio-list-section">
+				<div class="portfolio-list-inner isotope-wrap"> <!-- add/remove class "tt-wrap" to enable/disable element boxed layout (class "tt-boxed" is required in <body> tag!). Note: additionally you can use prepared helper class "max-width-*" to add custom width to "tt-wrap". Example: "max-width-1500" (class "tt-wrap" is still required!). More info about helper classes in file "helper.css" -->
+					
+					<!-- Begin isotope
+					===================
+					* Use class "gutter-1", "gutter-2", "gutter-3", "gutter-4", "gutter-5" or "gutter-6" to add more space between items.
+					* Use class "col-1", "col-2", "col-3", "col-4", "col-5" or "col-6" for columns.
+					-->
+					<div class="isotope col-3">
+						
+						<!-- Begin isotope top content -->
+						<div class="isotope-top-content">
+
+							<!-- Begin isotope categories (if you don't want to use a isotope filter then you can use the category list instead to present portfolio categories on separate pages. Just uncomment if needed. Note: do not forget to remove isotope filter code!).
+							================================= 
+							* Add class "active" to <li> if you need active link on current page.
+							* Use class "iso-cat-center" or "iso-cat-right" to align category list.
+							-->
+							<!-- <div class="isotope-categories-wrap">
+								<ul class="isotope-categories">
+									<li class="icl-title"><span>Categories: </span></li>
+									<li class="active"><a href="">Branding</a></li>
+									<li><a href="">Print</a></li>
+									<li><a href="">Digital</a></li>
+									<li><a href="">Motion</a></li>
+								</ul>
+							</div> -->
+							<!-- End isotope categories -->
+
+
+							<!-- Begin isotope filter
+							==========================
+							* Use class "fi-btn" to enable filter button (default style).
+							* Use class "fi-center" or "fi-right" to align filter ("fi-center"= no effect on "fi-btn").
+							* Use class "fi-btn-dark" to enable filter button dark style (class "fi-btn" is required!).
+							* Use class "fi-btn-light" to enable filter button light style (class "fi-btn" is required!).
+							* Use class "fi-btn-tansparent-dark" to enable filter button transparent dark style (class "fi-btn" is required! No effect on smaller screens!).
+							* Use class "fi-btn-tansparent-light" to enable filter button transparent light style (class "fi-btn" is required! No effect on smaller screens!).
+							* Use class "fi-btn-dropdown-dark" to enable filter button dropdown dark style (class "fi-btn" is required!).
+							* Use class "fi-btn-dropdown-light" to enable filter button dropdown light style (class "fi-btn" is required!).
+							-->
+							<div class="isotope-filter fi-btn fi-right fi-btn-tansparent-light">
+								<div class="isotope-filter-button">
+									<span class="ifb-icon"><span class="lnr lnr-funnel"></span></span>
+									<span class="ifb-icon-close"><i class="fas fa-times"></i></span> <!-- effect on small screens!) -->
+
+									<!-- Begin filter button text
+									==============================
+									* Use class "hide-from-xs" to disable button text on small screens.
+									* Use class "hide" to disable button text permanently.
+									-->
+									<span class="ifb-text">Filter</span>
+									<!-- End filter button text -->
+
+								</div> <!-- /.isotope-filter-button -->
+
+								<!-- Begin isotope filter links -->
+								<ul class="isotope-filter-links">
+									<li class="ifl-title"><span>Filter: </span></li>
+									<li><button class="active" data-filter="*">Show All</button></li>
+									<li><button data-filter=".branding">Branding</button></li>
+									<li><button data-filter=".print">Print</button></li>
+									<li><button data-filter=".digital">Digital</button></li>
+									<li><button data-filter=".motion">Motion</button></li>
+								</ul>
+								<!-- End isotope filter links -->
+							</div>
+							<!-- End isotope filter -->
+
+						</div>
+						<!-- End isotope top content -->
+
+						<!-- Begin isotope items wrap 
+						==============================
+						* Use class "pli-alter-1", "pli-alter-2", "pli-alter-3", "pli-alter-4" or "pli-alter-5" to change portfolio list item style. Note: style "pli-alter-4" is no effect on small screens (for better user experience)!
+						* Use class "pli-dark" to enable dark hover overlay (effect only with default hover overlay and "pli-alter-4", "pli-alter-5" classes!).
+						* Use class "pli-colored" or "pli-multi-colored" to enable colored hover overlay (effect only with default hover overlay and "pli-alter-4", "pli-alter-5" classes!).
+						* Use class "pli-frame" to enable image frames.
+						-->
+						<div class="isotope-items-wrap pli-multi-colored pli-alter-4">
+
+							<!-- Grid sizer (do not remove!!!) -->
+							<div class="grid-sizer"></div>
+
+
+							<!-- ===================== 
+							/// Begin isotope item ///
+							========================== 
+							* If you use background image on isotope-item child element, then you need to use class "iso-height-1" or "iso-height-2" to set the item height. If you use simple image tag, then don't use height classes.
+							-->
+							<div class="isotope-item digital iso-height-1">
+
+								<!-- Begin portfolio list item -->
+								<div class="portfolio-list-item">
+
+									<!-- Begin portfolio list item image -->
+									<div class="pl-item-image-wrap">
+
+										<!-- Begin portfolio list item image inner -->
+										<a href="portfolio-single-1.html" class="pl-item-image-inner">
+											<div class="pl-item-image bg-image lazy" data-src="assets/img/portfolio/list/list-2/portfolio-list-1.jpg"></div>
+											
+											<!-- Portfolio list item icon (displayed only with default hover overlay and "pli-alter-4" class in isotope-items-wrap) -->
+											<div class="pl-item-icon"><span class="lnr lnr-link"></span></div>
+										</a>
+										<!-- End portfolio list item image inner -->
+
+									</div>
+									<!-- End portfolio list item image -->
+									
+									<!-- Begin portfolio list item info -->
+									<div class="pl-item-info">
+										<div class="pl-item-caption">
+											<h2 class="pl-item-title"><a href="portfolio-single-1.html">Elper Nomadis</a></h2>
+											<div class="pl-item-category"><a href="portfolio-archive.html">Digital</a></div>
+										</div>
+									</div>
+									<!-- End portfolio list item info -->
+
+								</div>
+								<!-- End portfolio list item -->
+
+							</div>
+							<!-- End isotope item -->
+
+							<!-- ===================== 
+							/// Begin isotope item ///
+							========================== 
+							* If you use background image on isotope-item child element, then you need to use class "iso-height-1" or "iso-height-2" to set the item height. If you use simple image tag, then don't use height classes.
+							-->
+							<div class="isotope-item print iso-height-1">
+
+								<!-- Begin portfolio list item -->
+								<div class="portfolio-list-item">
+
+									<!-- Begin portfolio list item image -->
+									<div class="pl-item-image-wrap">
+
+										<!-- Begin portfolio list item image inner -->
+										<a href="portfolio-single-2.html" class="pl-item-image-inner">
+											<div class="pl-item-image bg-image lazy" data-src="assets/img/portfolio/list/list-2/portfolio-list-19.gif"></div>
+											
+											<!-- Portfolio list item icon (displayed only with default hover overlay and "pli-alter-4" class in isotope-items-wrap) -->
+											<div class="pl-item-icon"><span class="lnr lnr-link"></span></div>
+										</a>
+										<!-- End portfolio list item image inner -->
+
+									</div>
+									<!-- End portfolio list item image -->
+									
+									<!-- Begin portfolio list item info -->
+									<div class="pl-item-info">
+										<div class="pl-item-caption">
+											<h2 class="pl-item-title"><a href="portfolio-single-2.html">Futter Samantis</a></h2>
+											<div class="pl-item-category"><a href="portfolio-archive.html">Print</a></div>
+										</div>
+									</div>
+									<!-- End portfolio list item info -->
+
+								</div>
+								<!-- End portfolio list item -->
+
+							</div>
+							<!-- End isotope item -->
+
+							<!-- ===================== 
+							/// Begin isotope item ///
+							========================== 
+							* If you use background image on isotope-item child element, then you need to use class "iso-height-1" or "iso-height-2" to set the item height. If you use simple image tag, then don't use height classes.
+							-->
+							<div class="isotope-item branding iso-height-1">
+
+								<!-- Begin portfolio list item -->
+								<div class="portfolio-list-item">
+
+									<!-- Begin portfolio list item image -->
+									<div class="pl-item-image-wrap">
+
+										<!-- Begin portfolio list item image inner -->
+										<a href="portfolio-single-3.html" class="pl-item-image-inner">
+											<div class="pl-item-image bg-image lazy" data-src="assets/img/portfolio/list/list-2/portfolio-list-3.jpg"></div>
+											
+											<!-- Portfolio list item icon (displayed only with default hover overlay and "pli-alter-4" class in isotope-items-wrap) -->
+											<div class="pl-item-icon"><span class="lnr lnr-link"></span></div>
+										</a>
+										<!-- End portfolio list item image inner -->
+
+									</div>
+									<!-- End portfolio list item image -->
+									
+									<!-- Begin portfolio list item info -->
+									<div class="pl-item-info">
+										<div class="pl-item-caption">
+											<h2 class="pl-item-title"><a href="portfolio-single-3.html">Tartumi Sandera Naomis</a></h2>
+											<div class="pl-item-category"><a href="portfolio-archive.html">Branding</a></div>
+										</div>
+									</div>
+									<!-- End portfolio list item info -->
+
+								</div>
+								<!-- End portfolio list item -->
+
+							</div>
+							<!-- End isotope item -->
+
+							<!-- ===================== 
+							/// Begin isotope item ///
+							========================== 
+							* If you use background image on isotope-item child element, then you need to use class "iso-height-1" or "iso-height-2" to set the item height. If you use simple image tag, then don't use height classes.
+							-->
+							<div class="isotope-item digital iso-height-1">
+
+								<!-- Begin portfolio list item -->
+								<div class="portfolio-list-item">
+
+									<!-- Begin portfolio list item image -->
+									<div class="pl-item-image-wrap">
+
+										<!-- Begin portfolio list item image inner -->
+										<a href="portfolio-single-4.html" class="pl-item-image-inner">
+											<div class="pl-item-image bg-image lazy" data-src="assets/img/portfolio/list/list-2/portfolio-list-4.jpg"></div>
+											
+											<!-- Portfolio list item icon (displayed only with default hover overlay and "pli-alter-4" class in isotope-items-wrap) -->
+											<div class="pl-item-icon"><span class="lnr lnr-link"></span></div>
+										</a>
+										<!-- End portfolio list item image inner -->
+										
+									</div>
+									<!-- End portfolio list item image -->
+									
+									<!-- Begin portfolio list item info -->
+									<div class="pl-item-info">
+										<div class="pl-item-caption">
+											<h2 class="pl-item-title"><a href="portfolio-single-4.html">Tetera Laktus</a></h2>
+											<div class="pl-item-category"><a href="portfolio-archive.html">Digital</a></div>
+										</div>
+									</div>
+									<!-- End portfolio list item info -->
+
+								</div>
+								<!-- End portfolio list item -->
+
+							</div>
+							<!-- End isotope item -->
+
+							<!-- ===================== 
+							/// Begin isotope item ///
+							========================== 
+							* If you use background image on isotope-item child element, then you need to use class "iso-height-1" or "iso-height-2" to set the item height. If you use simple image tag, then don't use height classes.
+							-->
+							<div class="isotope-item motion iso-height-1">
+
+								<!-- Begin portfolio list item -->
+								<div class="portfolio-list-item">
+
+									<!-- Begin portfolio list item image -->
+									<div class="pl-item-image-wrap">
+
+										<!-- Begin portfolio list item image inner -->
+										<a href="portfolio-single-8.html" class="pl-item-image-inner">
+											<div class="pl-item-image bg-image lazy" data-src="assets/img/portfolio/list/list-2/portfolio-list-5.jpg"></div>
+											
+											<!-- Portfolio list item icon (displayed only with default hover overlay and "pli-alter-4" class in isotope-items-wrap) -->
+											<div class="pl-item-icon"><span class="lnr lnr-link"></span></div>
+										</a>
+										<!-- End portfolio list item image inner -->
+
+									</div>
+									<!-- End portfolio list item image -->
+									
+									<!-- Begin portfolio list item info -->
+									<div class="pl-item-info">
+										<div class="pl-item-caption">
+											<h2 class="pl-item-title"><a href="portfolio-single-8.html">Tant Saktra Memis</a></h2>
+											<div class="pl-item-category"><a href="portfolio-archive.html">Motion</a></div>
+										</div>
+									</div>
+									<!-- End portfolio list item info -->
+
+								</div>
+								<!-- End portfolio list item -->
+
+							</div>
+							<!-- End isotope item -->
+
+							<!-- ===================== 
+							/// Begin isotope item ///
+							========================== 
+							* If you use background image on isotope-item child element, then you need to use class "iso-height-1" or "iso-height-2" to set the item height. If you use simple image tag, then don't use height classes.
+							-->
+							<div class="isotope-item branding digital iso-height-1">
+
+								<!-- Begin portfolio list item -->
+								<div class="portfolio-list-item">
+
+									<!-- Begin portfolio list item image -->
+									<div class="pl-item-image-wrap">
+
+										<!-- Begin portfolio list item image inner -->
+										<a href="portfolio-single-6.html" class="pl-item-image-inner">
+											<div class="pl-item-image bg-image lazy" data-src="assets/img/portfolio/list/list-2/portfolio-list-6.jpg"></div>
+											
+											<!-- Portfolio list item icon (displayed only with default hover overlay and "pli-alter-4" class in isotope-items-wrap) -->
+											<div class="pl-item-icon"><span class="lnr lnr-link"></span></div>
+										</a>
+										<!-- End portfolio list item image inner -->
+
+									</div>
+									<!-- End portfolio list item image -->
+									
+									<!-- Begin portfolio list item info -->
+									<div class="pl-item-info">
+										<div class="pl-item-caption">
+											<h2 class="pl-item-title"><a href="portfolio-single-6.html">Intuisa Jacobis Untra</a></h2>
+											<div class="pl-item-category"><a href="portfolio-archive.html">Branding</a>, <a href="">Digital</a></div>
+										</div>
+									</div>
+									<!-- End portfolio list item info -->
+
+								</div>
+								<!-- End portfolio list item -->
+
+							</div>
+							<!-- End isotope item -->
+
+							<!-- ===================== 
+							/// Begin isotope item ///
+							========================== 
+							* If you use background image on isotope-item child element, then you need to use class "iso-height-1" or "iso-height-2" to set the item height. If you use simple image tag, then don't use height classes.
+							-->
+							<div class="isotope-item digital iso-height-1">
+
+								<!-- Begin portfolio list item -->
+								<div class="portfolio-list-item">
+
+									<!-- Begin portfolio list item image -->
+									<div class="pl-item-image-wrap">
+
+										<!-- Begin portfolio list item image inner -->
+										<a href="portfolio-single-7.html" class="pl-item-image-inner">
+											<div class="pl-item-image bg-image lazy" data-src="assets/img/portfolio/list/list-2/portfolio-list-20.gif"></div>
+											
+											<!-- Portfolio list item icon (displayed only with default hover overlay and "pli-alter-4" class in isotope-items-wrap) -->
+											<div class="pl-item-icon"><span class="lnr lnr-link"></span></div>
+										</a>
+										<!-- End portfolio list item image inner -->
+
+									</div>
+									<!-- End portfolio list item image -->
+									
+									<!-- Begin portfolio list item info -->
+									<div class="pl-item-info">
+										<div class="pl-item-caption">
+											<h2 class="pl-item-title"><a href="portfolio-single-7.html">Marevik Trastis</a></h2>
+											<div class="pl-item-category"><a href="portfolio-archive.html">Digital</a></div>
+										</div>
+									</div>
+									<!-- End portfolio list item info -->
+
+								</div>
+								<!-- End portfolio list item -->
+
+							</div>
+							<!-- End isotope item -->
+
+							<!-- ===================== 
+							/// Begin isotope item ///
+							========================== 
+							* If you use background image on isotope-item child element, then you need to use class "iso-height-1" or "iso-height-2" to set the item height. If you use simple image tag, then don't use height classes.
+							-->
+							<div class="isotope-item branding iso-height-1">
+
+								<!-- Begin portfolio list item -->
+								<div class="portfolio-list-item">
+
+									<!-- Begin portfolio list item image -->
+									<div class="pl-item-image-wrap">
+
+										<!-- Begin portfolio list item image inner -->
+										<a href="portfolio-single-8.html" class="pl-item-image-inner">
+											<div class="pl-item-image bg-image lazy" data-src="assets/img/portfolio/list/list-2/portfolio-list-8.jpg"></div>
+											
+											<!-- Portfolio list item icon (displayed only with default hover overlay and "pli-alter-4" class in isotope-items-wrap) -->
+											<div class="pl-item-icon"><span class="lnr lnr-link"></span></div>
+										</a>
+										<!-- End portfolio list item image inner -->
+
+									</div>
+									<!-- End portfolio list item image -->
+									
+									<!-- Begin portfolio list item info -->
+									<div class="pl-item-info">
+										<div class="pl-item-caption">
+											<h2 class="pl-item-title"><a href="portfolio-single-8.html">Kampur &amp; Brena</a></h2>
+											<div class="pl-item-category"><a href="portfolio-archive.html">Branding</a></div>
+										</div>
+									</div>
+									<!-- End portfolio list item info -->
+
+								</div>
+								<!-- End portfolio list item -->
+
+							</div>
+							<!-- End isotope item -->
+
+							<!-- ===================== 
+							/// Begin isotope item ///
+							========================== 
+							* If you use background image on isotope-item child element, then you need to use class "iso-height-1" or "iso-height-2" to set the item height. If you use simple image tag, then don't use height classes.
+							-->
+							<div class="isotope-item print iso-height-1">
+
+								<!-- Begin portfolio list item -->
+								<div class="portfolio-list-item">
+
+									<!-- Begin portfolio list item image -->
+									<div class="pl-item-image-wrap">
+
+										<!-- Begin portfolio list item image inner -->
+										<a href="portfolio-single-9.html" class="pl-item-image-inner">
+											<div class="pl-item-image bg-image lazy" data-src="assets/img/portfolio/list/list-2/portfolio-list-9.jpg"></div>
+											
+											<!-- Portfolio list item icon (displayed only with default hover overlay and "pli-alter-4" class in isotope-items-wrap) -->
+											<div class="pl-item-icon"><span class="lnr lnr-link"></span></div>
+										</a>
+										<!-- End portfolio list item image inner -->
+
+									</div>
+									<!-- End portfolio list item image -->
+									
+									<!-- Begin portfolio list item info -->
+									<div class="pl-item-info">
+										<div class="pl-item-caption">
+											<h2 class="pl-item-title"><a href="portfolio-single-9.html">Ekona Rufu Tatemi Antem</a></h2>
+											<div class="pl-item-category"><a href="portfolio-archive.html">Print</a></div>
+										</div>
+									</div>
+									<!-- End portfolio list item info -->
+
+								</div>
+								<!-- End portfolio list item -->
+
+							</div>
+							<!-- End isotope item -->
+
+							<!-- ===================== 
+							/// Begin isotope item ///
+							========================== 
+							* If you use background image on isotope-item child element, then you need to use class "iso-height-1" or "iso-height-2" to set the item height. If you use simple image tag, then don't use height classes.
+							-->
+							<div class="isotope-item digital iso-height-1">
+
+								<!-- Begin portfolio list item -->
+								<div class="portfolio-list-item">
+
+									<!-- Begin portfolio list item image -->
+									<div class="pl-item-image-wrap">
+
+										<!-- Begin portfolio list item image inner -->
+										<a href="portfolio-single-1.html" class="pl-item-image-inner">
+											<div class="pl-item-image bg-image lazy" data-src="assets/img/portfolio/list/list-2/portfolio-list-10.jpg"></div>
+											
+											<!-- Portfolio list item icon (displayed only with default hover overlay and "pli-alter-4" class in isotope-items-wrap) -->
+											<div class="pl-item-icon"><span class="lnr lnr-link"></span></div>
+										</a>
+										<!-- End portfolio list item image inner -->
+
+									</div>
+									<!-- End portfolio list item image -->
+									
+									<!-- Begin portfolio list item info -->
+									<div class="pl-item-info">
+										<div class="pl-item-caption">
+											<h2 class="pl-item-title"><a href="portfolio-single-1.html">Kakteil Nurk Um Akso</a></h2>
+											<div class="pl-item-category"><a href="portfolio-archive.html">Digital</a></div>
+										</div>
+									</div>
+									<!-- End portfolio list item info -->
+
+								</div>
+								<!-- End portfolio list item -->
+
+							</div>
+							<!-- End isotope item -->
+
+							<!-- ===================== 
+							/// Begin isotope item ///
+							========================== 
+							* If you use background image on isotope-item child element, then you need to use class "iso-height-1" or "iso-height-2" to set the item height. If you use simple image tag, then don't use height classes.
+							-->
+							<div class="isotope-item branding motion iso-height-1">
+
+								<!-- Begin portfolio list item -->
+								<div class="portfolio-list-item">
+
+									<!-- Begin portfolio list item image -->
+									<div class="pl-item-image-wrap">
+
+										<!-- Begin portfolio list item image inner -->
+										<a href="portfolio-single-2.html" class="pl-item-image-inner">
+											<div class="pl-item-image bg-image lazy" data-src="assets/img/portfolio/list/list-2/portfolio-list-11.jpg"></div>
+											
+											<!-- Portfolio list item icon (displayed only with default hover overlay and "pli-alter-4" class in isotope-items-wrap) -->
+											<div class="pl-item-icon"><span class="lnr lnr-link"></span></div>
+										</a>
+										<!-- End portfolio list item image inner -->
+
+									</div>
+									<!-- End portfolio list item image -->
+									
+									<!-- Begin portfolio list item info -->
+									<div class="pl-item-info">
+										<div class="pl-item-caption">
+											<h2 class="pl-item-title"><a href="portfolio-single-2.html">Gravitek Fucena Ekrem</a></h2>
+											<div class="pl-item-category"><a href="portfolio-archive.html">Branding</a>, <a href="">Motion</a></div>
+										</div>
+									</div>
+									<!-- End portfolio list item info -->
+
+								</div>
+								<!-- End portfolio list item -->
+
+							</div>
+							<!-- End isotope item -->
+
+							<!-- ===================== 
+							/// Begin isotope item ///
+							========================== 
+							* If you use background image on isotope-item child element, then you need to use class "iso-height-1" or "iso-height-2" to set the item height. If you use simple image tag, then don't use height classes.
+							-->
+							<div class="isotope-item digital branding iso-height-1">
+
+								<!-- Begin portfolio list item -->
+								<div class="portfolio-list-item">
+
+									<!-- Begin portfolio list item image -->
+									<div class="pl-item-image-wrap">
+
+										<!-- Begin portfolio list item image inner -->
+										<a href="portfolio-single-3.html" class="pl-item-image-inner">
+											<div class="pl-item-image bg-image lazy" data-src="assets/img/portfolio/list/list-2/portfolio-list-12.jpg"></div>
+											
+											<!-- Portfolio list item icon (displayed only with default hover overlay and "pli-alter-4" class in isotope-items-wrap) -->
+											<div class="pl-item-icon"><span class="lnr lnr-link"></span></div>
+										</a>
+										<!-- End portfolio list item image inner -->
+
+									</div>
+									<!-- End portfolio list item image -->
+									
+									<!-- Begin portfolio list item info -->
+									<div class="pl-item-info">
+										<div class="pl-item-caption">
+											<h2 class="pl-item-title"><a href="portfolio-single-3.html">Lehitsesa Linnas</a></h2>
+											<div class="pl-item-category"><a href="portfolio-archive.html">Digital</a>, <a href="">Branding</a></div>
+										</div>
+									</div>
+									<!-- End portfolio list item info -->
+
+								</div>
+								<!-- End portfolio list item -->
+
+							</div>
+							<!-- End isotope item -->
+
+							<!-- ===================== 
+							/// Begin isotope item ///
+							========================== 
+							* If you use background image on isotope-item child element, then you need to use class "iso-height-1" or "iso-height-2" to set the item height. If you use simple image tag, then don't use height classes.
+							-->
+							<div class="isotope-item digital branding iso-height-1">
+
+								<!-- Begin portfolio list item -->
+								<div class="portfolio-list-item">
+
+									<!-- Begin portfolio list item image -->
+									<div class="pl-item-image-wrap">
+
+										<!-- Begin portfolio list item image inner -->
+										<a href="portfolio-single-4.html" class="pl-item-image-inner">
+											<div class="pl-item-image bg-image lazy" data-src="assets/img/portfolio/list/list-2/portfolio-list-13.jpg"></div>
+											
+											<!-- Portfolio list item icon (displayed only with default hover overlay and "pli-alter-4" class in isotope-items-wrap) -->
+											<div class="pl-item-icon"><span class="lnr lnr-link"></span></div>
+										</a>
+										<!-- End portfolio list item image inner -->
+
+									</div>
+									<!-- End portfolio list item image -->
+									
+									<!-- Begin portfolio list item info -->
+									<div class="pl-item-info">
+										<div class="pl-item-caption">
+											<h2 class="pl-item-title"><a href="portfolio-single-4.html">Um Putra Amena</a></h2>
+											<div class="pl-item-category"><a href="portfolio-archive.html">Digital</a>, <a href="">Branding</a></div>
+										</div>
+									</div>
+									<!-- End portfolio list item info -->
+
+								</div>
+								<!-- End portfolio list item -->
+
+							</div>
+							<!-- End isotope item -->
+
+							<!-- ===================== 
+							/// Begin isotope item ///
+							========================== 
+							* If you use background image on isotope-item child element, then you need to use class "iso-height-1" or "iso-height-2" to set the item height. If you use simple image tag, then don't use height classes.
+							-->
+							<div class="isotope-item motion iso-height-1">
+
+								<!-- Begin portfolio list item -->
+								<div class="portfolio-list-item">
+
+									<!-- Begin portfolio list item image -->
+									<div class="pl-item-image-wrap">
+
+										<!-- Begin portfolio list item image inner -->
+										<a href="portfolio-single-5.html" class="pl-item-image-inner">
+											<div class="pl-item-image bg-image lazy" data-src="assets/img/portfolio/list/list-2/portfolio-list-14.jpg"></div>
+											
+											<!-- Portfolio list item icon (displayed only with default hover overlay and "pli-alter-4" class in isotope-items-wrap) -->
+											<div class="pl-item-icon"><span class="lnr lnr-link"></span></div>
+										</a>
+										<!-- End portfolio list item image inner -->
+
+									</div>
+									<!-- End portfolio list item image -->
+									
+									<!-- Begin portfolio list item info -->
+									<div class="pl-item-info">
+										<div class="pl-item-caption">
+											<h2 class="pl-item-title"><a href="portfolio-single-5.html">Aktus Nami At Fakenburger</a></h2>
+											<div class="pl-item-category"><a href="portfolio-archive.html">Motion</a></div>
+										</div>
+									</div>
+									<!-- End portfolio list item info -->
+
+								</div>
+								<!-- End portfolio list item -->
+
+							</div>
+							<!-- End isotope item -->
+
+							<!-- ===================== 
+							/// Begin isotope item ///
+							========================== 
+							* If you use background image on isotope-item child element, then you need to use class "iso-height-1" or "iso-height-2" to set the item height. If you use simple image tag, then don't use height classes.
+							-->
+							<div class="isotope-item digital iso-height-1">
+
+								<!-- Begin portfolio list item -->
+								<div class="portfolio-list-item">
+
+									<!-- Begin portfolio list item image -->
+									<div class="pl-item-image-wrap">
+
+										<!-- Begin portfolio list item image inner -->
+										<a href="portfolio-single-7.html" class="pl-item-image-inner">
+											<div class="pl-item-image bg-image lazy" data-src="assets/img/portfolio/list/list-2/portfolio-list-15.jpg"></div>
+											
+											<!-- Portfolio list item icon (displayed only with default hover overlay and "pli-alter-4" class in isotope-items-wrap) -->
+											<div class="pl-item-icon"><span class="lnr lnr-link"></span></div>
+										</a>
+										<!-- End portfolio list item image inner -->
+
+									</div>
+									<!-- End portfolio list item image -->
+									
+									<!-- Begin portfolio list item info -->
+									<div class="pl-item-info">
+										<div class="pl-item-caption">
+											<h2 class="pl-item-title"><a href="portfolio-single-7.html">Kennet Tuchina Leuki</a></h2>
+											<div class="pl-item-category"><a href="portfolio-archive.html">Digital</a></div>
+										</div>
+									</div>
+									<!-- End portfolio list item info -->
+
+								</div>
+								<!-- End portfolio list item -->
+
+							</div>
+							<!-- End isotope item -->
+
+						</div>
+						<!-- End isotope items wrap -->
+
+
+						<!-- Begin tt-pagination 
+						========================= 
+						* Use class "tt-pagin-center" or "tt-pagin-right" to align pagination 
+						* Use class "tt-pagin-rounded" to enable pagination rounded style -->
+						<!-- <div class="tt-pagination-wrap tt-pagin-center">
+							<ul class="tt-pagination">
+								<li><a href="" title="Go to the first page">First</a></li>
+								<li><a href="" title="Go to the previous page">Prev</a></li>
+								<li class="active"><a href="#0">1</a></li>
+								<li><a href="">2</a></li>
+								<li><a href="">3</a></li>
+								<li><span>...</span></li>
+								<li><a href="">6</a></li>
+								<li><a href="">7</a></li>
+								<li><a href="">8</a></li>
+								<li><a href="" title="Go to the next page">Next</a></li>
+								<li><a href="" title="Go to the last page">Last</a></li>
+							</ul>
+
+							<div class="tt-pagination-info">
+								<span>Showing page 1 of 8</span>
+								<span>Portfolios 1-15 of 114</span>
+							</div>
+						</div> -->
+						<!-- End tt-pagination -->
+
+						<!-- Begin isotope pagination (Note: "Load More" button is for design purposes only!)
+						============================== -->
+						<!-- <div class="iso-load-more-wrap">
+							<div class="iso-load-more">
+								<button class="iso-load-more-button">Load More</button>
+							</div>
+						</div> -->
+						<!-- End isotope pagination -->
+
+					</div>
+					<!-- End isotope -->
+
+				</div> <!-- /.portfolio-list-inner (/.isotope-wrap) -->
+			</section>
+			<!-- End portfolio list section -->
 
 
          <!-- ===========================
@@ -813,7 +1555,7 @@
 			* Use class "footer-dark" to enable dark footer.
 			* Use class "no-margin-top" if needed. 
 			-->
-			<section id="footer" class="no-margin-top">
+			<section id="footer" class="footer-dark no-margin-top">
 				<div class="footer-inner">
 					<div class="footer-container tt-wrap">
 						<div class="row">
@@ -967,7 +1709,6 @@
 
 		<!-- Theme master JS -->
 		<script src="assets/js/theme.js"></script>
-		<script src="assets/js/script.js"></script>
 
 
 

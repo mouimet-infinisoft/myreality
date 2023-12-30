@@ -10,7 +10,7 @@
 	<head>
 
 		<!-- Title -->
-		<title>Aivo - Multipurpose Portfolio HTML Website Template</title>
+		<title>Dummy Page / Aivo - Multipurpose Portfolio HTML Website Template</title>
 
 		<!-- Meta -->
 		<meta charset="utf-8">
@@ -78,7 +78,7 @@
 		* Use class "menu-align-right" to align menu to right.
 		* Use class "menu-align-center" to align menu to center (do not use with header classes!).
 		-->
-		<header id="header" class="header-show-hide-on-scroll header-transparent menu-align-right">
+		<header id="header" class="header-show-hide-on-scroll header-transparent header-transparent-dark menu-align-right">
 
 			<!-- Begin header inner -->
 			<div class="header-inner tt-wrap"> <!-- add/remove class "tt-wrap" to enable/disable element boxed layout (class "tt-boxed" is required in <body> tag!). Note: additionally you can use prepared helper class "max-width-*" to add custom width to "tt-wrap". Example: "max-width-1500" (class "tt-wrap" is still required!). More info about helper classes in file "helper.css" -->
@@ -244,7 +244,7 @@
 
 							<!-- Begin submenu (submenu master)
 							==================================== -->
-							<li class="tt-submenu-wrap tt-submenu-master active">
+							<li class="tt-submenu-wrap tt-submenu-master">
 								<a href="#0">Home</a>
 								<div class="tt-submenu">
 									<ul class="tt-submenu-list">
@@ -253,7 +253,7 @@
 										<li><a href="home-landing-3.html">Home Landing 3</a></li>
 										<li><a href="home-full-screen-slideshow.html">Full Screen Slideshow</a></li>
 										<li><a href="home-full-screen-single-image.html">Full Screen Image</a></li>
-										<li class="active"><a href="home-full-screen-video.html">Full Screen Video</a></li>
+										<li><a href="home-full-screen-video.html">Full Screen Video</a></li>
 									</ul> <!-- /.tt-submenu-list -->
 								</div> <!-- /.tt-submenu -->
 							</li>
@@ -483,7 +483,7 @@
 
 							<!-- Begin submenu (submenu master)
 							==================================== -->
-							<li class="tt-submenu-wrap tt-submenu-master">
+							<li class="tt-submenu-wrap tt-submenu-master active">
 								<a href="#0">More</a>
 								<div class="tt-submenu">
 									<ul class="tt-submenu-list">
@@ -607,12 +607,12 @@
 
 										<!-- Begin submenu
 										=================== -->
-										<li class="tt-submenu-wrap">
+										<li class="tt-submenu-wrap active">
 											<a href="#0">Search Results</a>
 											<div class="tt-submenu">
 												<ul class="tt-submenu-list">
 													<li><a href="search-results.html">Search Results 1</a></li>
-													<li><a href="search-results-2.html">Search Results 2</a></li>
+													<li class="active"><a href="search-results-2.html">Search Results 2</a></li>
 												</ul> <!-- /.tt-submenu-list -->
 											</div> <!-- /.tt-submenu -->
 										</li>
@@ -722,89 +722,468 @@
 		<div id="body-content">
 
 
-			<!-- ==========================
-			///// Begin intro section /////
-			===============================
-			* Use classes "intro-xs", "intro-sm", "intro-lg" "intro-xlg" or "intro-full" to set intro size.
-			* Use class "intro-full-m" to set intro size for small screens only.
+			<!-- ========================
+			///// Begin page header /////
+			=============================
+			* Use classes "ph-xs", "ph-sm", "ph-lg" or "ph-xlg" to set page header size.
+			* Use class "ph-center" or "ph-right" to align page header caption.
 			-->
-			<section id="tt-intro" class="intro-full">
-				<div class="tt-intro-inner"> <!-- add/remove class "tt-wrap" to enable/disable element boxed layout (class "tt-boxed" is required in <body> tag!). Note: additionally you can use prepared helper class "max-width-*" to add custom width to "tt-wrap". Example: "max-width-1500" (class "tt-wrap" is still required!). More info about helper classes in file "helper.css" -->
+			<section id="page-header">
 
-					<!-- Begin YTPlayer (Youtube video background)
-					=======================================================
-					* NOTE: Replace videoURL with your own (videoURL:'your-youtube-video-URL'). 
-					* Do not forget to add your background image for mobile devices (because the video background doesn't work on mobile devices).
-					* YTPlayer may not work in the local computer. It works properly only if used under a web server.
-					* Read more info about YTPlayer: https://github.com/pupunzi/jquery.mb.YTPlayer
+				<!-- Begin page header image 
+				============================= 
+				* Use class "parallax-1" up to "parallax-8" to enable image parallax effect (number 1-8 represents the speed).
+				* Use class "hide-ph-image" to hide page header image without removing the code.
+				-->
+				<div class="page-header-image hide-ph-image parallax-6 bg-image" style="background-image: url(assets/img/page-header/page-header-bg-16.jpg);">
+					
+					<!-- Element cover 
+					===================
+					* Use class "cover-opacity-*" to set cover opasity (1, 1.5, 2, 2.5, ... 9.5). Example: "cover-opacity-2" or "cover-opacity-2-5".
+					* Aditional color classes you can use: "cover-color", "cover-light", "cover-red", "cover-pink", "cover-purple", "cover-green", "cover-blue", "cover-yellow" or "cover-brown" to set cover background color (note: class "cover-color" = template main color).
+					* Use class "cover-gradient-dark", "cover-gradient-light" or "cover-gradient-color" to enable cover gradient background.
 					-->
-					<div class="youtube-bg-wrap parallax-6 bg-dark"> <!-- Class "parallax-6" is for tt-intro only!!! -->
-						<div class="youtube-bg" 
-						style="background-image: url(assets/img/video-bg/video-bg-1.jpg); background-position: 50% 50%;"
-						data-property="{
-							videoURL: 'https://www.youtube.com/watch?v=GCYlRFZQk2E',
-							containment: 'self',
-							quality: 'default',
-							startAt: 0,
-							stopAt: 0,
-							autoPlay: true,
-							loop: true,
-							mute: true,
-							showControls: false,
-							showYTLogo: false,
-							realfullscreen: true,
-							addRaster: false,
-							optimizeDisplay: true,
-							stopMovieOnBlur: true
-						}">
+					<div class="cover cover-opacity-4"></div>
+					
+				</div>
+				<!-- End page header image -->
 
-							<!-- Element cover 
-							===================
-							* Use class "cover-opacity-*" to set cover opasity (1, 1.5, 2, 2.5, ... 9.5). Example: "cover-opacity-2" or "cover-opacity-2-5".
-							* Aditional color classes you can use: "cover-color", "cover-light", "cover-red", "cover-pink", "cover-purple", "cover-green", "cover-blue", "cover-yellow" or "cover-brown" to set cover background color (note: class "cover-color" = template main color).
-							* Use class "cover-gradient-dark", "cover-gradient-light" or "cover-gradient-color" to enable cover gradient background.
-							-->
-							<div class="cover cover-opacity-6"></div>
+				<!-- Begin page header inner -->
+				<div class="page-header-inner tt-wrap">
 
-						</div> <!-- /.youtube-bg -->
-					</div>
-					<!-- End YTPlayer -->
-
-					<!-- Begin intro caption 
-					=========================
-					* Position classes: "top-left", "top-center", "top-right", "center-left", "center", "center-right", "bottom-left", "bottom-center", "bottom-right". 
-					* Size classes: "intro-caption-xs", "intro-caption-sm", "intro-caption-lg", "intro-caption-xlg", "intro-caption-xxlg".
+					<!-- Begin page header caption 
+					===============================
+					* Use classes "ph-cap-xs", "ph-cap-sm", "ph-cap-lg" or "ph-cap-xlg" to set caption size.
+					* Use classes "ph-cap-light" to enable caption light color style (useful if you use dark background images).
+					* Use classes "ph-cap-shadow" to enable caption text shadow.
 					* Use class "parallax-1" up to "parallax-6" to enable parallax effect (no effect on mobile devices!).
 					* Use class "fade-out-scroll-1" up to "fade-out-scroll-6" to enable fade out effect if page scrolls (no effect on mobile devices!).
 					-->
-					<div class="intro-caption-wrap caption-animate intro-caption-lg bottom-left parallax-4">
-						<div class="intro-caption-holder">
-							<div class="intro-caption center">
-								<h1 class="intro-title">What Are You<br>Waiting For?</h1>
-								<h2 class="intro-subtitle">Build your beautiful portfolio website today!</h2>
+					<div class="page-header-caption ph-cap-xlg parallax-5 fade-out-scroll-4">
+						<div class="ph-title-wrap">
+							<h1 class="page-header-title">Search</h1>
+						</div>
+						<!-- <div class="ph-subtitle-wrap">
+							<h2 class="page-header-subtitle">Page Header Subtitle</h2>
+						</div> -->
 
-								<!-- Begin intro description (recommended max 170 characters!) 
-								============================= -->
-								<div class="intro-description">
-									Aivo – is a complete HTML5 and CSS3 website template. It fits perfectly for freelancers, artists and design agencies. It looks great with all types of devices.
-								</div>
-								<!-- End intro-description -->
+						<!-- Begin zig-zag separator 
+						============================= 
+						* Use classes "zig-zag-xs", "zig-zag-sm", "zig-zag-lg" or "zig-zag-xlg" to set separator size. 
+						* Use classes "zig-zag-light" or "zig-zag-dark" to change zig-zag separator style.
+						-->
+						<div class="zig-zag-separator zig-zag-lg">
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+						</div>
+						<!-- End zig-zag separator -->
 
-								<!-- Begin intro buttons -->
-								<button id="startButton">Start</button>
-									<div class="intro-buttons">
-									<a href="https://themeforest.net/item/aivo-multipurpose-portfolio-html-website-template/21587861?ref=Themetorium" class="btn btn-primary margin-top-5 margin-right-10" target="_blank">Buy It Now!</a> 
-									<a href="" class="btn btn-white-bordered margin-top-5">Discover More</a>
-						<!-- End intro buttons -->
+						<!-- Begin page header description (recommended max 170 characters!) 
+						=================================== -->
+						<!-- <div class="page-header-description">
+							<div class="ph-desc-inner">
+								Fusce imperdiet, arcu non tempor aliquam, justo tortor cursus est, sed facilisis eros purus et felis. Sed eros sapien, iaculis eget gravida euismod, dapibus vitae turpis.
+							</div>
+						</div> -->
+						<!-- End page header description -->
 
-							</div> <!-- /.intro-caption -->
-						</div> <!-- /.intro-caption-holder -->
 					</div>
-					<!-- End intro caption wrap -->
-					
-				</div> <!-- /.tt-intro-inner -->
+					<!-- End page header caption -->
+
+				</div> 
+				<!-- End page header inner -->
+
+				<!-- Begin page header animated element
+				========================================
+				* Use class "ph-anim-circle" to enable element circle style.
+				* Use class "ph-anim-center" or "ph-anim-right" to align animated element.
+				* Use class "parallax-1" up to "parallax-6" to enable parallax effect.
+				* Use class "fade-out-scroll-1" up to "fade-out-scroll-6" to enable fade out effect if page scroll.
+				* Use class "hide-ph-anim" to disable animated element without removing the code.
+				-->
+				<div class="ph-anim-element-wrap ph-anim-circle parallax-4">
+					<div class="ph-anim-element-holder">
+						<div class="ph-anim-element"></div>
+					</div>
+				</div>
+				<!-- End page header animated element -->
+
 			</section>
-			<!-- End intro section -->
+			<!-- End page header -->
+
+
+			<!-- ===================================
+			///// Begin search results section /////
+			==================================== -->
+			<section id="search-results-section">
+				<div class="srs-inner tt-wrap"> <!-- add/remove class "tt-wrap" to enable/disable element boxed layout (class "tt-boxed" is required in <body> tag!). Note: additionally you can use prepared helper class "max-width-*" to add custom width to "tt-wrap". Example: "max-width-1500" (class "tt-wrap" is still required!). More info about helper classes in file "helper.css" -->
+
+					<!-- Begin big search box 
+					========================== 
+					* Use class "parallax-1" up to "parallax-6" to enable parallax effect.
+					-->
+					<div class="big-search-box">
+						<div class="big-search-box-inner">
+
+							<!-- Begin big search box form -->
+							<form id="big-search-form" class="form-btn-inside" method="get" action="search-results.html">
+								<div class="big-search-input-wrap">
+									<input type="text" id="big-search-input" name="search" placeholder="Search something ...">
+									<button type="submit"><i class="fas fa-search"></i></button>
+								</div> <!-- /.big-search-input-wrap -->
+
+								<div class="big-search-options-wrap">
+									<div class="radio-button-styled">
+										<div class="bso-title">Search from:</div>
+
+										<label class="radio-inline">
+											<input type="radio" name="search-check" id="search-all" value="search all" checked>
+											<span class="box"></span> All
+										</label>
+										<label class="radio-inline">
+											<input type="radio" name="search-check" id="search-gallery" value="search gallery">
+											<span class="box"></span> Portfolio
+										</label>
+										<label class="radio-inline">
+											<input type="radio" name="search-check" id="search-blog" value="search blog">
+											<span class="box"></span> Blog
+										</label>
+										<label class="radio-inline">
+											<input type="radio" name="search-check" id="search-pages" value="search pages">
+											<span class="box"></span> Pages
+										</label>
+									</div> <!-- /.radio-button-styled -->
+								</div> <!-- /.big-search-options-wrap -->
+							</form>
+							<!-- End big search box form -->
+
+						</div> <!-- /.big-search-box-inner -->
+					</div>
+					<!-- End big search box -->
+
+
+					<!-- Begin search results 
+					========================== -->
+					<div class="search-results">
+
+						<!-- <div class="no-search-results">
+							<h1>Nothing Found!</h1>
+							<p>Sorry, but nothing matched your search terms. Please try again with some different keywords.</p>
+						</div> -->
+					
+						<!-- Begin search results head -->
+						<div class="search-results-head">
+							<div class="row">
+								<div class="col-sm-6">
+									<h3 class="srh-title">Search Results for: "web design"</h3>
+									<em>Displaying search results from: <strong>portfolios</strong>, <strong>blog</strong>, <strong>pages</strong></em>
+								</div> <!-- /.col -->
+
+								<div class="col-sm-6 text-right">
+									<div class="sr-count"><strong>9</strong> results are found</div>
+								</div> <!-- /.col -->
+							</div> <!-- /.row -->
+						</div>
+						<!-- End search results head -->
+
+						<!-- Begin search results items wrap -->
+						<div class="sr-items-wrap">
+
+							<!-- Begin search results item (Type: portfolio) 
+							================================================= -->
+							<div class="search-results-item">
+
+								<!-- Begin search results item image -->
+								<a href="gallery-single-grid.html" class="sr-item-img-holder">
+									<div class="sr-item-img bg-image lazy" data-src="assets/img/portfolio/list/list-2/portfolio-list-1.jpg"></div>
+								</a>
+								<!-- End search results item image -->
+
+								<!-- Begin search results item info -->
+								<div class="sr-item-info">
+									<h2 class="sr-item-title"><a href="gallery-single-grid.html">Elper Nomadis</a></h2>
+									<div class="sr-item-category"><a href="portfolio-archive.html">Digital</a></div>
+									<div class="sr-item-description">
+										At tortor quis. Aut odio nibh. Aliquet neque dis gravida adipiscing feugiat. Elit amet metus. Magna suscipit risus. Arcu elementum accumsan. Pede tincidunt mauris lobortis aliquam sed fusce libero duis senectus nec ipsum. Libero amet mi. Tempor ante est non ut libero.
+									</div>
+									<a href="gallery-single-grid.html" class="btn btn-default btn-sm margin-top-20">View Portfolio</a>
+								</div>
+								<!-- End search results item info -->
+
+								<span class="sr-item-type"><strong>From:</strong> Portfolio</span>
+							</div>
+							<!-- End search results item -->
+							
+							<!-- Begin search results item (Type: portfolio) 
+							================================================= -->
+							<div class="search-results-item">
+
+								<!-- Begin search results item image -->
+								<a href="gallery-single-grid.html" class="sr-item-img-holder">
+									<div class="sr-item-img bg-image lazy" data-src="assets/img/portfolio/list/list-2/portfolio-list-2.jpg"></div>
+								</a>
+								<!-- End search results item image -->
+
+								<!-- Begin search results item info -->
+								<div class="sr-item-info">
+									<h2 class="sr-item-title"><a href="gallery-single-grid.html">Futter Samantis</a></h2>
+									<div class="sr-item-category"><a href="portfolio-archive.html">Print</a></div>
+									<div class="sr-item-description">
+										At tortor quis. Aut odio nibh. Aliquet neque dis gravida adipiscing feugiat. Elit amet metus. Magna suscipit risus. Arcu elementum accumsan. Pede tincidunt mauris lobortis aliquam sed fusce libero duis senectus nec ipsum. Libero amet mi. Tempor ante est non ut libero.
+									</div>
+									<a href="gallery-single-grid.html" class="btn btn-default btn-sm margin-top-20">View Portfolio</a>
+								</div>
+								<!-- End search results item info -->
+
+								<span class="sr-item-type"><strong>From:</strong> Portfolio</span>
+							</div>
+							<!-- End search results item -->
+							
+							<!-- Begin search results item (Type: portfolio) 
+							================================================= -->
+							<div class="search-results-item">
+
+								<!-- Begin search results item image -->
+								<a href="gallery-single-grid.html" class="sr-item-img-holder">
+									<div class="sr-item-img bg-image lazy" data-src="assets/img/portfolio/list/list-2/portfolio-list-3.jpg"></div>
+								</a>
+								<!-- End search results item image -->
+
+								<!-- Begin search results item info -->
+								<div class="sr-item-info">
+									<h2 class="sr-item-title"><a href="gallery-single-grid.html">Tartumi Sandera Naomis</a></h2>
+									<div class="sr-item-category"><a href="portfolio-archive.html">Branding</a></div>
+									<div class="sr-item-description">
+										At tortor quis. Aut odio nibh. Aliquet neque dis gravida adipiscing feugiat. Elit amet metus. Magna suscipit risus. Arcu elementum accumsan. Pede tincidunt mauris lobortis aliquam sed fusce libero duis senectus nec ipsum. Libero amet mi. Tempor ante est non ut libero.
+									</div>
+									<a href="gallery-single-grid.html" class="btn btn-default btn-sm margin-top-20">View Portfolio</a>
+								</div>
+								<!-- End search results item info -->
+
+								<span class="sr-item-type"><strong>From:</strong> Portfolio</span>
+							</div>
+							<!-- End search results item -->
+
+							<!-- Begin search results item (Type: portfolio, no image) 
+							=========================================================== -->
+							<div class="search-results-item">
+
+								<!-- Begin search results item info -->
+								<div class="sr-item-info">
+									<h2 class="sr-item-title"><a href="gallery-single-grid.html">Tetera Laktus</a></h2>
+									<div class="sr-item-category"><a href="portfolio-archive.html">Digital</a></div>
+									<div class="sr-item-description">
+										At tortor quis. Aut odio nibh. Aliquet neque dis gravida adipiscing feugiat. Elit amet metus. Magna suscipit risus. Arcu elementum accumsan. Pede tincidunt mauris lobortis aliquam sed fusce libero duis senectus nec ipsum. Libero amet mi. Tempor ante est non ut libero.
+									</div>
+									<a href="gallery-single-grid.html" class="btn btn-default btn-sm margin-top-20">View Portfolio</a>
+								</div>
+								<!-- End search results item info -->
+
+								<span class="sr-item-type"><strong>From:</strong> Portfolio</span>
+							</div>
+							<!-- End search results item -->
+
+
+
+
+
+							<!-- Begin search results item (Type: blog post) 
+							================================================= -->
+							<div class="search-results-item">
+
+								<!-- Begin search results item image -->
+								<a href="gallery-single-grid.html" class="sr-item-img-holder">
+									<div class="sr-item-img bg-image lazy" data-src="assets/img/blog/list/blog-1.jpg"></div>
+								</a>
+								<!-- End search results item image -->
+
+								<!-- Begin search results item info -->
+								<div class="sr-item-info">
+									<div class="sr-item-category"><a href="blog-archive.html">Web Design</a> <a href="blog-archive.html">Coding</a></div>
+									<h2 class="sr-item-title"><a href="blog-single.html">Responsive Web Design: 50 Examples and Best Practices</a></h2>
+									<div class="sr-item-meta"> 
+										<span class="published">Nov 28, 2017</span>
+										<span class="posted-by">- by <a href="#" title="View all posts by Lucas Sanski">Lucas Sanski</a></span>
+									</div>
+									<div class="sr-item-description">
+										At tortor quis. Aut odio nibh. Aliquet neque dis gravida adipiscing feugiat. Elit amet metus. Magna suscipit risus. Arcu elementum accumsan. Pede tincidunt mauris lobortis aliquam sed fusce libero duis senectus nec ipsum. Libero amet mi. Tempor ante est non ut libero.
+									</div>
+									<a href="gallery-single-grid.html" class="btn btn-default btn-sm margin-top-20">Read Blog Post</a>
+
+									<!-- Begin blog list item attributes -->
+									<ul class="sr-item-attr">
+										<li>
+											<!-- Begin comments count -->
+											<a href="blog-single.html#blog-post-comments" class="sr-item-comments-count" title="Read the comments"><i class="far fa-comment"></i> 8</a>
+											<!-- End comments count -->
+										</li>
+									</ul>
+									<!-- End blog list item attributes -->
+								</div>
+								<!-- End search results item info -->
+
+								<span class="sr-item-type"><strong>From:</strong> Blog</span>
+							</div>
+							<!-- End search results item -->
+
+							<!-- Begin search results item (Type: blog post) 
+							================================================= -->
+							<div class="search-results-item">
+
+								<!-- Begin search results item image -->
+								<a href="gallery-single-grid.html" class="sr-item-img-holder">
+									<div class="sr-item-img bg-image lazy" data-src="assets/img/blog/list/blog-5.jpg"></div>
+								</a>
+								<!-- End search results item image -->
+
+								<!-- Begin search results item info -->
+								<div class="sr-item-info">
+									<div class="sr-item-category"><a href="blog-archive.html">Resources</a></div>
+									<h2 class="sr-item-title"><a href="blog-single.html">25 Free and Premium Admin HTML Website Templates and Layouts</a></h2>
+									<div class="sr-item-meta"> 
+										<span class="published">Nov 22, 2017</span>
+										<span class="posted-by">- by <a href="#" title="View all posts by Lucas Sanski">Lucas Sanski</a></span>
+									</div>
+									<div class="sr-item-description">
+										Etiam sollicitudin dolor lorem, non aliquet quam dignissim vel. Nunc at eros non odio vestibulum porttitor egestas ut nisl. Proin in cursus nisi, id feugiat magna. Aliquam nec elit...
+									</div>
+									<a href="gallery-single-grid.html" class="btn btn-default btn-sm margin-top-20">Read Blog Post</a>
+
+									<!-- Begin blog list item attributes -->
+									<ul class="sr-item-attr">
+										<li>
+											<!-- Begin comments count -->
+											<a href="blog-single.html#blog-post-comments" class="sr-item-comments-count" title="Read the comments"><i class="far fa-comment"></i> 10</a>
+											<!-- End comments count -->
+										</li>
+									</ul>
+									<!-- End blog list item attributes -->
+								</div>
+								<!-- End search results item info -->
+
+								<span class="sr-item-type"><strong>From:</strong> Blog</span>
+							</div>
+							<!-- End search results item -->
+
+							<!-- Begin search results item (Type: blog post, no image) 
+							=========================================================== -->
+							<div class="search-results-item">
+
+								<!-- Begin search results item info -->
+								<div class="sr-item-info">
+									<div class="sr-item-category"><a href="blog-archive.html">Coding</a></div>
+									<h2 class="sr-item-title"><a href="blog-single.html">Why Designers and Web Developers Must Work Together (No Image)</a></h2>
+									<div class="sr-item-meta"> 
+										<span class="published">Nov 14, 2017</span>
+										<span class="posted-by">- by <a href="#" title="View all posts by Kate Dixon">Kate Dixon</a></span>
+									</div>
+									<div class="sr-item-description">
+										At tortor quis. Aut odio nibh. Aliquet neque dis gravida adipiscing feugiat. Elit amet metus. Magna suscipit risus. Arcu elementum accumsan. Pede tincidunt mauris lobortis aliquam sed fusce libero duis senectus nec ipsum. Libero amet mi. Tempor ante est non ut libero.
+									</div>
+									<a href="gallery-single-grid.html" class="btn btn-default btn-sm margin-top-20">Read Blog Post</a>
+
+									<!-- Begin blog list item attributes -->
+									<ul class="sr-item-attr">
+										<li>
+											<!-- Begin comments count -->
+											<a href="blog-single.html#blog-post-comments" class="sr-item-comments-count" title="Read the comments"><i class="far fa-comment"></i> 16</a>
+											<!-- End comments count -->
+										</li>
+									</ul>
+									<!-- End blog list item attributes -->
+								</div>
+								<!-- End search results item info -->
+
+								<span class="sr-item-type"><strong>From:</strong> Blog</span>
+							</div>
+							<!-- End search results item -->
+
+
+
+
+
+
+							<!-- Begin search results item (Type: page) 
+							============================================ -->
+							<div class="search-results-item">
+
+								<!-- Begin search results item image -->
+								<a href="gallery-single-grid.html" class="sr-item-img-holder">
+									<div class="sr-item-img bg-image lazy" data-src="assets/img/page-header/page-header-bg-9.jpg"></div>
+								</a>
+								<!-- End search results item image -->
+
+								<!-- Begin search results item info -->
+								<div class="sr-item-info">
+									<h2 class="sr-item-title"><a href="page-dummy-classic-sidebar-right.html">Dummy Page</a></h2>
+									<div class="sr-item-description">
+										At tortor quis. Aut odio nibh. Aliquet neque dis gravida adipiscing feugiat. Elit amet metus. Magna suscipit risus. Arcu elementum accumsan. Pede tincidunt mauris lobortis aliquam sed fusce libero duis senectus nec ipsum. Libero amet mi. Tempor ante est non ut libero.
+									</div>
+									<a href="gallery-single-grid.html" class="btn btn-default btn-sm margin-top-20">View Page</a>
+								</div>
+								<!-- End search results item info -->
+
+								<span class="sr-item-type"><strong>From:</strong> Pages</span>
+							</div>
+							<!-- End search results item -->
+
+							<!-- Begin search results item (Type: page, no image) 
+							====================================================== -->
+							<div class="search-results-item">
+
+								<!-- Begin search results item info -->
+								<div class="sr-item-info">
+									<h2 class="sr-item-title"><a href="page-dummy-modern-fluid">Dummy Page (No Image)</a></h2>
+									<div class="sr-item-description">
+										At tortor quis. Aut odio nibh. Aliquet neque dis gravida adipiscing feugiat. Elit amet metus. Magna suscipit risus. Arcu elementum accumsan. Pede tincidunt mauris lobortis aliquam sed fusce libero duis senectus nec ipsum. Libero amet mi. Tempor ante est non ut libero.
+									</div>
+									<a href="gallery-single-grid.html" class="btn btn-default btn-sm margin-top-20">View Page</a>
+								</div>
+								<!-- End search results item info -->
+
+								<span class="sr-item-type"><strong>From:</strong> Pages</span>
+							</div>
+							<!-- End search results item -->
+
+						</div>
+						<!-- End search results items wrap -->
+
+					</div>
+					<!-- End search results -->
+
+
+					<!-- Begin tt-pagination 
+					========================= 
+					* Use class "tt-pagin-center" or "tt-pagin-right" to align pagination 
+					* Use class "tt-pagin-rounded" to enable pagination rounded style -->
+					<div class="tt-pagination-wrap">
+						<ul class="tt-pagination">
+							<li><a href="" title="Go to the first page">First</a></li>
+							<li><a href="" title="Go to the previous page">Prev</a></li>
+							<li class="active"><a href="#0">1</a></li>
+							<li><a href="">2</a></li>
+							<li><a href="">3</a></li>
+							<li><span>...</span></li>
+							<li><a href="">6</a></li>
+							<li><a href="">7</a></li>
+							<li><a href="">8</a></li>
+							<li><a href="" title="Go to the next page">Next</a></li>
+							<li><a href="" title="Go to the last page">Last</a></li>
+						</ul>
+
+						<div class="tt-pagination-info">
+							<span>Showing page 1 of 8</span>
+							<span>Portfolios 1-15 of 114</span>
+						</div>
+					</div>
+					<!-- End tt-pagination -->
+
+				</div>
+				<!-- End search results section inner -->
+
+			</section> <!-- /.search results section -->
 
 
          <!-- ===========================
@@ -813,7 +1192,7 @@
 			* Use class "footer-dark" to enable dark footer.
 			* Use class "no-margin-top" if needed. 
 			-->
-			<section id="footer" class="no-margin-top">
+			<section id="footer" class="footer-dark no-margin-top">
 				<div class="footer-inner">
 					<div class="footer-container tt-wrap">
 						<div class="row">
@@ -967,7 +1346,6 @@
 
 		<!-- Theme master JS -->
 		<script src="assets/js/theme.js"></script>
-		<script src="assets/js/script.js"></script>
 
 
 
