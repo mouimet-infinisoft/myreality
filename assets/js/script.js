@@ -359,3 +359,15 @@ function toggleMic() {
         // Activate microphone logic
     }
 }
+
+
+
+
+
+// This script is optional and can be used to control the fade effect dynamically
+document.addEventListener('DOMContentLoaded', function() {
+    const fadeText = document.getElementById('fade-text');
+    setInterval(function() {
+        fadeText.style.opacity = fadeText.style.opacity === '1' ? '0' : '1';
+    }, 10000); // Duration for fade in and out in milliseconds
+});

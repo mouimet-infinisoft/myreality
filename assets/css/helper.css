@@ -1498,3 +1498,37 @@
 	/* overflow: hidden; */
 	/* margin-left: -1px; */
 }
+
+
+#fade-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 4em; /* Adjust size as needed */
+    font-weight: bold;
+    text-align: center;
+
+}
+
+#fade-text #universal {
+    color: blue;
+}
+
+#fade-text #workflow {
+    color: white;
+}
+
+@keyframes fadeInOut {
+    0%, 100% { opacity: 0; }
+    50% { opacity: 1; }
+}
+
+#fade-text {
+    animation: fadeInOut 5s forwards;/* Adjust time as needed */
+}
+
+#fade-here {
+    animation: fadeInOut 5s forwards; /* Adjust time as needed */
+	animation-delay: 6s;
+}
