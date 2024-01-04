@@ -11,7 +11,7 @@
         padding: 0;
         height: 100%;
         overflow: hidden;
-        /* background: black; */
+        background: black;
       }
       .video-background {
         position: fixed;
@@ -34,44 +34,18 @@
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body>
-    <video autoplay muted loop class="video-background">
+    <!-- <video autoplay muted loop class="video-background">
       <source src="assets/video/bg.mp4" type="video/mp4" />
       <source src="assets/video/bg2.mp4" type="video/mp4" />
       <source src="assets/video/bg3.mp4" type="video/mp4" />
       Your browser does not support HTML5 video.
-    </video>
+    </video> -->
 
     <div class="title" id="title"></div>
 
-    <script>
-      const phrases = ["Arts", "Technology", "Music", "Philosophy"];
-      let currentPhraseIndex = 0;
-      const titleElement = document.getElementById("title");
 
-      function updatePhrase() {
-        titleElement.style.opacity = "0";
+    <script src="./assets/components/universal_workflow_jumbotron.js"></script>
 
-        setTimeout(() => {
-          // Change the phrase
-          titleElement.textContent = phrases[currentPhraseIndex];
-
-          // Randomly position the title
-          const x =
-            Math.random() * (window.innerWidth - titleElement.clientWidth);
-          const y =
-            Math.random() * (window.innerHeight - titleElement.clientHeight);
-          titleElement.style.left = `${x}px`;
-          titleElement.style.top = `${y}px`;
-
-          titleElement.style.opacity = "1";
-
-          currentPhraseIndex = (currentPhraseIndex + 1) % phrases.length;
-        }, 2000);
-
-        setTimeout(updatePhrase, 4000);
-      }
-
-      updatePhrase();
-    </script>
+    <universal-workflow-jumbotron></universal-workflow-jumbotron>
   </body>
 </html>
